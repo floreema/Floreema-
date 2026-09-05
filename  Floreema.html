@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Floreema World — Handmade Gifts</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap');
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'DM Sans',sans-serif;background:#fbf6f1;color:#392d31;line-height:1.5}
+a{text-decoration:none;color:inherit}
+nav{position:fixed;top:0;left:0;right:0;z-index:10;display:flex;align-items:center;justify-content:space-between;padding:18px 7%;background:rgba(251,246,241,.88);backdrop-filter:blur(12px);border-bottom:1px solid #eadfd8}
+.logo{font-family:'Playfair Display',serif;font-size:27px;letter-spacing:.3px}.logo span{font-size:12px;display:block;letter-spacing:3px;text-transform:uppercase}
+.navlinks{display:flex;gap:28px;font-size:14px}.navlinks a:hover{opacity:.55}
+.btn{display:inline-block;background:#392d31;color:#fff;padding:13px 23px;border-radius:999px;font-size:13px;transition:.25s}.btn:hover{transform:translateY(-2px);opacity:.9}
+.hero{min-height:100vh;padding:145px 7% 70px;display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:50px}
+.kicker{font-size:12px;text-transform:uppercase;letter-spacing:3px;color:#9a777d;margin-bottom:18px}
+h1{font-family:'Playfair Display',serif;font-size:clamp(54px,7vw,92px);line-height:.98;font-weight:500;max-width:650px}
+.hero p{max-width:510px;margin:25px 0 30px;color:#6e6265;font-size:16px}
+.hero-art{height:610px;border-radius:260px 260px 28px 28px;background:linear-gradient(145deg,#ead6d6,#f1e7df 55%,#e3d0c9);position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.flower{font-size:155px;filter:drop-shadow(0 15px 18px rgba(57,45,49,.12));transform:rotate(-8deg)}
+.tag{position:absolute;background:#fff8f4;border:1px solid #eadfd8;padding:13px 17px;border-radius:18px;font-size:12px;box-shadow:0 12px 30px rgba(57,45,49,.08)}
+.t1{top:18%;left:8%}.t2{bottom:20%;right:7%}
+.section{padding:100px 7%}.section-head{display:flex;justify-content:space-between;align-items:end;margin-bottom:40px}
+h2{font-family:'Playfair Display',serif;font-size:48px;font-weight:500}
+.muted{color:#786b6e;font-size:14px}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.card{background:#fff;border:1px solid #eadfd8;border-radius:22px;overflow:hidden;transition:.25s}.card:hover{transform:translateY(-5px)}
+.pic{height:250px;display:flex;align-items:center;justify-content:center;font-size:86px}
+.p1{background:#ead9dd}.p2{background:#e6ddd1}.p3{background:#e5d6cf}.p4{background:#ddd9e4}
+.card-body{padding:20px}.card h3{font-family:'Playfair Display',serif;font-size:21px;font-weight:500}.price{margin-top:8px;color:#8c6d73;font-size:13px}
+.story{display:grid;grid-template-columns:.9fr 1.1fr;gap:70px;align-items:center;background:#efe4dd}
+.story-box{height:460px;border-radius:30px;background:#ddc8c1;display:flex;align-items:center;justify-content:center;font-size:130px}
+.story p{margin:20px 0;color:#6e6265;max-width:600px}
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:40px}
+.feature{padding:30px;border-top:1px solid #d8c9c5}.feature b{display:block;margin-bottom:8px}
+.cta{margin:0 7% 100px;padding:75px 8%;border-radius:32px;background:#3f3035;color:white;text-align:center}.cta h2{color:white}.cta p{color:#d9cdd0;margin:15px auto 25px;max-width:560px}.cta .btn{background:#f8eee8;color:#392d31}
+footer{padding:35px 7%;border-top:1px solid #eadfd8;display:flex;justify-content:space-between;font-size:12px;color:#786b6e}
+@media(max-width:850px){.navlinks{display:none}.hero{grid-template-columns:1fr;padding-top:125px}.hero-art{height:440px}.grid{grid-template-columns:repeat(2,1fr)}.story{grid-template-columns:1fr}.features{grid-template-columns:1fr}h2{font-size:38px}}
+@media(max-width:520px){.grid{grid-template-columns:1fr}.section{padding:70px 6%}.hero{padding-left:6%;padding-right:6%}h1{font-size:55px}.hero-art{height:380px}}
+</style>
+</head>
+<body>
+<nav>
+  <a class="logo" href="#">Floreema<span>World</span></a>
+  <div class="navlinks"><a href="#shop">Creations</a><a href="#story">Our story</a><a href="#custom">Customize</a><a href="#contact">Contact</a></div>
+  <a class="btn" href="#shop">Shop now</a>
+</nav>
+
+<section class="hero">
+  <div>
+    <div class="kicker">Handmade gifts · Made with love</div>
+    <h1>Little things,<br><em>big feelings.</em></h1>
+    <p>Welcome to Floreema — a little world of handmade creations made to make someone smile. Choose your colors, add your touch, and make it truly yours.</p>
+    <a class="btn" href="#shop">Discover our creations&nbsp; →</a>
+  </div>
+  <div class="hero-art">
+    <div class="flower">🌷</div>
+    <div class="tag t1">♡ handmade with care</div>
+    <div class="tag t2">your colors · your story</div>
+  </div>
+</section>
+
+<section class="section" id="shop">
+  <div class="section-head"><div><div class="kicker">Made for you</div><h2>Our creations</h2></div><span class="muted">Gifts • Flowers • Decor</span></div>
+  <div class="grid">
+    <article class="card"><div class="pic p1">🌷</div><div class="card-body"><h3>Everlasting Flowers</h3><div class="price">From 1,500 DA</div></div></article>
+    <article class="card"><div class="pic p2">🪞</div><div class="card-body"><h3>Decorated Mirrors</h3><div class="price">Custom made</div></div></article>
+    <article class="card"><div class="pic p3">🎀</div><div class="card-body"><h3>Gift Boxes</h3><div class="price">Made for every occasion</div></div></article>
+    <article class="card"><div class="pic p4">🌸</div><div class="card-body"><h3>Pipe Cleaner Art</h3><div class="price">Choose your colors</div></div></article>
+  </div>
+</section>
+
+<section class="section story" id="story">
+  <div class="story-box">🌸</div>
+  <div>
+    <div class="kicker">The Floreema story</div>
+    <h2>From our hands<br>to your heart.</h2>
+    <p>Floreema was created from a love for little details, soft colors and gifts that feel personal. Every creation is handmade with patience, creativity and a whole lot of love.</p>
+    <p>Because the best gifts aren't always the biggest ones — they're the ones that say <strong>“I thought of you.”</strong></p>
+    <div class="features">
+      <div class="feature"><b>Handmade</b><span class="muted">Created piece by piece.</span></div>
+      <div class="feature"><b>Personalized</b><span class="muted">Your colors, your name, your vibe.</span></div>
+      <div class="feature"><b>Made with love</b><span class="muted">For the moments that matter.</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="custom">
+  <div class="section-head"><div><div class="kicker">Make it yours</div><h2>Customize your gift</h2></div></div>
+  <div style="max-width:720px"><p class="muted" style="font-size:17px;margin-bottom:25px">Tell us what you're imagining — favorite colors, name, occasion and little details. We'll turn your idea into a Floreema creation.</p><a class="btn" href="https://instagram.com/flower.eema">Request a custom order&nbsp; →</a></div>
+</section>
+
+<section class="cta" id="contact">
+  <div class="kicker" style="color:#c7aab0">A little something for someone special</div>
+  <h2>Let's create something beautiful.</h2>
+  <p>Follow Floreema and discover new creations, behind-the-scenes moments and gift inspiration.</p>
+  <a class="btn" href="https://instagram.com/flower.eema">@flower.eema&nbsp; →</a>
+</section>
+
+<footer><span>© 2026 Floreema World</span><span>From our hands to your heart ♡</span></footer>
+</body>
+</html>
