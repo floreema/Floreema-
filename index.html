@@ -294,6 +294,15 @@ section{
   background:#fff;
 }
 
+.product-section{
+  max-width:1100px;
+  margin:0 auto 75px;
+}
+
+.product-section:last-child{
+  margin-bottom:0;
+}
+
 .product-grid{
   display:grid;
   grid-template-columns:repeat(4,1fr);
@@ -327,6 +336,22 @@ section{
   height:100%;
   object-fit:contain;
   padding:8px;
+}
+
+.product-image.duo{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:4px;
+  padding:5px;
+}
+
+.product-image.duo img{
+  width:100%;
+  height:100%;
+  object-fit:contain;
+  padding:0;
+  background:#fff;
+  border-radius:10px;
 }
 
 .product-placeholder{
@@ -478,6 +503,7 @@ footer p{
 
 /* MOBILE */
 @media(max-width:900px){
+
   .category-grid{
     grid-template-columns:repeat(2,1fr);
   }
@@ -501,6 +527,7 @@ footer p{
 }
 
 @media(max-width:650px){
+
   header{
     padding:15px 5%;
   }
@@ -542,6 +569,10 @@ footer p{
   .custom-box{
     padding:25px 18px;
   }
+
+  .product-image.duo{
+    height:250px;
+  }
 }
 </style>
 </head>
@@ -553,6 +584,7 @@ footer p{
 </div>
 
 <header>
+
   <a href="#accueil" class="logo">
     Flor<span>e</span>ema
   </a>
@@ -564,13 +596,19 @@ footer p{
     <a href="#personnalisation">Personnalisation</a>
     <a href="#contact">Contact</a>
   </nav>
+
 </header>
 
+
 <!-- ACCUEIL -->
+
 <section class="hero" id="accueil">
 
   <div class="hero-text">
-    <div class="small-title">Bienvenue chez Floreema</div>
+
+    <div class="small-title">
+      Bienvenue chez Floreema
+    </div>
 
     <h1>
       Des créations<br>
@@ -585,6 +623,7 @@ footer p{
     <a href="#categories" class="btn">
       Découvrir la collection
     </a>
+
   </div>
 
   <div class="hero-decoration">
@@ -595,16 +634,26 @@ footer p{
 
 
 <!-- CATÉGORIES -->
+
 <section class="categories" id="categories">
 
   <div class="section-head">
-    <div class="eyebrow">Notre univers</div>
-    <h2>Nos catégories</h2>
+
+    <div class="eyebrow">
+      Notre univers
+    </div>
+
+    <h2>
+      Nos catégories
+    </h2>
+
     <p>
       Explorez nos différentes créations et choisissez
       la catégorie qui vous correspond.
     </p>
+
   </div>
+
 
   <div class="category-grid">
 
@@ -663,151 +712,317 @@ footer p{
     </a>
 
   </div>
+
 </section>
 
 
 <!-- SOUS CATÉGORIES -->
+
 <section class="subcategories">
 
+
   <!-- PIPE CLEANER -->
+
   <div class="subcategory-box" id="pipe-cleaner">
 
-    <h3>🌷 Créations en Pipe Cleaner</h3>
+    <h3>
+      🌷 Créations en Pipe Cleaner
+    </h3>
 
     <div class="subcategory-grid">
-      <a href="#bouquets">Bouquets de fleurs</a>
-      <a href="#fleurs-lumineuses" class="subcategory">Fleurs lumineuses</a>
-      <a href="#coupes-pipe" class="subcategory">Coupes</a>
-      <a href="#rose-eternelle" class="subcategory">Fleur éternelle</a>
-      <a href="#cadres-fleuris" class="subcategory">Cadres fleuris</a>
-      <a href="#porte-accessoires" class="subcategory">Porte-accessoires</a>
-      <a href="#accessoires-pipe" class="subcategory">Accessoires cheveux</a>
-      <a href="#porte-cles-pipe" class="subcategory">Porte-clés</a>
-      <a href="#vases-pipe" class="subcategory">Vases</a>
-      <a href="#coque" class="subcategory">Coque de téléphone anti-choc</a>
-      <a href="#gateau" class="subcategory">Gâteau d’anniversaire</a>
-      <a href="#jardin-infini" class="subcategory">Jardin de Fleurs Infini</a>
+
+      <a href="#bouquets" class="subcategory">
+        Bouquets de fleurs
+      </a>
+
+      <a href="#fleurs-lumineuses" class="subcategory">
+        Fleurs lumineuses
+      </a>
+
+      <a href="#coupes-pipe" class="subcategory">
+        Coupes
+      </a>
+
+      <a href="#rose-eternelle" class="subcategory">
+        Fleur éternelle
+      </a>
+
+      <a href="#cadres-fleuris" class="subcategory">
+        Cadres fleuris
+      </a>
+
+      <a href="#porte-accessoires" class="subcategory">
+        Porte-accessoires
+      </a>
+
+      <a href="#accessoires-pipe" class="subcategory">
+        Accessoires cheveux
+      </a>
+
+      <a href="#porte-cles-pipe" class="subcategory">
+        Porte-clés
+      </a>
+
+      <a href="#vases-pipe" class="subcategory">
+        Vases
+      </a>
+
+      <a href="#coque" class="subcategory">
+        Coque de téléphone anti-choc
+      </a>
+
+      <a href="#gateau" class="subcategory">
+        Gâteau d’anniversaire
+      </a>
+
+      <a href="#jardin-infini" class="subcategory">
+        Jardin de Fleurs Infini
+      </a>
+
     </div>
 
   </div>
 
 
   <!-- SATIN -->
+
   <div class="subcategory-box" id="satin">
 
-    <h3>🎀 Fleurs en Satin</h3>
+    <h3>
+      🎀 Fleurs en Satin
+    </h3>
 
     <div class="subcategory-grid">
-      <a href="#bouquets-satin" class="subcategory">Bouquets de fleurs</a>
-      <a href="#box-satin" class="subcategory">Box de fleurs</a>
-      <a href="#cles-satin" class="subcategory">Porte-clés en satin</a>
+
+      <a href="#bouquets-satin" class="subcategory">
+        Bouquets de fleurs
+      </a>
+
+      <a href="#box-satin" class="subcategory">
+        Box de fleurs
+      </a>
+
+      <a href="#cles-satin" class="subcategory">
+        Porte-clés en satin
+      </a>
+
     </div>
 
   </div>
 
 
   <!-- MIROIRS -->
+
   <div class="subcategory-box" id="miroirs">
 
-    <h3>🪞 Miroirs</h3>
+    <h3>
+      🪞 Miroirs
+    </h3>
 
     <div class="subcategory-grid">
-      <a href="#miroir-prenom" class="subcategory">Miroir prénom</a>
-      <a href="#miroir-foam" class="subcategory">Miroir en Foam</a>
-      <a href="#miroir-perles" class="subcategory">Miroir en perles</a>
-      <a href="#miroir-fleurs" class="subcategory">Miroir fleurs artificielles</a>
-      <a href="#miroir-pipe" class="subcategory">Miroir Pipe Cleaner</a>
-      <a href="#miroir-stickers" class="subcategory">Miroir stickers</a>
+
+      <a href="#miroir-prenom" class="subcategory">
+        Miroir prénom
+      </a>
+
+      <a href="#miroir-foam" class="subcategory">
+        Miroir en Foam
+      </a>
+
+      <a href="#miroir-perles" class="subcategory">
+        Miroir en perles
+      </a>
+
+      <a href="#miroir-fleurs" class="subcategory">
+        Miroir fleurs artificielles
+      </a>
+
+      <a href="#miroir-pipe" class="subcategory">
+        Miroir Pipe Cleaner
+      </a>
+
+      <a href="#miroir-stickers" class="subcategory">
+        Miroir stickers
+      </a>
+
     </div>
 
   </div>
 
 
   <!-- COUPES -->
+
   <div class="subcategory-box" id="coupes">
 
-    <h3>☕ Coupes</h3>
+    <h3>
+      ☕ Coupes
+    </h3>
 
     <div class="subcategory-grid">
-      <a href="#coupe-foam" class="subcategory">Coupe en Foam</a>
-      <a href="#coupe-pipe" class="subcategory">Coupe Pipe Cleaner</a>
-      <a href="#coupe-dessins" class="subcategory">Coupe à dessins</a>
+
+      <a href="#coupe-foam" class="subcategory">
+        Coupe en Foam
+      </a>
+
+      <a href="#coupes-pipe" class="subcategory">
+        Coupe Pipe Cleaner
+      </a>
+
+      <a href="#coupe-dessins" class="subcategory">
+        Coupe à dessins
+      </a>
+
     </div>
 
   </div>
 
 
   <!-- CADRES -->
+
   <div class="subcategory-box" id="cadres">
 
-    <h3>🖼️ Cadres Personnalisés</h3>
+    <h3>
+      🖼️ Cadres Personnalisés
+    </h3>
 
     <div class="subcategory-grid">
-      <a href="#cadre-diplome" class="subcategory">Cadre de remise des diplômes</a>
-      <a href="#cadre-photo" class="subcategory">Cadre photo</a>
-      <a href="#cadre-anniversaire" class="subcategory">Cadre anniversaire</a>
-      <a href="#cadre-fleuri" class="subcategory">Cadre fleuri</a>
-      <a href="#cadre-decoratif" class="subcategory">Cadre décoratif</a>
-      <a href="#cadre-a4" class="subcategory">Format A4</a>
-      <a href="#cadre-a5" class="subcategory">Format A5</a>
-      <a href="#cadre-3d" class="subcategory">Cadre 3D</a>
+
+      <a href="#cadre-diplome" class="subcategory">
+        Cadre de remise des diplômes
+      </a>
+
+      <a href="#cadre-photo" class="subcategory">
+        Cadre photo
+      </a>
+
+      <a href="#cadre-anniversaire" class="subcategory">
+        Cadre anniversaire
+      </a>
+
+      <a href="#cadre-fleuri" class="subcategory">
+        Cadre fleuri
+      </a>
+
+      <a href="#cadre-decoratif" class="subcategory">
+        Cadre décoratif
+      </a>
+
+      <a href="#cadre-a4" class="subcategory">
+        Format A4
+      </a>
+
+      <a href="#cadre-a5" class="subcategory">
+        Format A5
+      </a>
+
+      <a href="#cadre-3d" class="subcategory">
+        Cadre 3D
+      </a>
+
     </div>
 
   </div>
 
 
   <!-- FLEURS ARTIFICIELLES -->
+
   <div class="subcategory-box" id="fleurs-artificielles">
 
-    <h3>💐 Fleurs Artificielles</h3>
+    <h3>
+      💐 Fleurs Artificielles
+    </h3>
 
     <div class="subcategory-grid">
+
       <a href="#bouquets-artificiels" class="subcategory">
         Bouquets selon le type de fleur
       </a>
+
     </div>
 
   </div>
 
 
   <!-- ACCESSOIRES -->
+
   <div class="subcategory-box" id="accessoires">
 
-    <h3>🎀 Accessoires Cheveux</h3>
+    <h3>
+      🎀 Accessoires Cheveux
+    </h3>
 
     <div class="subcategory-grid">
-      <a href="#pinces-pipe" class="subcategory">Pinces fleurs Pipe Cleaner</a>
-      <a href="#serre-tetes-pipe" class="subcategory">Serre-têtes Pipe Cleaner</a>
-      <a href="#pinces-papillon" class="subcategory">Pinces papillon en Satin</a>
-      <a href="#headbands-satin" class="subcategory">Headbands en Satin</a>
+
+      <a href="#pinces-pipe" class="subcategory">
+        Pinces fleurs Pipe Cleaner
+      </a>
+
+      <a href="#serre-tetes-pipe" class="subcategory">
+        Serre-têtes Pipe Cleaner
+      </a>
+
+      <a href="#pinces-papillon" class="subcategory">
+        Pinces papillon en Satin
+      </a>
+
+      <a href="#headbands-satin" class="subcategory">
+        Headbands en Satin
+      </a>
+
     </div>
 
   </div>
 
 
   <!-- VASES -->
+
   <div class="subcategory-box" id="vases">
 
-    <h3>🌻 Vases en Foam</h3>
+    <h3>
+      🌻 Vases en Foam
+    </h3>
 
     <div class="subcategory-grid">
-      <a href="#vase-tulipe" class="subcategory">Vase Tulipe</a>
-      <a href="#vase-tournesol" class="subcategory">Vase Sunflower</a>
-      <a href="#vase-fleurs" class="subcategory">Type de fleur selon demande</a>
+
+      <a href="#vase-tulipe" class="subcategory">
+        Vase Tulipe
+      </a>
+
+      <a href="#vase-tournesol" class="subcategory">
+        Vase Sunflower
+      </a>
+
+      <a href="#vase-fleurs" class="subcategory">
+        Type de fleur selon demande
+      </a>
+
     </div>
 
   </div>
 
 
   <!-- BOX -->
+
   <div class="subcategory-box" id="box">
 
-    <h3>🎁 Box Cadeaux</h3>
+    <h3>
+      🎁 Box Cadeaux
+    </h3>
 
     <div class="subcategory-grid">
-      <a href="#box-sur-mesure" class="subcategory">Box sur mesure</a>
-      <a href="#box-photos-fleurs" class="subcategory">Box photos & fleurs</a>
-      <a href="#box-chocolat" class="subcategory">Box photos & chocolat</a>
+
+      <a href="#box-sur-mesure" class="subcategory">
+        Box sur mesure
+      </a>
+
+      <a href="#box-photos-fleurs" class="subcategory">
+        Box photos & fleurs
+      </a>
+
+      <a href="#box-chocolat" class="subcategory">
+        Box photos & chocolat
+      </a>
+
     </div>
 
   </div>
@@ -816,191 +1031,527 @@ footer p{
 
 
 <!-- PRODUITS -->
+
 <section class="products" id="produits">
 
   <div class="section-head">
-    <div class="eyebrow">Nos créations</div>
-    <h2>Quelques créations</h2>
+
+    <div class="eyebrow">
+      Nos créations
+    </div>
+
+    <h2>
+      Quelques créations
+    </h2>
+
     <p>
       Découvrez nos premières créations disponibles.
       D'autres produits seront ajoutés prochainement.
     </p>
+
   </div>
 
 
-  <div class="product-grid">
+  <!-- BOUQUETS DE FLEURS -->
 
-    <!-- GRAND BOUQUET -->
-    <article class="product-card" id="bouquets">
+  <div class="product-section" id="bouquets">
 
-      <div class="product-image">
-        <img src="IMG_8337.jpeg"
-             alt="Grand Bouquet Lilies & Tulipes"
-             onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+    <div class="section-head">
 
-        <div class="product-placeholder" style="display:none;">
-          Photo du produit
-        </div>
+      <div class="eyebrow">
+        Pipe Cleaner
       </div>
 
-      <div class="product-info">
-        <h4>Grand Bouquet</h4>
+      <h2>
+        🌷 Bouquets de fleurs
+      </h2>
 
-        <p>
-          Bouquet composé de lilies et tulipes,
-          réalisé entièrement à la main.
-        </p>
+    </div>
 
-        <div class="price">4500 DA</div>
 
-        <div class="tags">
-          <span class="tag">Toutes les couleurs disponibles</span>
-          <span class="tag">Fait main</span>
+    <div class="product-grid">
+
+
+      <!-- GRAND BOUQUET -->
+
+      <article class="product-card">
+
+        <div class="product-image">
+
+          <img
+            src="IMG_8337.jpeg"
+            alt="Grand Bouquet Lilies & Tulipes"
+            onerror="this.style.display='none';this.nextElementSibling.style.display='block';"
+          >
+
+          <div class="product-placeholder" style="display:none;">
+            Photo du produit
+          </div>
+
         </div>
 
-        <p style="margin-top:12px;">
-          Le prix varie selon le nombre de fleurs.
-        </p>
-      </div>
 
-    </article>
+        <div class="product-info">
 
+          <h4>
+            Grand Bouquet
+          </h4>
 
-    <!-- MOYEN BOUQUET 1 -->
-    <article class="product-card">
+          <p>
+            Bouquet composé de lilies et tulipes,
+            réalisé entièrement à la main.
+          </p>
 
-      <div class="product-image">
-        <img src="IMG_8338.jpeg"
-             alt="Moyen Bouquet Lilies & Tulipes"
-             onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+          <div class="price">
+            4500 DA
+          </div>
 
-        <div class="product-placeholder" style="display:none;">
-          Photo du produit
-        </div>
-      </div>
+          <div class="tags">
 
-      <div class="product-info">
-        <h4>Moyen Bouquet</h4>
+            <span class="tag">
+              Toutes les couleurs disponibles
+            </span>
 
-        <p>
-          Bouquet de lilies et tulipes,
-          réalisé à la main.
-        </p>
+            <span class="tag">
+              Fait main
+            </span>
 
-        <div class="price">1500 DA</div>
+          </div>
 
-        <div class="tags">
-          <span class="tag">Toutes les couleurs disponibles</span>
-          <span class="tag">Fait main</span>
+          <p style="margin-top:12px;">
+            Le prix varie selon le nombre de fleurs.
+          </p>
+
         </div>
 
-        <p style="margin-top:12px;">
-          Le prix varie selon le nombre de fleurs.
-        </p>
-      </div>
-
-    </article>
+      </article>
 
 
-    <!-- MOYEN BOUQUET 2 -->
-    <article class="product-card">
+      <!-- MOYEN BOUQUET 1 -->
 
-      <div class="product-image">
-        <img src="IMG_8339.jpeg"
-             alt="Moyen Bouquet Lilies & Tulipes"
-             onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+      <article class="product-card">
 
-        <div class="product-placeholder" style="display:none;">
-          Photo du produit
-        </div>
-      </div>
+        <div class="product-image">
 
-      <div class="product-info">
-        <h4>Moyen Bouquet</h4>
+          <img
+            src="IMG_8338.jpeg"
+            alt="Moyen Bouquet Lilies & Tulipes"
+            onerror="this.style.display='none';this.nextElementSibling.style.display='block';"
+          >
 
-        <p>
-          Une autre composition de lilies et tulipes
-          réalisée à la main.
-        </p>
+          <div class="product-placeholder" style="display:none;">
+            Photo du produit
+          </div>
 
-        <div class="price">1500 DA</div>
-
-        <div class="tags">
-          <span class="tag">Toutes les couleurs disponibles</span>
-          <span class="tag">Fait main</span>
         </div>
 
-        <p style="margin-top:12px;">
-          Le prix varie selon le nombre de fleurs.
-        </p>
-      </div>
 
-    </article>
+        <div class="product-info">
 
+          <h4>
+            Moyen Bouquet
+          </h4>
 
-    <!-- MINI ROSE -->
-    <article class="product-card">
+          <p>
+            Bouquet de lilies et tulipes,
+            réalisé à la main.
+          </p>
 
-      <div class="product-image">
-        <img src="IMG_5947.jpeg"
-             alt="Mini Rose Bouquet"
-             onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+          <div class="price">
+            1500 DA
+          </div>
 
-        <div class="product-placeholder" style="display:none;">
-          Photo du produit
+          <div class="tags">
+
+            <span class="tag">
+              Toutes les couleurs disponibles
+            </span>
+
+            <span class="tag">
+              Fait main
+            </span>
+
+          </div>
+
+          <p style="margin-top:12px;">
+            Le prix varie selon le nombre de fleurs.
+          </p>
+
         </div>
-      </div>
 
-      <div class="product-info">
-        <h4>Mini Rose Bouquet</h4>
+      </article>
 
-        <p>
-          Petit bouquet de roses réalisé
-          délicatement à la main.
-        </p>
 
-        <div class="price">3000 DA</div>
+      <!-- MOYEN BOUQUET 2 -->
 
-        <div class="tags">
-          <span class="tag">Toutes les couleurs disponibles</span>
-          <span class="tag">Fait main</span>
+      <article class="product-card">
+
+        <div class="product-image">
+
+          <img
+            src="IMG_8339.jpeg"
+            alt="Moyen Bouquet Lilies & Tulipes"
+            onerror="this.style.display='none';this.nextElementSibling.style.display='block';"
+          >
+
+          <div class="product-placeholder" style="display:none;">
+            Photo du produit
+          </div>
+
         </div>
-      </div>
-
-    </article>
 
 
-    <!-- ROSE ETERNELLE -->
-    <article class="product-card" id="rose-eternelle">
+        <div class="product-info">
 
-      <div class="product-image">
-        <img src="IMG_6689.jpeg"
-             alt="Rose éternelle"
-             onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+          <h4>
+            Moyen Bouquet
+          </h4>
 
-        <div class="product-placeholder" style="display:none;">
-          Photo du produit
+          <p>
+            Une autre composition de lilies et tulipes
+            réalisée à la main.
+          </p>
+
+          <div class="price">
+            1500 DA
+          </div>
+
+          <div class="tags">
+
+            <span class="tag">
+              Toutes les couleurs disponibles
+            </span>
+
+            <span class="tag">
+              Fait main
+            </span>
+
+          </div>
+
+          <p style="margin-top:12px;">
+            Le prix varie selon le nombre de fleurs.
+          </p>
+
         </div>
-      </div>
 
-      <div class="product-info">
-        <h4>Rose éternelle</h4>
+      </article>
 
-        <p>
-          Une rose délicate réalisée en Pipe Cleaner,
-          parfaite pour offrir.
-        </p>
 
-        <div class="price">1000 DA</div>
+      <!-- MINI ROSE -->
 
-        <div class="tags">
-          <span class="tag">Toutes les couleurs disponibles</span>
-          <span class="tag">Prix fixe</span>
-          <span class="tag">Fait main</span>
+      <article class="product-card">
+
+        <div class="product-image">
+
+          <img
+            src="IMG_5947.jpeg"
+            alt="Mini Rose Bouquet"
+            onerror="this.style.display='none';this.nextElementSibling.style.display='block';"
+          >
+
+          <div class="product-placeholder" style="display:none;">
+            Photo du produit
+          </div>
+
         </div>
+
+
+        <div class="product-info">
+
+          <h4>
+            Mini Rose Bouquet
+          </h4>
+
+          <p>
+            Petit bouquet de roses réalisé
+            délicatement à la main.
+          </p>
+
+          <div class="price">
+            3000 DA
+          </div>
+
+          <div class="tags">
+
+            <span class="tag">
+              Toutes les couleurs disponibles
+            </span>
+
+            <span class="tag">
+              Fait main
+            </span>
+
+          </div>
+
+        </div>
+
+      </article>
+
+    </div>
+
+  </div>
+
+
+  <!-- FLEUR ÉTERNELLE : SECTION INDÉPENDANTE -->
+
+  <div class="product-section" id="rose-eternelle">
+
+    <div class="section-head">
+
+      <div class="eyebrow">
+        Pipe Cleaner
       </div>
 
-    </article>
+      <h2>
+        🌹 Fleur éternelle
+      </h2>
+
+      <p>
+        Une création indépendante des bouquets.
+      </p>
+
+    </div>
+
+
+    <div class="product-grid">
+
+      <article class="product-card">
+
+        <div class="product-image">
+
+          <img
+            src="IMG_6689.jpeg"
+            alt="Rose éternelle"
+            onerror="this.style.display='none';this.nextElementSibling.style.display='block';"
+          >
+
+          <div class="product-placeholder" style="display:none;">
+            Photo du produit
+          </div>
+
+        </div>
+
+
+        <div class="product-info">
+
+          <h4>
+            Rose éternelle
+          </h4>
+
+          <p>
+            Une rose délicate réalisée en Pipe Cleaner,
+            parfaite pour offrir.
+          </p>
+
+          <div class="price">
+            1000 DA
+          </div>
+
+          <div class="tags">
+
+            <span class="tag">
+              Toutes les couleurs disponibles
+            </span>
+
+            <span class="tag">
+              Prix fixe
+            </span>
+
+            <span class="tag">
+              Fait main
+            </span>
+
+          </div>
+
+        </div>
+
+      </article>
+
+    </div>
+
+  </div>
+
+
+  <!-- COUPES PIPE CLEANER -->
+
+  <div class="product-section" id="coupes-pipe">
+
+    <div class="section-head">
+
+      <div class="eyebrow">
+        Nouveau
+      </div>
+
+      <h2>
+        ☕ Coupes Pipe Cleaner
+      </h2>
+
+      <p>
+        Chaque modèle est à 600 DA.
+        Les deux photos d'une même couleur sont regroupées
+        dans la même fiche.
+      </p>
+
+    </div>
+
+
+    <div class="product-grid">
+
+
+      <!-- COULEUR 1 -->
+
+      <article class="product-card">
+
+        <div class="product-image duo">
+
+          <img
+            src="IMG_7682.jpeg"
+            alt="Coupe Pipe Cleaner rose vif - vue 1"
+          >
+
+          <img
+            src="IMG_7683.jpeg"
+            alt="Coupe Pipe Cleaner rose vif - vue 2"
+          >
+
+        </div>
+
+
+        <div class="product-info">
+
+          <h4>
+            Coupe Pipe Cleaner — Rose vif
+          </h4>
+
+          <p>
+            Coupe décorée à la main avec fleurs
+            en Pipe Cleaner et détails délicats.
+          </p>
+
+          <div class="price">
+            600 DA
+          </div>
+
+          <div class="tags">
+
+            <span class="tag">
+              Fait main
+            </span>
+
+            <span class="tag">
+              2 photos du même modèle
+            </span>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <!-- COULEUR 2 -->
+
+      <article class="product-card">
+
+        <div class="product-image duo">
+
+          <img
+            src="IMG_7695.jpeg"
+            alt="Coupe Pipe Cleaner rose pastel - vue 1"
+          >
+
+          <img
+            src="IMG_7696.jpeg"
+            alt="Coupe Pipe Cleaner rose pastel - vue 2"
+          >
+
+        </div>
+
+
+        <div class="product-info">
+
+          <h4>
+            Coupe Pipe Cleaner — Rose pastel
+          </h4>
+
+          <p>
+            Coupe décorée à la main avec fleurs
+            en Pipe Cleaner.
+          </p>
+
+          <div class="price">
+            600 DA
+          </div>
+
+          <div class="tags">
+
+            <span class="tag">
+              Fait main
+            </span>
+
+            <span class="tag">
+              2 photos du même modèle
+            </span>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <!-- COULEUR 3 -->
+
+      <article class="product-card">
+
+        <div class="product-image duo">
+
+          <img
+            src="IMG_7702.jpeg"
+            alt="Coupe Pipe Cleaner violet - vue 1"
+          >
+
+          <img
+            src="IMG_7703.jpeg"
+            alt="Coupe Pipe Cleaner violet - vue 2"
+          >
+
+        </div>
+
+
+        <div class="product-info">
+
+          <h4>
+            Coupe Pipe Cleaner — Violet
+          </h4>
+
+          <p>
+            Coupe décorée à la main avec fleurs
+            en Pipe Cleaner.
+          </p>
+
+          <div class="price">
+            600 DA
+          </div>
+
+          <div class="tags">
+
+            <span class="tag">
+              Fait main
+            </span>
+
+            <span class="tag">
+              2 photos du même modèle
+            </span>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+    </div>
 
   </div>
 
@@ -1008,20 +1559,32 @@ footer p{
 
 
 <!-- PERSONNALISATION -->
+
 <section class="custom" id="personnalisation">
 
   <div class="section-head">
-    <div class="eyebrow">Votre création</div>
-    <h2>Personnalisez votre bouquet</h2>
+
+    <div class="eyebrow">
+      Votre création
+    </div>
+
+    <h2>
+      Personnalisez votre bouquet
+    </h2>
+
     <p>
       Vous pouvez choisir la composition que vous souhaitez
       et nous envoyer votre demande.
     </p>
+
   </div>
+
 
   <div class="custom-box">
 
-    <h3>Votre bouquet sur mesure 🌷</h3>
+    <h3>
+      Votre bouquet sur mesure 🌷
+    </h3>
 
     <p>
       Indiquez-nous les fleurs, les couleurs et le nombre
@@ -1029,30 +1592,62 @@ footer p{
       Le prix sera confirmé selon votre composition.
     </p>
 
+
     <div class="form-group">
-      <label>Type de bouquet</label>
+
+      <label>
+        Type de bouquet
+      </label>
 
       <select>
-        <option>Choisir une composition</option>
-        <option>Lilies + Tulipes</option>
-        <option>Roses</option>
-        <option>Lilies</option>
-        <option>Tulipes</option>
-        <option>Autre composition</option>
+
+        <option>
+          Choisir une composition
+        </option>
+
+        <option>
+          Lilies + Tulipes
+        </option>
+
+        <option>
+          Roses
+        </option>
+
+        <option>
+          Lilies
+        </option>
+
+        <option>
+          Tulipes
+        </option>
+
+        <option>
+          Autre composition
+        </option>
+
       </select>
+
     </div>
 
 
     <div class="form-group">
-      <label>Décrivez votre demande</label>
+
+      <label>
+        Décrivez votre demande
+      </label>
 
       <textarea
-        placeholder="Exemple : Je souhaite un bouquet avec 5 lilies roses et 3 tulipes blanches.">
-      </textarea>
+        placeholder="Exemple : Je souhaite un bouquet avec 5 lilies roses et 3 tulipes blanches."
+      ></textarea>
+
     </div>
 
-    <button class="btn" type="button"
-      onclick="sendInstagram()">
+
+    <button
+      class="btn"
+      type="button"
+      onclick="sendInstagram()"
+    >
       Envoyer ma demande
     </button>
 
@@ -1062,11 +1657,14 @@ footer p{
 
 
 <!-- INSTAGRAM -->
+
 <section class="instagram" id="contact">
 
   <div class="instagram-box">
 
-    <h3>Une question ? 💌</h3>
+    <h3>
+      Une question ? 💌
+    </h3>
 
     <p>
       Pour commander, demander un prix ou personnaliser
@@ -1076,7 +1674,8 @@ footer p{
     <a
       href="https://instagram.com/flower.eema"
       target="_blank"
-      class="btn">
+      class="btn"
+    >
       @flower.eema
     </a>
 
@@ -1086,6 +1685,7 @@ footer p{
 
 
 <!-- FOOTER -->
+
 <footer>
 
   <div class="footer-logo">
@@ -1107,30 +1707,57 @@ footer p{
 
 function sendInstagram(){
 
-  const select = document.querySelector('.custom-box select');
-  const textarea = document.querySelector('.custom-box textarea');
+  const select =
+    document.querySelector('.custom-box select');
 
-  const composition = select.value;
-  const description = textarea.value.trim();
+  const textarea =
+    document.querySelector('.custom-box textarea');
 
-  if(composition === "Choisir une composition" && description === ""){
-    alert("Veuillez remplir votre demande 🌷");
+  const composition =
+    select.value;
+
+  const description =
+    textarea.value.trim();
+
+  if(
+    composition === "Choisir une composition"
+    &&
+    description === ""
+  ){
+
+    alert(
+      "Veuillez remplir votre demande 🌷"
+    );
+
     return;
   }
 
   alert(
+
     "Votre demande est prête 💗\n\n" +
-    "Composition : " + composition +
+
+    "Composition : " +
+    composition +
+
     "\n\n" +
-    "Description : " + (description || "Non précisée") +
+
+    "Description : " +
+    (
+      description ||
+      "Non précisée"
+    ) +
+
     "\n\n" +
+
     "Vous allez être redirigée vers Instagram."
+
   );
 
   window.open(
     "https://instagram.com/flower.eema",
     "_blank"
   );
+
 }
 
 </script>
