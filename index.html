@@ -3,847 +3,1134 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Floreema World</title>
+
+<title>Floreema | Créations faites main</title>
 
 <style>
-*{box-sizing:border-box}
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap');
+
+:root{
+  --pink:#f8dce8;
+  --pink2:#f3c7d9;
+  --cream:#fff8f1;
+  --cream2:#fdf1e7;
+  --white:#ffffff;
+  --text:#704c5b;
+  --dark:#5d3949;
+  --gold:#c69b78;
+  --shadow:0 10px 30px rgba(112,76,91,.10);
+}
+
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
 
 body{
-margin:0;
-background:#fdf7f4;
-color:#604b48;
-font-family:Arial,sans-serif;
+  font-family:'Poppins',sans-serif;
+  background:var(--cream);
+  color:var(--text);
 }
 
+html{
+  scroll-behavior:smooth;
+}
+
+a{
+  text-decoration:none;
+  color:inherit;
+}
+
+button{
+  font-family:inherit;
+}
+
+/* TOP BAR */
+.topbar{
+  background:var(--pink);
+  color:var(--dark);
+  text-align:center;
+  padding:9px 15px;
+  font-size:13px;
+  letter-spacing:.3px;
+}
+
+/* HEADER */
 header{
-background:linear-gradient(180deg,#f8e9e6,#ead5d1);
-text-align:center;
-padding:24px 15px 30px;
+  background:var(--white);
+  padding:18px 7%;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  border-bottom:1px solid #f4e3e8;
+  position:sticky;
+  top:0;
+  z-index:100;
 }
 
-.logo-img{
-width:155px;
-height:155px;
-object-fit:cover;
-border-radius:50%;
-display:block;
-margin:0 auto 14px;
-box-shadow:0 8px 24px rgba(100,70,70,.12);
+.logo{
+  font-family:'Playfair Display',serif;
+  font-size:31px;
+  color:var(--dark);
+  font-weight:600;
 }
 
-header p{
-margin:0;
-color:#806763;
-font-size:15px;
+.logo span{
+  color:#d994b1;
 }
 
-main{
-max-width:1100px;
-margin:auto;
-padding:28px 16px 60px;
+nav{
+  display:flex;
+  gap:25px;
+  font-size:14px;
 }
 
+nav a{
+  transition:.3s;
+}
+
+nav a:hover{
+  color:#d487a8;
+}
+
+/* HERO */
 .hero{
-text-align:center;
-background:white;
-border:1px solid #eadbd7;
-border-radius:28px;
-padding:30px 18px;
-margin-bottom:38px;
-box-shadow:0 7px 22px rgba(100,70,70,.07);
+  min-height:480px;
+  padding:75px 7%;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:40px;
+  background:
+    radial-gradient(circle at 85% 20%,#f8dce8 0,transparent 30%),
+    linear-gradient(135deg,#fffdfb,#fff1f5,#fff8f1);
 }
 
-h1{
-color:#745350;
-margin:0 0 10px;
-text-align:center;
+.hero-text{
+  max-width:600px;
 }
 
-.intro{
-text-align:center;
-color:#927d78;
-line-height:1.6;
-margin:0 auto 25px;
-max-width:700px;
+.small-title{
+  color:#c58ba2;
+  text-transform:uppercase;
+  letter-spacing:3px;
+  font-size:12px;
+  margin-bottom:14px;
 }
 
-.hero-btn{
-display:inline-block;
-background:#8e6662;
-color:white;
-border:0;
-border-radius:14px;
-padding:12px 20px;
-font-weight:bold;
-cursor:pointer;
+.hero h1{
+  font-family:'Playfair Display',serif;
+  font-size:55px;
+  line-height:1.08;
+  color:var(--dark);
+  margin-bottom:20px;
 }
 
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:18px;
+.hero h1 span{
+  color:#d78eaa;
 }
 
-.card{
-background:white;
-border:1px solid #eadbd7;
-border-radius:22px;
-padding:24px 18px;
-text-align:center;
-box-shadow:0 5px 18px rgba(100,70,70,.08);
-cursor:pointer;
-transition:.2s;
+.hero p{
+  line-height:1.8;
+  font-size:15px;
+  margin-bottom:30px;
 }
 
-.card:hover{
-transform:translateY(-4px);
+.btn{
+  display:inline-block;
+  background:#d994b1;
+  color:white;
+  padding:13px 25px;
+  border-radius:30px;
+  font-size:14px;
+  border:none;
+  cursor:pointer;
+  transition:.3s;
+  box-shadow:0 7px 18px rgba(217,148,177,.25);
 }
 
-.icon{
-font-size:44px;
-margin-bottom:10px;
+.btn:hover{
+  transform:translateY(-2px);
+  background:#c982a1;
 }
 
-.card h2,.card h3{
-color:#74504d;
-margin:5px 0 9px;
+.hero-decoration{
+  width:350px;
+  height:350px;
+  border-radius:50%;
+  background:linear-gradient(145deg,#fff,#f8dce8,#fff5ed);
+  box-shadow:var(--shadow);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#d394ad;
+  font-family:'Playfair Display',serif;
+  font-size:42px;
 }
 
-.card p{
-color:#967f7b;
-font-size:14px;
-margin:0;
+/* SECTION */
+section{
+  padding:70px 7%;
 }
 
-.back{
-border:0;
-background:#ead5d1;
-color:#674d4a;
-padding:11px 18px;
-border-radius:14px;
-font-weight:bold;
-cursor:pointer;
-margin-bottom:20px;
+.section-head{
+  text-align:center;
+  margin-bottom:40px;
 }
 
-.hidden{
-display:none;
+.section-head .eyebrow{
+  color:#c58ba2;
+  text-transform:uppercase;
+  letter-spacing:2px;
+  font-size:11px;
+  margin-bottom:8px;
 }
 
-.product{
-background:white;
-border:1px solid #eadbd7;
-border-radius:20px;
-overflow:hidden;
-box-shadow:0 5px 18px rgba(100,70,70,.08);
+.section-head h2{
+  font-family:'Playfair Display',serif;
+  font-size:38px;
+  color:var(--dark);
+  margin-bottom:10px;
 }
 
-.product-photo{
-height:300px;
-background:#f8efec;
+.section-head p{
+  font-size:14px;
+  max-width:650px;
+  margin:auto;
+  line-height:1.7;
 }
 
-.product-photo img{
-width:100%;
-height:100%;
-object-fit:contain;
-display:block;
+/* CATEGORIES */
+.categories{
+  background:var(--white);
 }
 
-.product-body{
-padding:17px;
+.category-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:22px;
 }
 
-.product h3{
-color:#74504d;
-margin:0 0 8px;
+.category{
+  background:linear-gradient(145deg,#fff,#fff6f0);
+  border:1px solid #f2dfe5;
+  border-radius:22px;
+  padding:28px 22px;
+  min-height:190px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  text-align:center;
+  transition:.3s;
+  box-shadow:var(--shadow);
 }
 
-.product p{
-color:#927d78;
-line-height:1.5;
+.category:hover{
+  transform:translateY(-5px);
+  border-color:#e6b6c8;
+}
+
+.category-icon{
+  font-size:35px;
+  margin-bottom:13px;
+}
+
+.category h3{
+  font-family:'Playfair Display',serif;
+  font-size:22px;
+  color:var(--dark);
+  margin-bottom:8px;
+}
+
+.category p{
+  font-size:12px;
+  line-height:1.6;
+}
+
+/* SUB CATEGORIES */
+.subcategories{
+  background:var(--cream);
+}
+
+.subcategory-box{
+  max-width:1050px;
+  margin:0 auto 55px;
+}
+
+.subcategory-box h3{
+  font-family:'Playfair Display',serif;
+  color:var(--dark);
+  font-size:28px;
+  margin-bottom:22px;
+  border-left:4px solid #e3a7bd;
+  padding-left:14px;
+}
+
+.subcategory-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:14px;
+}
+
+.subcategory{
+  background:white;
+  border:1px solid #f0dfe5;
+  border-radius:15px;
+  padding:17px 12px;
+  text-align:center;
+  font-size:13px;
+  transition:.3s;
+  cursor:pointer;
+}
+
+.subcategory:hover{
+  background:#fbe7ee;
+  transform:translateY(-2px);
+}
+
+/* PRODUCTS */
+.products{
+  background:#fff;
+}
+
+.product-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:22px;
+}
+
+.product-card{
+  background:#fffaf7;
+  border:1px solid #f0dfe5;
+  border-radius:20px;
+  overflow:hidden;
+  box-shadow:var(--shadow);
+  transition:.3s;
+}
+
+.product-card:hover{
+  transform:translateY(-5px);
+}
+
+.product-image{
+  height:245px;
+  background:#fff5ef;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+}
+
+.product-image img{
+  width:100%;
+  height:100%;
+  object-fit:contain;
+  padding:8px;
+}
+
+.product-placeholder{
+  color:#caa4b2;
+  font-size:13px;
+  text-align:center;
+  padding:20px;
+}
+
+.product-info{
+  padding:19px;
+}
+
+.product-info h4{
+  font-family:'Playfair Display',serif;
+  font-size:20px;
+  color:var(--dark);
+  margin-bottom:8px;
+}
+
+.product-info p{
+  font-size:12px;
+  line-height:1.7;
+  margin-bottom:12px;
 }
 
 .price{
-color:#986966;
-font-weight:bold;
-margin:10px 0;
+  color:#c981a0;
+  font-size:18px;
+  font-weight:600;
+}
+
+.tags{
+  display:flex;
+  flex-wrap:wrap;
+  gap:6px;
+  margin-top:12px;
 }
 
 .tag{
-display:inline-block;
-background:#f5e8e5;
-border-radius:20px;
-padding:6px 10px;
-margin:3px;
-font-size:12px;
+  background:#f8e1e9;
+  color:#855769;
+  border-radius:20px;
+  padding:5px 9px;
+  font-size:10px;
 }
 
-.order{
-display:inline-block;
-margin-top:12px;
-padding:11px 16px;
-background:#8e6662;
-color:white;
-text-decoration:none;
-border-radius:13px;
+/* CUSTOMIZATION */
+.custom{
+  background:linear-gradient(135deg,#fff4f7,#fff8f1);
 }
 
 .custom-box{
-grid-column:1/-1;
-background:white;
-border:1px solid #eadbd7;
-border-radius:22px;
-padding:22px;
-box-shadow:0 5px 18px rgba(100,70,70,.08);
+  max-width:850px;
+  margin:auto;
+  background:white;
+  padding:35px;
+  border-radius:25px;
+  box-shadow:var(--shadow);
+  border:1px solid #f0dce3;
 }
 
-.custom-box h2{
-color:#74504d;
-margin-top:0;
+.custom-box h3{
+  font-family:'Playfair Display',serif;
+  font-size:30px;
+  color:var(--dark);
+  margin-bottom:10px;
 }
 
 .custom-box p{
-color:#927d78;
+  font-size:13px;
+  line-height:1.7;
+  margin-bottom:25px;
 }
 
-.custom-box label{
-display:block;
-color:#74504d;
-font-weight:bold;
-margin:14px 0 7px;
+.form-group{
+  margin-bottom:18px;
 }
 
-.custom-box select,
-.custom-box textarea{
-width:100%;
-border:1px solid #eadbd7;
-border-radius:12px;
-padding:12px;
-font-family:inherit;
-background:#fdf7f4;
-color:#604b48;
+.form-group label{
+  display:block;
+  font-size:13px;
+  margin-bottom:7px;
+  color:var(--dark);
 }
 
-.custom-box textarea{
-resize:vertical;
+.form-group input,
+.form-group select,
+.form-group textarea{
+  width:100%;
+  border:1px solid #ead5dd;
+  background:#fffdfb;
+  padding:12px 14px;
+  border-radius:12px;
+  outline:none;
+  font-family:inherit;
+  color:var(--text);
 }
 
+.form-group textarea{
+  min-height:120px;
+  resize:vertical;
+}
+
+/* INSTAGRAM */
+.instagram{
+  text-align:center;
+  background:var(--white);
+}
+
+.instagram-box{
+  max-width:700px;
+  margin:auto;
+  background:linear-gradient(145deg,#fff7f9,#fff7f0);
+  border-radius:25px;
+  padding:40px 25px;
+  border:1px solid #f0dce3;
+}
+
+.instagram-box h3{
+  font-family:'Playfair Display',serif;
+  font-size:31px;
+  color:var(--dark);
+  margin-bottom:10px;
+}
+
+.instagram-box p{
+  font-size:13px;
+  margin-bottom:22px;
+}
+
+/* FOOTER */
 footer{
-text-align:center;
-background:#ead5d1;
-padding:28px 15px;
-color:#765956;
+  background:#f8dce8;
+  padding:35px 7%;
+  text-align:center;
+  color:var(--dark);
+}
+
+footer .footer-logo{
+  font-family:'Playfair Display',serif;
+  font-size:28px;
+  margin-bottom:8px;
+}
+
+footer p{
+  font-size:12px;
+}
+
+/* MOBILE */
+@media(max-width:900px){
+  .category-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .product-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .subcategory-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .hero-decoration{
+    width:260px;
+    height:260px;
+  }
+
+  .hero h1{
+    font-size:44px;
+  }
+}
+
+@media(max-width:650px){
+  header{
+    padding:15px 5%;
+  }
+
+  nav{
+    display:none;
+  }
+
+  .hero{
+    padding:55px 6%;
+    text-align:center;
+  }
+
+  .hero h1{
+    font-size:39px;
+  }
+
+  .hero-decoration{
+    display:none;
+  }
+
+  section{
+    padding:55px 5%;
+  }
+
+  .category-grid,
+  .product-grid{
+    grid-template-columns:1fr;
+  }
+
+  .subcategory-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .section-head h2{
+    font-size:31px;
+  }
+
+  .custom-box{
+    padding:25px 18px;
+  }
 }
 </style>
 </head>
 
 <body>
 
+<div class="topbar">
+  ✨ Créations faites main avec amour • Livraison disponible en Algérie 🇩🇿
+</div>
+
 <header>
+  <a href="#accueil" class="logo">
+    Flor<span>e</span>ema
+  </a>
 
-<img class="logo-img" src="floreema-logo.jpg" alt="Floreema World">
-
-<p>Des créations uniques, pensées pour vous ♡</p>
-
+  <nav>
+    <a href="#accueil">Accueil</a>
+    <a href="#categories">Catégories</a>
+    <a href="#produits">Produits</a>
+    <a href="#personnalisation">Personnalisation</a>
+    <a href="#contact">Contact</a>
+  </nav>
 </header>
 
-<main>
+<!-- ACCUEIL -->
+<section class="hero" id="accueil">
 
-<section id="accueil">
+  <div class="hero-text">
+    <div class="small-title">Bienvenue chez Floreema</div>
 
-<div class="hero">
+    <h1>
+      Des créations<br>
+      <span>uniques & délicates</span>
+    </h1>
 
-<h1>Bienvenue dans l'univers Floreema ♡</h1>
+    <p>
+      Découvrez nos créations faites main, pensées avec amour
+      pour offrir, décorer et créer de beaux souvenirs.
+    </p>
 
-<p class="intro">
-Des créations faites à la main avec douceur, amour et une touche de magie.
-</p>
+    <a href="#categories" class="btn">
+      Découvrir la collection
+    </a>
+  </div>
 
-<button class="hero-btn"
-onclick="document.getElementById('categories').scrollIntoView({behavior:'smooth'})">
-Découvrir nos créations
-</button>
-
-</div>
-
-<h1 id="categories">Nos catégories</h1>
-
-<p class="intro">
-Choisissez une catégorie pour découvrir ses différentes créations.
-</p>
-
-<div class="grid">
-
-<div class="card" onclick="ouvrirCategorie('pipe')">
-<div class="icon">🌸</div>
-<h2>Créations en Pipe Cleaner</h2>
-<p>Découvrir</p>
-</div>
-
-<div class="card" onclick="ouvrirCategorie('satin')">
-<div class="icon">🌷</div>
-<h2>Fleurs en Satin</h2>
-<p>Découvrir</p>
-</div>
-
-<div class="card" onclick="ouvrirCategorie('miroirs')">
-<div class="icon">🪞</div>
-<h2>Miroirs</h2>
-<p>Découvrir</p>
-</div>
-
-<div class="card" onclick="ouvrirCategorie('coupes')">
-<div class="icon">☕</div>
-<h2>Coupes</h2>
-<p>Découvrir</p>
-</div>
-
-<div class="card" onclick="ouvrirCategorie('cadres')">
-<div class="icon">🖼️</div>
-<h2>Cadres Personnalisés</h2>
-<p>Découvrir</p>
-</div>
-
-<div class="card" onclick="ouvrirCategorie('artificielles')">
-<div class="icon">💐</div>
-<h2>Fleurs Artificielles</h2>
-<p>Découvrir</p>
-</div>
-
-<div class="card" onclick="ouvrirCategorie('cheveux')">
-<div class="icon">🎀</div>
-<h2>Accessoires Cheveux</h2>
-<p>Découvrir</p>
-</div>
-
-<div class="card" onclick="ouvrirCategorie('foam')">
-<div class="icon">🏺</div>
-<h2>Vases en Foam</h2>
-<p>Découvrir</p>
-</div>
-
-<div class="card" onclick="ouvrirCategorie('box')">
-<div class="icon">🎁</div>
-<h2>Box Cadeaux</h2>
-<p>Découvrir</p>
-</div>
-
-</div>
-</section>
-
-
-<section id="sousCategories" class="hidden">
-
-<button class="back" onclick="retourAccueil()">← Retour</button>
-
-<h1 id="titreCategorie"></h1>
-
-<p class="intro">
-Choisissez une sous-catégorie.
-</p>
-
-<div id="listeSousCategories" class="grid"></div>
+  <div class="hero-decoration">
+    Floreema
+  </div>
 
 </section>
 
 
-<section id="produitsSection" class="hidden">
+<!-- CATÉGORIES -->
+<section class="categories" id="categories">
 
-<button class="back" onclick="retourSousCategories()">← Retour</button>
+  <div class="section-head">
+    <div class="eyebrow">Notre univers</div>
+    <h2>Nos catégories</h2>
+    <p>
+      Explorez nos différentes créations et choisissez
+      la catégorie qui vous correspond.
+    </p>
+  </div>
 
-<h1 id="titreSousCategorie"></h1>
+  <div class="category-grid">
 
-<p class="intro">
-Découvrez les créations disponibles dans cette sous-catégorie.
-</p>
+    <a href="#pipe-cleaner" class="category">
+      <div class="category-icon">🌷</div>
+      <h3>Créations en Pipe Cleaner</h3>
+      <p>Des créations florales réalisées à la main.</p>
+    </a>
 
-<div id="listeProduits" class="grid"></div>
+    <a href="#satin" class="category">
+      <div class="category-icon">🎀</div>
+      <h3>Fleurs en Satin</h3>
+      <p>Des fleurs délicates et élégantes.</p>
+    </a>
+
+    <a href="#miroirs" class="category">
+      <div class="category-icon">🪞</div>
+      <h3>Miroirs</h3>
+      <p>Des miroirs personnalisés et décoratifs.</p>
+    </a>
+
+    <a href="#coupes" class="category">
+      <div class="category-icon">☕</div>
+      <h3>Coupes</h3>
+      <p>Des coupes originales et personnalisées.</p>
+    </a>
+
+    <a href="#cadres" class="category">
+      <div class="category-icon">🖼️</div>
+      <h3>Cadres Personnalisés</h3>
+      <p>Des cadres créés selon vos envies.</p>
+    </a>
+
+    <a href="#fleurs-artificielles" class="category">
+      <div class="category-icon">💐</div>
+      <h3>Fleurs Artificielles</h3>
+      <p>Des bouquets pour toutes les occasions.</p>
+    </a>
+
+    <a href="#accessoires" class="category">
+      <div class="category-icon">🎀</div>
+      <h3>Accessoires Cheveux</h3>
+      <p>Des accessoires féminins faits main.</p>
+    </a>
+
+    <a href="#vases" class="category">
+      <div class="category-icon">🌻</div>
+      <h3>Vases en Foam</h3>
+      <p>Des vases fleuris et décoratifs.</p>
+    </a>
+
+    <a href="#box" class="category">
+      <div class="category-icon">🎁</div>
+      <h3>Box Cadeaux</h3>
+      <p>Des cadeaux personnalisés pour vos proches.</p>
+    </a>
+
+  </div>
+</section>
+
+
+<!-- SOUS CATÉGORIES -->
+<section class="subcategories">
+
+  <!-- PIPE CLEANER -->
+  <div class="subcategory-box" id="pipe-cleaner">
+
+    <h3>🌷 Créations en Pipe Cleaner</h3>
+
+    <div class="subcategory-grid">
+      <a href="#bouquets">Bouquets de fleurs</a>
+      <a href="#fleurs-lumineuses" class="subcategory">Fleurs lumineuses</a>
+      <a href="#coupes-pipe" class="subcategory">Coupes</a>
+      <a href="#rose-eternelle" class="subcategory">Fleur éternelle</a>
+      <a href="#cadres-fleuris" class="subcategory">Cadres fleuris</a>
+      <a href="#porte-accessoires" class="subcategory">Porte-accessoires</a>
+      <a href="#accessoires-pipe" class="subcategory">Accessoires cheveux</a>
+      <a href="#porte-cles-pipe" class="subcategory">Porte-clés</a>
+      <a href="#vases-pipe" class="subcategory">Vases</a>
+      <a href="#coque" class="subcategory">Coque de téléphone anti-choc</a>
+      <a href="#gateau" class="subcategory">Gâteau d’anniversaire</a>
+      <a href="#jardin-infini" class="subcategory">Jardin de Fleurs Infini</a>
+    </div>
+
+  </div>
+
+
+  <!-- SATIN -->
+  <div class="subcategory-box" id="satin">
+
+    <h3>🎀 Fleurs en Satin</h3>
+
+    <div class="subcategory-grid">
+      <a href="#bouquets-satin" class="subcategory">Bouquets de fleurs</a>
+      <a href="#box-satin" class="subcategory">Box de fleurs</a>
+      <a href="#cles-satin" class="subcategory">Porte-clés en satin</a>
+    </div>
+
+  </div>
+
+
+  <!-- MIROIRS -->
+  <div class="subcategory-box" id="miroirs">
+
+    <h3>🪞 Miroirs</h3>
+
+    <div class="subcategory-grid">
+      <a href="#miroir-prenom" class="subcategory">Miroir prénom</a>
+      <a href="#miroir-foam" class="subcategory">Miroir en Foam</a>
+      <a href="#miroir-perles" class="subcategory">Miroir en perles</a>
+      <a href="#miroir-fleurs" class="subcategory">Miroir fleurs artificielles</a>
+      <a href="#miroir-pipe" class="subcategory">Miroir Pipe Cleaner</a>
+      <a href="#miroir-stickers" class="subcategory">Miroir stickers</a>
+    </div>
+
+  </div>
+
+
+  <!-- COUPES -->
+  <div class="subcategory-box" id="coupes">
+
+    <h3>☕ Coupes</h3>
+
+    <div class="subcategory-grid">
+      <a href="#coupe-foam" class="subcategory">Coupe en Foam</a>
+      <a href="#coupe-pipe" class="subcategory">Coupe Pipe Cleaner</a>
+      <a href="#coupe-dessins" class="subcategory">Coupe à dessins</a>
+    </div>
+
+  </div>
+
+
+  <!-- CADRES -->
+  <div class="subcategory-box" id="cadres">
+
+    <h3>🖼️ Cadres Personnalisés</h3>
+
+    <div class="subcategory-grid">
+      <a href="#cadre-diplome" class="subcategory">Cadre de remise des diplômes</a>
+      <a href="#cadre-photo" class="subcategory">Cadre photo</a>
+      <a href="#cadre-anniversaire" class="subcategory">Cadre anniversaire</a>
+      <a href="#cadre-fleuri" class="subcategory">Cadre fleuri</a>
+      <a href="#cadre-decoratif" class="subcategory">Cadre décoratif</a>
+      <a href="#cadre-a4" class="subcategory">Format A4</a>
+      <a href="#cadre-a5" class="subcategory">Format A5</a>
+      <a href="#cadre-3d" class="subcategory">Cadre 3D</a>
+    </div>
+
+  </div>
+
+
+  <!-- FLEURS ARTIFICIELLES -->
+  <div class="subcategory-box" id="fleurs-artificielles">
+
+    <h3>💐 Fleurs Artificielles</h3>
+
+    <div class="subcategory-grid">
+      <a href="#bouquets-artificiels" class="subcategory">
+        Bouquets selon le type de fleur
+      </a>
+    </div>
+
+  </div>
+
+
+  <!-- ACCESSOIRES -->
+  <div class="subcategory-box" id="accessoires">
+
+    <h3>🎀 Accessoires Cheveux</h3>
+
+    <div class="subcategory-grid">
+      <a href="#pinces-pipe" class="subcategory">Pinces fleurs Pipe Cleaner</a>
+      <a href="#serre-tetes-pipe" class="subcategory">Serre-têtes Pipe Cleaner</a>
+      <a href="#pinces-papillon" class="subcategory">Pinces papillon en Satin</a>
+      <a href="#headbands-satin" class="subcategory">Headbands en Satin</a>
+    </div>
+
+  </div>
+
+
+  <!-- VASES -->
+  <div class="subcategory-box" id="vases">
+
+    <h3>🌻 Vases en Foam</h3>
+
+    <div class="subcategory-grid">
+      <a href="#vase-tulipe" class="subcategory">Vase Tulipe</a>
+      <a href="#vase-tournesol" class="subcategory">Vase Sunflower</a>
+      <a href="#vase-fleurs" class="subcategory">Type de fleur selon demande</a>
+    </div>
+
+  </div>
+
+
+  <!-- BOX -->
+  <div class="subcategory-box" id="box">
+
+    <h3>🎁 Box Cadeaux</h3>
+
+    <div class="subcategory-grid">
+      <a href="#box-sur-mesure" class="subcategory">Box sur mesure</a>
+      <a href="#box-photos-fleurs" class="subcategory">Box photos & fleurs</a>
+      <a href="#box-chocolat" class="subcategory">Box photos & chocolat</a>
+    </div>
+
+  </div>
 
 </section>
 
-</main>
+
+<!-- PRODUITS -->
+<section class="products" id="produits">
+
+  <div class="section-head">
+    <div class="eyebrow">Nos créations</div>
+    <h2>Quelques créations</h2>
+    <p>
+      Découvrez nos premières créations disponibles.
+      D'autres produits seront ajoutés prochainement.
+    </p>
+  </div>
 
 
+  <div class="product-grid">
+
+    <!-- GRAND BOUQUET -->
+    <article class="product-card" id="bouquets">
+
+      <div class="product-image">
+        <img src="IMG_8337.jpeg"
+             alt="Grand Bouquet Lilies & Tulipes"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+
+        <div class="product-placeholder" style="display:none;">
+          Photo du produit
+        </div>
+      </div>
+
+      <div class="product-info">
+        <h4>Grand Bouquet</h4>
+
+        <p>
+          Bouquet composé de lilies et tulipes,
+          réalisé entièrement à la main.
+        </p>
+
+        <div class="price">4500 DA</div>
+
+        <div class="tags">
+          <span class="tag">Toutes les couleurs disponibles</span>
+          <span class="tag">Fait main</span>
+        </div>
+
+        <p style="margin-top:12px;">
+          Le prix varie selon le nombre de fleurs.
+        </p>
+      </div>
+
+    </article>
+
+
+    <!-- MOYEN BOUQUET 1 -->
+    <article class="product-card">
+
+      <div class="product-image">
+        <img src="IMG_8338.jpeg"
+             alt="Moyen Bouquet Lilies & Tulipes"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+
+        <div class="product-placeholder" style="display:none;">
+          Photo du produit
+        </div>
+      </div>
+
+      <div class="product-info">
+        <h4>Moyen Bouquet</h4>
+
+        <p>
+          Bouquet de lilies et tulipes,
+          réalisé à la main.
+        </p>
+
+        <div class="price">1500 DA</div>
+
+        <div class="tags">
+          <span class="tag">Toutes les couleurs disponibles</span>
+          <span class="tag">Fait main</span>
+        </div>
+
+        <p style="margin-top:12px;">
+          Le prix varie selon le nombre de fleurs.
+        </p>
+      </div>
+
+    </article>
+
+
+    <!-- MOYEN BOUQUET 2 -->
+    <article class="product-card">
+
+      <div class="product-image">
+        <img src="IMG_8339.jpeg"
+             alt="Moyen Bouquet Lilies & Tulipes"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+
+        <div class="product-placeholder" style="display:none;">
+          Photo du produit
+        </div>
+      </div>
+
+      <div class="product-info">
+        <h4>Moyen Bouquet</h4>
+
+        <p>
+          Une autre composition de lilies et tulipes
+          réalisée à la main.
+        </p>
+
+        <div class="price">1500 DA</div>
+
+        <div class="tags">
+          <span class="tag">Toutes les couleurs disponibles</span>
+          <span class="tag">Fait main</span>
+        </div>
+
+        <p style="margin-top:12px;">
+          Le prix varie selon le nombre de fleurs.
+        </p>
+      </div>
+
+    </article>
+
+
+    <!-- MINI ROSE -->
+    <article class="product-card">
+
+      <div class="product-image">
+        <img src="IMG_5947.jpeg"
+             alt="Mini Rose Bouquet"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+
+        <div class="product-placeholder" style="display:none;">
+          Photo du produit
+        </div>
+      </div>
+
+      <div class="product-info">
+        <h4>Mini Rose Bouquet</h4>
+
+        <p>
+          Petit bouquet de roses réalisé
+          délicatement à la main.
+        </p>
+
+        <div class="price">3000 DA</div>
+
+        <div class="tags">
+          <span class="tag">Toutes les couleurs disponibles</span>
+          <span class="tag">Fait main</span>
+        </div>
+      </div>
+
+    </article>
+
+
+    <!-- ROSE ETERNELLE -->
+    <article class="product-card" id="rose-eternelle">
+
+      <div class="product-image">
+        <img src="IMG_6689.jpeg"
+             alt="Rose éternelle"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+
+        <div class="product-placeholder" style="display:none;">
+          Photo du produit
+        </div>
+      </div>
+
+      <div class="product-info">
+        <h4>Rose éternelle</h4>
+
+        <p>
+          Une rose délicate réalisée en Pipe Cleaner,
+          parfaite pour offrir.
+        </p>
+
+        <div class="price">1000 DA</div>
+
+        <div class="tags">
+          <span class="tag">Toutes les couleurs disponibles</span>
+          <span class="tag">Prix fixe</span>
+          <span class="tag">Fait main</span>
+        </div>
+      </div>
+
+    </article>
+
+  </div>
+
+</section>
+
+
+<!-- PERSONNALISATION -->
+<section class="custom" id="personnalisation">
+
+  <div class="section-head">
+    <div class="eyebrow">Votre création</div>
+    <h2>Personnalisez votre bouquet</h2>
+    <p>
+      Vous pouvez choisir la composition que vous souhaitez
+      et nous envoyer votre demande.
+    </p>
+  </div>
+
+  <div class="custom-box">
+
+    <h3>Votre bouquet sur mesure 🌷</h3>
+
+    <p>
+      Indiquez-nous les fleurs, les couleurs et le nombre
+      de fleurs que vous souhaitez.
+      Le prix sera confirmé selon votre composition.
+    </p>
+
+    <div class="form-group">
+      <label>Type de bouquet</label>
+
+      <select>
+        <option>Choisir une composition</option>
+        <option>Lilies + Tulipes</option>
+        <option>Roses</option>
+        <option>Lilies</option>
+        <option>Tulipes</option>
+        <option>Autre composition</option>
+      </select>
+    </div>
+
+
+    <div class="form-group">
+      <label>Décrivez votre demande</label>
+
+      <textarea
+        placeholder="Exemple : Je souhaite un bouquet avec 5 lilies roses et 3 tulipes blanches.">
+      </textarea>
+    </div>
+
+    <button class="btn" type="button"
+      onclick="sendInstagram()">
+      Envoyer ma demande
+    </button>
+
+  </div>
+
+</section>
+
+
+<!-- INSTAGRAM -->
+<section class="instagram" id="contact">
+
+  <div class="instagram-box">
+
+    <h3>Une question ? 💌</h3>
+
+    <p>
+      Pour commander, demander un prix ou personnaliser
+      votre création, contactez-nous directement sur Instagram.
+    </p>
+
+    <a
+      href="https://instagram.com/flower.eema"
+      target="_blank"
+      class="btn">
+      @flower.eema
+    </a>
+
+  </div>
+
+</section>
+
+
+<!-- FOOTER -->
 <footer>
 
-<strong>Floreema World ♡</strong><br>
+  <div class="footer-logo">
+    Floreema
+  </div>
 
-Créations personnalisées — Commandes sur Instagram
+  <p>
+    Créations faites main avec amour ♡
+  </p>
+
+  <p style="margin-top:8px;">
+    © 2026 Floreema — Tous droits réservés
+  </p>
 
 </footer>
 
 
 <script>
 
-const categories={
-
-pipe:{
-titre:"Créations en Pipe Cleaner",
-
-sousCategories:[
-["🌸","Bouquets de fleurs"],
-["✨","Fleurs lumineuses"],
-["☕","Coupes"],
-["🌹","Fleur éternelle"],
-["🖼️","Cadres fleuris"],
-["🎀","Porte-accessoires"],
-["🎀","Accessoires cheveux"],
-["🔑","Porte-clés"],
-["🏺","Vases"],
-["📱","Coque de téléphone anti-choc"],
-["🎂","Gâteau d’anniversaire"],
-["🌸","Jardin de Fleurs Infini"]
-]
-},
-
-satin:{
-titre:"Fleurs en Satin",
-sousCategories:[
-["💐","Bouquets de fleurs"],
-["🎁","Box de fleurs"],
-["🔑","Porte-clés en satin"]
-]
-},
-
-miroirs:{
-titre:"Miroirs",
-sousCategories:[
-["🪞","Miroir prénom"],
-["🪞","Miroir en Foam"],
-["🪞","Miroir en perles"],
-["🌸","Miroir fleurs artificielles"],
-["🌷","Miroir Pipe Cleaner"],
-["✨","Miroir stickers"]
-]
-},
-
-coupes:{
-titre:"Coupes",
-sousCategories:[
-["🏺","Coupe en Foam"],
-["🌸","Coupe Pipe Cleaner"],
-["🎨","Coupe à dessins"]
-]
-},
-
-cadres:{
-titre:"Cadres Personnalisés",
-sousCategories:[
-["🎓","Cadre de remise des diplômes"],
-["📸","Cadre photo"],
-["🎂","Cadre anniversaire"],
-["🌸","Cadre fleuri"],
-["🖼️","Cadre décoratif"],
-["📐","Format A4"],
-["📐","Format A5"],
-["✨","Format 3D"]
-]
-},
-
-artificielles:{
-titre:"Fleurs Artificielles",
-sousCategories:[
-["💐","Bouquets de fleurs"],
-["🌹","Bouquets selon le type de fleur"]
-]
-},
-
-cheveux:{
-titre:"Accessoires Cheveux",
-sousCategories:[
-["🌸","Pinces fleurs Pipe Cleaner"],
-["🎀","Serre-têtes Pipe Cleaner"],
-["🦋","Pinces papillon en Satin"],
-["🎀","Headbands en Satin"]
-]
-},
-
-foam:{
-titre:"Vases en Foam",
-sousCategories:[
-["🌷","Vase Tulipe"],
-["🌻","Vase Sunflower"],
-["🌸","Fleur selon votre demande"]
-]
-},
-
-box:{
-titre:"Box Cadeaux",
-sousCategories:[
-["🎁","Box sur mesure"],
-["📸","Box photos & fleurs"],
-["🍫","Box photos & chocolat"]
-]
-}
-
-};
-
-
-let categorieActuelle="";
-let sousCategorieActuelle="";
-
-
-function ouvrirCategorie(categorie){
-
-categorieActuelle=categorie;
-
-document.getElementById("accueil").classList.add("hidden");
-
-document.getElementById("produitsSection").classList.add("hidden");
-
-document.getElementById("sousCategories").classList.remove("hidden");
-
-document.getElementById("titreCategorie").textContent=
-categories[categorie].titre;
-
-const liste=document.getElementById("listeSousCategories");
-
-liste.innerHTML="";
-
-categories[categorie].sousCategories.forEach(function(item){
-
-const card=document.createElement("div");
-
-card.className="card";
-
-card.onclick=function(){
-
-ouvrirProduits(item[1]);
-
-};
-
-card.innerHTML=`
-
-<div class="icon">${item[0]}</div>
-
-<h3>${item[1]}</h3>
-
-<p>Voir les produits</p>
-
-`;
-
-liste.appendChild(card);
-
-});
-
-window.scrollTo(0,0);
-
-}
-
-
-function ouvrirProduits(nom){
-
-sousCategorieActuelle=nom;
-
-document.getElementById("sousCategories").classList.add("hidden");
-
-document.getElementById("produitsSection").classList.remove("hidden");
-
-document.getElementById("titreSousCategorie").textContent=nom;
-
-const liste=document.getElementById("listeProduits");
-
-liste.innerHTML="";
-
-
-/* BOUQUETS DE FLEURS */
-
-if(categorieActuelle==="pipe" && nom==="Bouquets de fleurs"){
-
-const produits=[
-
-{
-image:"IMG_8337.jpeg",
-nom:"Grand Bouquet — Lilies & Tulipes",
-prix:"4500 DA",
-infos:[
-"Toutes les couleurs disponibles",
-"Prix selon le nombre de fleurs"
-]
-},
-
-{
-image:"IMG_8338.jpeg",
-nom:"Moyen Bouquet — Lilies & Tulipes",
-prix:"1500 DA",
-infos:[
-"Toutes les couleurs disponibles",
-"Prix selon le nombre de fleurs"
-]
-},
-
-{
-image:"IMG_8339.jpeg",
-nom:"Moyen Bouquet — Lilies & Tulipes",
-prix:"1500 DA",
-infos:[
-"Toutes les couleurs disponibles",
-"Prix selon le nombre de fleurs"
-]
-},
-
-{
-image:"IMG_5947.jpeg",
-nom:"Mini Rose Bouquet",
-prix:"3000 DA",
-infos:[
-"Toutes les couleurs disponibles"
-]
-}
-
-];
-
-
-produits.forEach(function(item){
-
-const produit=document.createElement("div");
-
-produit.className="product";
-
-produit.innerHTML=`
-
-<div class="product-photo">
-
-<img src="${item.image}" alt="${item.nom}">
-
-</div>
-
-<div class="product-body">
-
-<h3>${item.nom}</h3>
-
-<div class="price">
-Prix : ${item.prix}
-</div>
-
-${item.infos.map(info=>
-`<span class="tag">${info}</span>`
-).join("")}
-
-<br>
-
-<a class="order"
-href="https://instagram.com/flower.eema"
-target="_blank">
-Commander sur Instagram
-</a>
-
-</div>
-
-`;
-
-liste.appendChild(produit);
-
-});
-
-
-/* PERSONNALISATION */
-
-const personnalisation=document.createElement("div");
-
-personnalisation.className="custom-box";
-
-personnalisation.innerHTML=`
-
-<h2>💐 Personnalisez votre bouquet</h2>
-
-<p>
-Choisissez le type de bouquet que vous souhaitez et décrivez votre demande.
-</p>
-
-<label for="typeBouquet">
-Type de bouquet souhaité
-</label>
-
-<select id="typeBouquet">
-
-<option value="">
-Choisir un type
-</option>
-
-<option>Lilies</option>
-
-<option>Tulipes</option>
-
-<option>Lilies & Tulipes</option>
-
-<option>Roses</option>
-
-<option>Autre</option>
-
-</select>
-
-
-<label for="descriptionBouquet">
-Description / Demande spéciale
-</label>
-
-<textarea
-id="descriptionBouquet"
-rows="5"
-placeholder="Ex : Je souhaite un bouquet avec 5 lilies roses et 3 tulipes blanches...">
-</textarea>
-
-
-<a class="order"
-href="https://instagram.com/flower.eema"
-target="_blank">
-
-Envoyer ma demande sur Instagram
-
-</a>
-
-`;
-
-liste.appendChild(personnalisation);
-
-}
-
-
-/* FLEUR ETERNELLE */
-
-else if(categorieActuelle==="pipe" && nom==="Fleur éternelle"){
-
-const produit=document.createElement("div");
-
-produit.className="product";
-
-produit.innerHTML=`
-
-<div class="product-photo">
-
-<img src="IMG_6689.jpeg" alt="Rose éternelle">
-
-</div>
-
-<div class="product-body">
-
-<h3>Rose éternelle</h3>
-
-<div class="price">
-Prix : 1000 DA
-</div>
-
-<span class="tag">
-Toutes les couleurs disponibles
-</span>
-
-<br>
-
-<a class="order"
-href="https://instagram.com/flower.eema"
-target="_blank">
-
-Commander sur Instagram
-
-</a>
-
-</div>
-
-`;
-
-liste.appendChild(produit);
-
-}
-
-
-/* AUTRES PRODUITS - TEMPORAIRE */
-
-else{
-
-for(let i=1;i<=3;i++){
-
-const produit=document.createElement("div");
-
-produit.className="product";
-
-produit.innerHTML=`
-
-<div class="product-photo">
-<div style="
-height:100%;
-display:flex;
-align-items:center;
-justify-content:center;
-font-size:52px;">
-📷
-</div>
-</div>
-
-<div class="product-body">
-
-<h3>
-${nom} — Modèle ${i}
-</h3>
-
-<p>
-Description du produit à ajouter.
-</p>
-
-<div class="price">
-Prix : à renseigner
-</div>
-
-<span class="tag">
-Couleurs : à renseigner
-</span>
-
-<span class="tag">
-Personnalisable
-</span>
-
-<br>
-
-<a class="order"
-href="https://instagram.com/flower.eema"
-target="_blank">
-
-Commander sur Instagram
-
-</a>
-
-</div>
-
-`;
-
-liste.appendChild(produit);
-
-}
-
-}
-
-window.scrollTo(0,0);
-
-}
-
-
-function retourAccueil(){
-
-document.getElementById("sousCategories")
-.classList.add("hidden");
-
-document.getElementById("produitsSection")
-.classList.add("hidden");
-
-document.getElementById("accueil")
-.classList.remove("hidden");
-
-window.scrollTo(0,0);
-
-}
-
-
-function retourSousCategories(){
-
-document.getElementById("produitsSection")
-.classList.add("hidden");
-
-document.getElementById("sousCategories")
-.classList.remove("hidden");
-
-window.scrollTo(0,0);
-
+function sendInstagram(){
+
+  const select = document.querySelector('.custom-box select');
+  const textarea = document.querySelector('.custom-box textarea');
+
+  const composition = select.value;
+  const description = textarea.value.trim();
+
+  if(composition === "Choisir une composition" && description === ""){
+    alert("Veuillez remplir votre demande 🌷");
+    return;
+  }
+
+  alert(
+    "Votre demande est prête 💗\n\n" +
+    "Composition : " + composition +
+    "\n\n" +
+    "Description : " + (description || "Non précisée") +
+    "\n\n" +
+    "Vous allez être redirigée vers Instagram."
+  );
+
+  window.open(
+    "https://instagram.com/flower.eema",
+    "_blank"
+  );
 }
 
 </script>
