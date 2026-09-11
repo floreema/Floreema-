@@ -21,11 +21,7 @@
   --shadow:0 10px 30px rgba(112,76,91,.10);
 }
 
-*{
-  box-sizing:border-box;
-  margin:0;
-  padding:0;
-}
+*{box-sizing:border-box;margin:0;padding:0;}
 
 body{
   font-family:'Poppins',sans-serif;
@@ -33,20 +29,10 @@ body{
   color:var(--text);
 }
 
-html{
-  scroll-behavior:smooth;
-}
+html{scroll-behavior:smooth;}
+a{text-decoration:none;color:inherit;}
+button{font-family:inherit;}
 
-a{
-  text-decoration:none;
-  color:inherit;
-}
-
-button{
-  font-family:inherit;
-}
-
-/* TOP BAR */
 .topbar{
   background:var(--pink);
   color:var(--dark);
@@ -56,7 +42,6 @@ button{
   letter-spacing:.3px;
 }
 
-/* HEADER */
 header{
   background:var(--white);
   padding:18px 7%;
@@ -76,9 +61,7 @@ header{
   font-weight:600;
 }
 
-.logo span{
-  color:#d994b1;
-}
+.logo span{color:#d994b1;}
 
 nav{
   display:flex;
@@ -86,15 +69,9 @@ nav{
   font-size:14px;
 }
 
-nav a{
-  transition:.3s;
-}
+nav a{transition:.3s;}
+nav a:hover{color:#d487a8;}
 
-nav a:hover{
-  color:#d487a8;
-}
-
-/* HERO */
 .hero{
   min-height:480px;
   padding:75px 7%;
@@ -107,9 +84,7 @@ nav a:hover{
     linear-gradient(135deg,#fffdfb,#fff1f5,#fff8f1);
 }
 
-.hero-text{
-  max-width:600px;
-}
+.hero-text{max-width:600px;}
 
 .small-title{
   color:#c58ba2;
@@ -127,9 +102,7 @@ nav a:hover{
   margin-bottom:20px;
 }
 
-.hero h1 span{
-  color:#d78eaa;
-}
+.hero h1 span{color:#d78eaa;}
 
 .hero p{
   line-height:1.8;
@@ -169,10 +142,7 @@ nav a:hover{
   font-size:42px;
 }
 
-/* SECTION */
-section{
-  padding:70px 7%;
-}
+section{padding:70px 7%;}
 
 .section-head{
   text-align:center;
@@ -201,10 +171,7 @@ section{
   line-height:1.7;
 }
 
-/* CATEGORIES */
-.categories{
-  background:var(--white);
-}
+.categories{background:var(--white);}
 
 .category-grid{
   display:grid;
@@ -248,10 +215,7 @@ section{
   line-height:1.6;
 }
 
-/* SUB CATEGORIES */
-.subcategories{
-  background:var(--cream);
-}
+.subcategories{background:var(--cream);}
 
 .subcategory-box{
   max-width:1050px;
@@ -289,19 +253,7 @@ section{
   transform:translateY(-2px);
 }
 
-/* PRODUCTS */
-.products{
-  background:#fff;
-}
-
-.product-section{
-  max-width:1100px;
-  margin:0 auto 75px;
-}
-
-.product-section:last-child{
-  margin-bottom:0;
-}
+.products{background:#fff;}
 
 .product-grid{
   display:grid;
@@ -338,19 +290,36 @@ section{
   padding:8px;
 }
 
+/* صورتان داخل نفس الخانة */
 .product-image.duo{
   display:grid;
   grid-template-columns:1fr 1fr;
-  gap:4px;
-  padding:5px;
+  gap:6px;
+  padding:6px;
 }
 
 .product-image.duo img{
   width:100%;
   height:100%;
-  object-fit:contain;
+  object-fit:cover;
   padding:0;
+  border-radius:12px;
   background:#fff;
+}
+
+/* ثلاث صور */
+.product-image.trio{
+  display:grid;
+  grid-template-columns:1fr 1fr 1fr;
+  gap:5px;
+  padding:5px;
+}
+
+.product-image.trio img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  padding:0;
   border-radius:10px;
 }
 
@@ -361,9 +330,7 @@ section{
   padding:20px;
 }
 
-.product-info{
-  padding:19px;
-}
+.product-info{padding:19px;}
 
 .product-info h4{
   font-family:'Playfair Display',serif;
@@ -399,7 +366,18 @@ section{
   font-size:10px;
 }
 
-/* CUSTOMIZATION */
+/* الأقسام الخاصة بالمنتجات */
+.product-section{
+  padding-top:25px;
+  background:#fff;
+  margin-bottom:65px;
+}
+
+.product-section .section-head{
+  margin-bottom:30px;
+}
+
+/* التخصيص */
 .custom{
   background:linear-gradient(135deg,#fff4f7,#fff8f1);
 }
@@ -452,11 +430,10 @@ section{
 }
 
 .form-group textarea{
-  min-height:120px;
+  min-height:150px;
   resize:vertical;
 }
 
-/* INSTAGRAM */
 .instagram{
   text-align:center;
   background:var(--white);
@@ -483,7 +460,6 @@ section{
   margin-bottom:22px;
 }
 
-/* FOOTER */
 footer{
   background:#f8dce8;
   padding:35px 7%;
@@ -497,11 +473,8 @@ footer .footer-logo{
   margin-bottom:8px;
 }
 
-footer p{
-  font-size:12px;
-}
+footer p{font-size:12px;}
 
-/* MOBILE */
 @media(max-width:900px){
 
   .category-grid{
@@ -570,8 +543,9 @@ footer p{
     padding:25px 18px;
   }
 
-  .product-image.duo{
-    height:250px;
+  .product-image.duo,
+  .product-image.trio{
+    height:230px;
   }
 }
 </style>
@@ -584,10 +558,7 @@ footer p{
 </div>
 
 <header>
-
-  <a href="#accueil" class="logo">
-    Flor<span>e</span>ema
-  </a>
+  <a href="#accueil" class="logo">Flor<span>e</span>ema</a>
 
   <nav>
     <a href="#accueil">Accueil</a>
@@ -596,12 +567,9 @@ footer p{
     <a href="#personnalisation">Personnalisation</a>
     <a href="#contact">Contact</a>
   </nav>
-
 </header>
 
-
 <!-- ACCUEIL -->
-
 <section class="hero" id="accueil">
 
   <div class="hero-text">
@@ -632,9 +600,7 @@ footer p{
 
 </section>
 
-
-<!-- CATÉGORIES -->
-
+<!-- CATEGORIES -->
 <section class="categories" id="categories">
 
   <div class="section-head">
@@ -653,7 +619,6 @@ footer p{
     </p>
 
   </div>
-
 
   <div class="category-grid">
 
@@ -715,19 +680,13 @@ footer p{
 
 </section>
 
-
-<!-- SOUS CATÉGORIES -->
-
+<!-- SOUS-CATEGORIES -->
 <section class="subcategories">
 
-
   <!-- PIPE CLEANER -->
-
   <div class="subcategory-box" id="pipe-cleaner">
 
-    <h3>
-      🌷 Créations en Pipe Cleaner
-    </h3>
+    <h3>🌷 Créations en Pipe Cleaner</h3>
 
     <div class="subcategory-grid">
 
@@ -785,12 +744,9 @@ footer p{
 
 
   <!-- SATIN -->
-
   <div class="subcategory-box" id="satin">
 
-    <h3>
-      🎀 Fleurs en Satin
-    </h3>
+    <h3>🎀 Fleurs en Satin</h3>
 
     <div class="subcategory-grid">
 
@@ -812,12 +768,9 @@ footer p{
 
 
   <!-- MIROIRS -->
-
   <div class="subcategory-box" id="miroirs">
 
-    <h3>
-      🪞 Miroirs
-    </h3>
+    <h3>🪞 Miroirs</h3>
 
     <div class="subcategory-grid">
 
@@ -851,12 +804,9 @@ footer p{
 
 
   <!-- COUPES -->
-
   <div class="subcategory-box" id="coupes">
 
-    <h3>
-      ☕ Coupes
-    </h3>
+    <h3>☕ Coupes</h3>
 
     <div class="subcategory-grid">
 
@@ -878,12 +828,9 @@ footer p{
 
 
   <!-- CADRES -->
-
   <div class="subcategory-box" id="cadres">
 
-    <h3>
-      🖼️ Cadres Personnalisés
-    </h3>
+    <h3>🖼️ Cadres Personnalisés</h3>
 
     <div class="subcategory-grid">
 
@@ -899,7 +846,7 @@ footer p{
         Cadre anniversaire
       </a>
 
-      <a href="#cadre-fleuri" class="subcategory">
+      <a href="#cadres-fleuris" class="subcategory">
         Cadre fleuri
       </a>
 
@@ -925,12 +872,9 @@ footer p{
 
 
   <!-- FLEURS ARTIFICIELLES -->
-
   <div class="subcategory-box" id="fleurs-artificielles">
 
-    <h3>
-      💐 Fleurs Artificielles
-    </h3>
+    <h3>💐 Fleurs Artificielles</h3>
 
     <div class="subcategory-grid">
 
@@ -944,12 +888,9 @@ footer p{
 
 
   <!-- ACCESSOIRES -->
-
   <div class="subcategory-box" id="accessoires">
 
-    <h3>
-      🎀 Accessoires Cheveux
-    </h3>
+    <h3>🎀 Accessoires Cheveux</h3>
 
     <div class="subcategory-grid">
 
@@ -974,13 +915,10 @@ footer p{
   </div>
 
 
-  <!-- VASES -->
-
+  <!-- VASES FOAM -->
   <div class="subcategory-box" id="vases">
 
-    <h3>
-      🌻 Vases en Foam
-    </h3>
+    <h3>🌻 Vases en Foam</h3>
 
     <div class="subcategory-grid">
 
@@ -1002,12 +940,9 @@ footer p{
 
 
   <!-- BOX -->
-
   <div class="subcategory-box" id="box">
 
-    <h3>
-      🎁 Box Cadeaux
-    </h3>
+    <h3>🎁 Box Cadeaux</h3>
 
     <div class="subcategory-grid">
 
@@ -1031,7 +966,6 @@ footer p{
 
 
 <!-- PRODUITS -->
-
 <section class="products" id="produits">
 
   <div class="section-head">
@@ -1041,19 +975,18 @@ footer p{
     </div>
 
     <h2>
-      Quelques créations
+      Créations Pipe Cleaner
     </h2>
 
     <p>
-      Découvrez nos premières créations disponibles.
-      D'autres produits seront ajoutés prochainement.
+      Découvrez nos créations réalisées à la main.
+      Chaque modèle peut être personnalisé selon vos envies.
     </p>
 
   </div>
 
 
-  <!-- BOUQUETS DE FLEURS -->
-
+  <!-- BOUQUETS -->
   <div class="product-section" id="bouquets">
 
     <div class="section-head">
@@ -1066,56 +999,43 @@ footer p{
         🌷 Bouquets de fleurs
       </h2>
 
-    </div>
+      <p>
+        Bouquets réalisés à la main avec lilies, tulipes ou roses.
+        Toutes les couleurs sont disponibles.
+      </p>
 
+    </div>
 
     <div class="product-grid">
 
-
-      <!-- GRAND BOUQUET -->
-
       <article class="product-card">
 
         <div class="product-image">
-
-          <img
-            src="IMG_8337.jpeg"
-            alt="Grand Bouquet Lilies & Tulipes"
-            onerror="this.style.display='none';this.nextElementSibling.style.display='block';"
-          >
+          <img src="IMG_8337.jpeg"
+               alt="Grand bouquet lilies et tulipes"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
 
           <div class="product-placeholder" style="display:none;">
             Photo du produit
           </div>
-
         </div>
-
 
         <div class="product-info">
 
-          <h4>
-            Grand Bouquet
-          </h4>
+          <h4>Grand Bouquet — Lilies & Tulipes</h4>
 
           <p>
-            Bouquet composé de lilies et tulipes,
-            réalisé entièrement à la main.
+            Grand bouquet réalisé entièrement à la main.
+            Toutes les couleurs disponibles.
           </p>
 
           <div class="price">
-            4500 DA
+            Prix sur demande
           </div>
 
           <div class="tags">
-
-            <span class="tag">
-              Toutes les couleurs disponibles
-            </span>
-
-            <span class="tag">
-              Fait main
-            </span>
-
+            <span class="tag">Toutes les couleurs</span>
+            <span class="tag">Fait main</span>
           </div>
 
           <p style="margin-top:12px;">
@@ -1127,50 +1047,34 @@ footer p{
       </article>
 
 
-      <!-- MOYEN BOUQUET 1 -->
-
       <article class="product-card">
 
         <div class="product-image">
-
-          <img
-            src="IMG_8338.jpeg"
-            alt="Moyen Bouquet Lilies & Tulipes"
-            onerror="this.style.display='none';this.nextElementSibling.style.display='block';"
-          >
+          <img src="IMG_8338.jpeg"
+               alt="Moyen bouquet lilies et tulipes"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
 
           <div class="product-placeholder" style="display:none;">
             Photo du produit
           </div>
-
         </div>
-
 
         <div class="product-info">
 
-          <h4>
-            Moyen Bouquet
-          </h4>
+          <h4>Moyen Bouquet — Lilies & Tulipes</h4>
 
           <p>
-            Bouquet de lilies et tulipes,
-            réalisé à la main.
+            Composition délicate réalisée à la main.
+            Toutes les couleurs disponibles.
           </p>
 
           <div class="price">
-            1500 DA
+            Prix sur demande
           </div>
 
           <div class="tags">
-
-            <span class="tag">
-              Toutes les couleurs disponibles
-            </span>
-
-            <span class="tag">
-              Fait main
-            </span>
-
+            <span class="tag">Toutes les couleurs</span>
+            <span class="tag">Fait main</span>
           </div>
 
           <p style="margin-top:12px;">
@@ -1182,30 +1086,21 @@ footer p{
       </article>
 
 
-      <!-- MOYEN BOUQUET 2 -->
-
       <article class="product-card">
 
         <div class="product-image">
-
-          <img
-            src="IMG_8339.jpeg"
-            alt="Moyen Bouquet Lilies & Tulipes"
-            onerror="this.style.display='none';this.nextElementSibling.style.display='block';"
-          >
+          <img src="IMG_8339.jpeg"
+               alt="Moyen bouquet lilies et tulipes"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
 
           <div class="product-placeholder" style="display:none;">
             Photo du produit
           </div>
-
         </div>
-
 
         <div class="product-info">
 
-          <h4>
-            Moyen Bouquet
-          </h4>
+          <h4>Moyen Bouquet — Lilies & Tulipes</h4>
 
           <p>
             Une autre composition de lilies et tulipes
@@ -1213,19 +1108,12 @@ footer p{
           </p>
 
           <div class="price">
-            1500 DA
+            Prix sur demande
           </div>
 
           <div class="tags">
-
-            <span class="tag">
-              Toutes les couleurs disponibles
-            </span>
-
-            <span class="tag">
-              Fait main
-            </span>
-
+            <span class="tag">Toutes les couleurs</span>
+            <span class="tag">Fait main</span>
           </div>
 
           <p style="margin-top:12px;">
@@ -1237,50 +1125,34 @@ footer p{
       </article>
 
 
-      <!-- MINI ROSE -->
-
       <article class="product-card">
 
         <div class="product-image">
-
-          <img
-            src="IMG_5947.jpeg"
-            alt="Mini Rose Bouquet"
-            onerror="this.style.display='none';this.nextElementSibling.style.display='block';"
-          >
+          <img src="IMG_5947.jpeg"
+               alt="Mini bouquet de roses"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
 
           <div class="product-placeholder" style="display:none;">
             Photo du produit
           </div>
-
         </div>
-
 
         <div class="product-info">
 
-          <h4>
-            Mini Rose Bouquet
-          </h4>
+          <h4>Mini Bouquet de Roses</h4>
 
           <p>
-            Petit bouquet de roses réalisé
-            délicatement à la main.
+            Petit bouquet de roses réalisé délicatement
+            à la main.
           </p>
 
           <div class="price">
-            3000 DA
+            Prix sur demande
           </div>
 
           <div class="tags">
-
-            <span class="tag">
-              Toutes les couleurs disponibles
-            </span>
-
-            <span class="tag">
-              Fait main
-            </span>
-
+            <span class="tag">Toutes les couleurs</span>
+            <span class="tag">Fait main</span>
           </div>
 
         </div>
@@ -1292,8 +1164,200 @@ footer p{
   </div>
 
 
-  <!-- FLEUR ÉTERNELLE : SECTION INDÉPENDANTE -->
+  <!-- FLEURS LUMINEUSES -->
+  <div class="product-section" id="fleurs-lumineuses">
 
+    <div class="section-head">
+
+      <div class="eyebrow">
+        Pipe Cleaner
+      </div>
+
+      <h2>
+        ✨ Fleurs lumineuses
+      </h2>
+
+      <p>
+        Une création fleurie avec éclairage intégré,
+        disponible dans différents types de fleurs et couleurs.
+      </p>
+
+    </div>
+
+    <div class="product-grid">
+
+      <article class="product-card">
+
+        <div class="product-image">
+          <img src="IMG_5061.jpeg"
+               alt="Fleur lumineuse Pipe Cleaner"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+
+          <div class="product-placeholder" style="display:none;">
+            Photo du produit
+          </div>
+        </div>
+
+        <div class="product-info">
+
+          <h4>Fleur lumineuse</h4>
+
+          <p>
+            Création florale lumineuse réalisée en Pipe Cleaner.
+            Plusieurs types de fleurs sont disponibles :
+            Tulipe, Lys, Lotus, Rose et autres selon la demande.
+          </p>
+
+          <div class="price">
+            Prix sur demande
+          </div>
+
+          <div class="tags">
+            <span class="tag">Toutes les couleurs</span>
+            <span class="tag">Différents types de fleurs</span>
+            <span class="tag">Éclairage intégré</span>
+            <span class="tag">Fait main</span>
+          </div>
+
+        </div>
+
+      </article>
+
+    </div>
+
+  </div>
+
+
+  <!-- COUPES PIPE CLEANER -->
+  <div class="product-section" id="coupes-pipe">
+
+    <div class="section-head">
+
+      <div class="eyebrow">
+        Pipe Cleaner
+      </div>
+
+      <h2>
+        ☕ Coupes Pipe Cleaner
+      </h2>
+
+      <p>
+        Des modèles réalisés à la main.
+        Chaque paire de photos représente le même modèle/couleur.
+      </p>
+
+    </div>
+
+    <div class="product-grid">
+
+
+      <article class="product-card">
+
+        <div class="product-image duo">
+
+          <img src="IMG_7682.jpeg"
+               alt="Coupe Pipe Cleaner rose">
+
+          <img src="IMG_7683.jpeg"
+               alt="Coupe Pipe Cleaner rose">
+
+        </div>
+
+        <div class="product-info">
+
+          <h4>Coupe Pipe Cleaner — Rose</h4>
+
+          <p>
+            Coupe décorée à la main avec des fleurs en Pipe Cleaner.
+          </p>
+
+          <div class="price">
+            Prix sur demande
+          </div>
+
+          <div class="tags">
+            <span class="tag">Fait main</span>
+            <span class="tag">Toutes les couleurs</span>
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <article class="product-card">
+
+        <div class="product-image duo">
+
+          <img src="IMG_7695.jpeg"
+               alt="Coupe Pipe Cleaner rose pâle">
+
+          <img src="IMG_7696.jpeg"
+               alt="Coupe Pipe Cleaner rose pâle">
+
+        </div>
+
+        <div class="product-info">
+
+          <h4>Coupe Pipe Cleaner — Rose pâle</h4>
+
+          <p>
+            Coupe décorée à la main avec des fleurs en Pipe Cleaner.
+          </p>
+
+          <div class="price">
+            Prix sur demande
+          </div>
+
+          <div class="tags">
+            <span class="tag">Fait main</span>
+            <span class="tag">Toutes les couleurs</span>
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <article class="product-card">
+
+        <div class="product-image duo">
+
+          <img src="IMG_7702.jpeg"
+               alt="Coupe Pipe Cleaner lilas">
+
+          <img src="IMG_7703.jpeg"
+               alt="Coupe Pipe Cleaner lilas">
+
+        </div>
+
+        <div class="product-info">
+
+          <h4>Coupe Pipe Cleaner — Lilas</h4>
+
+          <p>
+            Coupe décorée à la main avec des fleurs en Pipe Cleaner.
+          </p>
+
+          <div class="price">
+            Prix sur demande
+          </div>
+
+          <div class="tags">
+            <span class="tag">Fait main</span>
+            <span class="tag">Toutes les couleurs</span>
+          </div>
+
+        </div>
+
+      </article>
+
+    </div>
+
+  </div>
+
+
+  <!-- FLEUR ETERNELLE -->
   <div class="product-section" id="rose-eternelle">
 
     <div class="section-head">
@@ -1307,11 +1371,11 @@ footer p{
       </h2>
 
       <p>
-        Une création indépendante des bouquets.
+        Une création indépendante des bouquets,
+        réalisée avec soin à la main.
       </p>
 
     </div>
-
 
     <div class="product-grid">
 
@@ -1319,11 +1383,9 @@ footer p{
 
         <div class="product-image">
 
-          <img
-            src="IMG_6689.jpeg"
-            alt="Rose éternelle"
-            onerror="this.style.display='none';this.nextElementSibling.style.display='block';"
-          >
+          <img src="IMG_6689.jpeg"
+               alt="Rose éternelle Pipe Cleaner"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
 
           <div class="product-placeholder" style="display:none;">
             Photo du produit
@@ -1331,12 +1393,9 @@ footer p{
 
         </div>
 
-
         <div class="product-info">
 
-          <h4>
-            Rose éternelle
-          </h4>
+          <h4>Rose éternelle</h4>
 
           <p>
             Une rose délicate réalisée en Pipe Cleaner,
@@ -1344,23 +1403,12 @@ footer p{
           </p>
 
           <div class="price">
-            1000 DA
+            Prix sur demande
           </div>
 
           <div class="tags">
-
-            <span class="tag">
-              Toutes les couleurs disponibles
-            </span>
-
-            <span class="tag">
-              Prix fixe
-            </span>
-
-            <span class="tag">
-              Fait main
-            </span>
-
+            <span class="tag">Toutes les couleurs</span>
+            <span class="tag">Fait main</span>
           </div>
 
         </div>
@@ -1372,76 +1420,188 @@ footer p{
   </div>
 
 
-  <!-- COUPES PIPE CLEANER -->
-
-  <div class="product-section" id="coupes-pipe">
+  <!-- CADRES FLEURIS -->
+  <div class="product-section" id="cadres-fleuris">
 
     <div class="section-head">
 
       <div class="eyebrow">
-        Nouveau
+        Pipe Cleaner
       </div>
 
       <h2>
-        ☕ Coupes Pipe Cleaner
+        🖼️ Cadre fleuri personnalisé
       </h2>
 
       <p>
-        Chaque modèle est à 600 DA.
-        Les deux photos d'une même couleur sont regroupées
-        dans la même fiche.
+        Cadres fleuris personnalisés selon vos envies.
       </p>
 
     </div>
 
+    <div class="product-grid">
+
+      <article class="product-card">
+
+        <div class="product-image">
+
+          <img src="IMG_8400.jpeg"
+               alt="Cadre fleuri personnalisé"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+
+          <div class="product-placeholder" style="display:none;">
+            Photo du produit
+          </div>
+
+        </div>
+
+        <div class="product-info">
+
+          <h4>Cadre fleuri personnalisé</h4>
+
+          <p>
+            Création personnalisée avec fleurs en Pipe Cleaner
+            et message au choix.
+          </p>
+
+          <div class="price">
+            Prix sur demande
+          </div>
+
+          <div class="tags">
+            <span class="tag">A4</span>
+            <span class="tag">A5</span>
+            <span class="tag">3D</span>
+            <span class="tag">Toutes les couleurs</span>
+          </div>
+
+          <p style="margin-top:12px;">
+            Le modèle et les détails peuvent être adaptés
+            selon votre demande.
+          </p>
+
+        </div>
+
+      </article>
+
+    </div>
+
+  </div>
+
+
+  <!-- PORTE ACCESSOIRES -->
+  <div class="product-section" id="porte-accessoires">
+
+    <div class="section-head">
+
+      <div class="eyebrow">
+        Pipe Cleaner
+      </div>
+
+      <h2>
+        🌸 Porte-accessoires
+      </h2>
+
+      <p>
+        Une création pratique et décorative réalisée à la main.
+      </p>
+
+    </div>
+
+    <div class="product-grid">
+
+      <article class="product-card">
+
+        <div class="product-image">
+
+          <img src="IMG_8402.jpeg"
+               alt="Porte-accessoires Pipe Cleaner"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+
+          <div class="product-placeholder" style="display:none;">
+            Photo du produit
+          </div>
+
+        </div>
+
+        <div class="product-info">
+
+          <h4>Porte-accessoires</h4>
+
+          <p>
+            Création fleurie réalisée en Pipe Cleaner.
+            Le modèle peut être adapté selon la demande.
+          </p>
+
+          <div class="price">
+            Prix sur demande
+          </div>
+
+          <div class="tags">
+            <span class="tag">Toutes les couleurs</span>
+            <span class="tag">Fait main</span>
+          </div>
+
+        </div>
+
+      </article>
+
+    </div>
+
+  </div>
+
+
+  <!-- ACCESSOIRES CHEVEUX PIPE -->
+  <div class="product-section" id="accessoires-pipe">
+
+    <div class="section-head">
+
+      <div class="eyebrow">
+        Pipe Cleaner
+      </div>
+
+      <h2>
+        🎀 Accessoires cheveux
+      </h2>
+
+      <p>
+        Chaque photo représente un modèle différent.
+      </p>
+
+    </div>
 
     <div class="product-grid">
 
 
-      <!-- COULEUR 1 -->
-
       <article class="product-card">
 
-        <div class="product-image duo">
+        <div class="product-image">
 
-          <img
-            src="IMG_7682.jpeg"
-            alt="Coupe Pipe Cleaner rose vif - vue 1"
-          >
+          <img src="IMG_8404.jpeg"
+               alt="Pince fleur Pipe Cleaner"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
 
-          <img
-            src="IMG_7683.jpeg"
-            alt="Coupe Pipe Cleaner rose vif - vue 2"
-          >
+          <div class="product-placeholder" style="display:none;">
+            Photo du produit
+          </div>
 
         </div>
 
-
         <div class="product-info">
 
-          <h4>
-            Coupe Pipe Cleaner — Rose vif
-          </h4>
+          <h4>Pince fleur</h4>
 
           <p>
-            Coupe décorée à la main avec fleurs
-            en Pipe Cleaner et détails délicats.
+            Accessoire cheveux fleuri réalisé à la main.
           </p>
 
           <div class="price">
-            600 DA
+            Prix sur demande
           </div>
 
           <div class="tags">
-
-            <span class="tag">
-              Fait main
-            </span>
-
-            <span class="tag">
-              2 photos du même modèle
-            </span>
-
+            <span class="tag">Toutes les couleurs</span>
+            <span class="tag">Fait main</span>
           </div>
 
         </div>
@@ -1449,107 +1609,475 @@ footer p{
       </article>
 
 
-      <!-- COULEUR 2 -->
-
       <article class="product-card">
 
-        <div class="product-image duo">
+        <div class="product-image">
 
-          <img
-            src="IMG_7695.jpeg"
-            alt="Coupe Pipe Cleaner rose pastel - vue 1"
-          >
+          <img src="IMG_8403.jpeg"
+               alt="Pince papillon Pipe Cleaner"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
 
-          <img
-            src="IMG_7696.jpeg"
-            alt="Coupe Pipe Cleaner rose pastel - vue 2"
-          >
+          <div class="product-placeholder" style="display:none;">
+            Photo du produit
+          </div>
 
         </div>
 
+        <div class="product-info">
+
+          <h4>Pince papillon</h4>
+
+          <p>
+            Modèle décoratif réalisé en Pipe Cleaner.
+          </p>
+
+          <div class="price">
+            Prix sur demande
+          </div>
+
+          <div class="tags">
+            <span class="tag">Toutes les couleurs</span>
+            <span class="tag">Fait main</span>
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <article class="product-card">
+
+        <div class="product-image">
+
+          <img src="IMG_0304(1).jpeg"
+               alt="Serre-tête fleuri Pipe Cleaner"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+
+          <div class="product-placeholder" style="display:none;">
+            Photo du produit
+          </div>
+
+        </div>
 
         <div class="product-info">
 
-          <h4>
-            Coupe Pipe Cleaner — Rose pastel
-          </h4>
+          <h4>Serre-tête fleuri</h4>
 
           <p>
-            Coupe décorée à la main avec fleurs
+            Serre-tête décoré avec des fleurs en Pipe Cleaner.
+          </p>
+
+          <div class="price">
+            Prix sur demande
+          </div>
+
+          <div class="tags">
+            <span class="tag">Toutes les couleurs</span>
+            <span class="tag">Fait main</span>
+          </div>
+
+        </div>
+
+      </article>
+
+    </div>
+
+  </div>
+
+
+  <!-- PORTE CLES -->
+  <div class="product-section" id="porte-cles-pipe">
+
+    <div class="section-head">
+
+      <div class="eyebrow">
+        Pipe Cleaner
+      </div>
+
+      <h2>
+        🔑 Porte-clés
+      </h2>
+
+      <p>
+        Porte-clés fleuris personnalisables selon vos envies.
+      </p>
+
+    </div>
+
+    <div class="product-grid">
+
+      <article class="product-card">
+
+        <div class="product-image">
+
+          <img src="IMG_8405.jpeg"
+               alt="Porte-clés fleur Pipe Cleaner"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+
+          <div class="product-placeholder" style="display:none;">
+            Photo du produit
+          </div>
+
+        </div>
+
+        <div class="product-info">
+
+          <h4>Porte-clés fleuri</h4>
+
+          <p>
+            Le type de fleur varie selon la demande.
+            Toutes les couleurs sont disponibles.
+          </p>
+
+          <div class="price">
+            Prix sur demande
+          </div>
+
+          <div class="tags">
+            <span class="tag">Toutes les couleurs</span>
+            <span class="tag">Fleur au choix</span>
+            <span class="tag">Fait main</span>
+          </div>
+
+        </div>
+
+      </article>
+
+    </div>
+
+  </div>
+
+
+  <!-- VASES PIPE -->
+  <div class="product-section" id="vases-pipe">
+
+    <div class="section-head">
+
+      <div class="eyebrow">
+        Pipe Cleaner
+      </div>
+
+      <h2>
+        🪴 Vases
+      </h2>
+
+      <p>
+        Des vases fleuris et lumineux réalisés à la main.
+      </p>
+
+    </div>
+
+    <div class="product-grid">
+
+      <article class="product-card">
+
+        <div class="product-image">
+
+          <img src="IMG_8406.jpeg"
+               alt="Vase fleuri Pipe Cleaner lumineux"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+
+          <div class="product-placeholder" style="display:none;">
+            Photo du produit
+          </div>
+
+        </div>
+
+        <div class="product-info">
+
+          <h4>Vase fleuri lumineux</h4>
+
+          <p>
+            Vase décoratif avec fleurs en Pipe Cleaner
+            et éclairage intégré pour créer un bel effet lumineux la nuit.
+          </p>
+
+          <div class="price">
+            Prix sur demande
+          </div>
+
+          <div class="tags">
+            <span class="tag">Toutes les couleurs</span>
+            <span class="tag">Fleurs au choix</span>
+            <span class="tag">Éclairage intégré</span>
+            <span class="tag">Fait main</span>
+          </div>
+
+          <p style="margin-top:12px;">
+            Le type de fleur peut être choisi selon la demande.
+          </p>
+
+        </div>
+
+      </article>
+
+    </div>
+
+  </div>
+
+
+  <!-- COQUE -->
+  <div class="product-section" id="coque">
+
+    <div class="section-head">
+
+      <div class="eyebrow">
+        Pipe Cleaner
+      </div>
+
+      <h2>
+        📱 Coques de téléphone anti-choc
+      </h2>
+
+      <p>
+        Chaque photo représente un modèle différent.
+        Le modèle est réalisé selon votre demande.
+      </p>
+
+    </div>
+
+    <div class="product-grid">
+
+
+      <article class="product-card">
+
+        <div class="product-image">
+
+          <img src="IMG_8408.jpeg"
+               alt="Coque téléphone Pipe Cleaner modèle 1"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+
+          <div class="product-placeholder" style="display:none;">
+            Photo du produit
+          </div>
+
+        </div>
+
+        <div class="product-info">
+
+          <h4>Coque personnalisée — Modèle 1</h4>
+
+          <p>
+            Exemple de création avec décorations en Pipe Cleaner.
+          </p>
+
+          <div class="price">
+            Prix sur demande
+          </div>
+
+          <div class="tags">
+            <span class="tag">Modèle sur demande</span>
+            <span class="tag">Personnalisable</span>
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <article class="product-card">
+
+        <div class="product-image">
+
+          <img src="IMG_8407.jpeg"
+               alt="Coque téléphone Pipe Cleaner modèle 2"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+
+          <div class="product-placeholder" style="display:none;">
+            Photo du produit
+          </div>
+
+        </div>
+
+        <div class="product-info">
+
+          <h4>Coque personnalisée — Modèle 2</h4>
+
+          <p>
+            Exemple de création avec fleurs et décorations
             en Pipe Cleaner.
           </p>
 
           <div class="price">
-            600 DA
+            Prix sur demande
           </div>
 
           <div class="tags">
-
-            <span class="tag">
-              Fait main
-            </span>
-
-            <span class="tag">
-              2 photos du même modèle
-            </span>
-
+            <span class="tag">Modèle sur demande</span>
+            <span class="tag">Personnalisable</span>
           </div>
 
         </div>
 
       </article>
 
+    </div>
 
-      <!-- COULEUR 3 -->
+  </div>
+
+
+  <!-- GATEAUX -->
+  <div class="product-section" id="gateau">
+
+    <div class="section-head">
+
+      <div class="eyebrow">
+        Pipe Cleaner
+      </div>
+
+      <h2>
+        🎂 Gâteaux d’anniversaire
+      </h2>
+
+      <p>
+        Chaque photo représente un modèle différent.
+        Le modèle peut être personnalisé selon votre demande.
+      </p>
+
+    </div>
+
+    <div class="product-grid">
+
 
       <article class="product-card">
 
-        <div class="product-image duo">
+        <div class="product-image">
 
-          <img
-            src="IMG_7702.jpeg"
-            alt="Coupe Pipe Cleaner violet - vue 1"
-          >
+          <img src="IMG_8351.jpeg"
+               alt="Gâteau anniversaire Pipe Cleaner modèle 1"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
 
-          <img
-            src="IMG_7703.jpeg"
-            alt="Coupe Pipe Cleaner violet - vue 2"
-          >
+          <div class="product-placeholder" style="display:none;">
+            Photo du produit
+          </div>
 
         </div>
 
-
         <div class="product-info">
 
-          <h4>
-            Coupe Pipe Cleaner — Violet
-          </h4>
+          <h4>Gâteau d’anniversaire — Modèle 1</h4>
 
           <p>
-            Coupe décorée à la main avec fleurs
-            en Pipe Cleaner.
+            Création décorative réalisée à la main en Pipe Cleaner.
           </p>
 
           <div class="price">
-            600 DA
+            Prix sur demande
           </div>
 
           <div class="tags">
-
-            <span class="tag">
-              Fait main
-            </span>
-
-            <span class="tag">
-              2 photos du même modèle
-            </span>
-
+            <span class="tag">Toutes les couleurs</span>
+            <span class="tag">Modèle sur demande</span>
+            <span class="tag">Fait main</span>
           </div>
 
         </div>
 
       </article>
 
+
+      <article class="product-card">
+
+        <div class="product-image">
+
+          <img src="IMG_8357.jpeg"
+               alt="Gâteau anniversaire Pipe Cleaner modèle 2"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+
+          <div class="product-placeholder" style="display:none;">
+            Photo du produit
+          </div>
+
+        </div>
+
+        <div class="product-info">
+
+          <h4>Gâteau d’anniversaire — Modèle 2</h4>
+
+          <p>
+            Création décorative personnalisable selon votre demande.
+          </p>
+
+          <div class="price">
+            Prix sur demande
+          </div>
+
+          <div class="tags">
+            <span class="tag">Toutes les couleurs</span>
+            <span class="tag">Modèle sur demande</span>
+            <span class="tag">Fait main</span>
+          </div>
+
+        </div>
+
+      </article>
+
+    </div>
+
+  </div>
+
+
+  <!-- JARDIN INFINI -->
+  <div class="product-section" id="jardin-infini">
+
+    <div class="section-head">
+
+      <div class="eyebrow">
+        Pipe Cleaner
+      </div>
+
+      <h2>
+        🌸 Jardin de Fleurs Infini
+      </h2>
+
+      <p>
+        Une création originale avec miroir, effet 3D
+        et éclairage intégré.
+      </p>
+
+    </div>
+
+    <div class="product-grid">
+
+      <article class="product-card">
+
+        <div class="product-image">
+
+          <img src="IMG_8209.jpeg"
+               alt="Jardin de Fleurs Infini"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+
+          <div class="product-placeholder" style="display:none;">
+            Photo du produit
+          </div>
+
+        </div>
+
+        <div class="product-info">
+
+          <h4>Jardin de Fleurs Infini</h4>
+
+          <p>
+            Cadre miroir avec effet 3D, fleurs en Pipe Cleaner
+            et éclairage intégré pour créer un magnifique effet
+            de profondeur et de lumière.
+          </p>
+
+          <div class="price">
+            Prix sur demande
+          </div>
+
+          <div class="tags">
+            <span class="tag">Effet 3D</span>
+            <span class="tag">Miroir</span>
+            <span class="tag">Éclairage intégré</span>
+            <span class="tag">Personnalisable</span>
+            <span class="tag">Fait main</span>
+          </div>
+
+        </div>
+
+      </article>
 
     </div>
 
@@ -1559,7 +2087,6 @@ footer p{
 
 
 <!-- PERSONNALISATION -->
-
 <section class="custom" id="personnalisation">
 
   <div class="section-head">
@@ -1569,12 +2096,13 @@ footer p{
     </div>
 
     <h2>
-      Personnalisez votre bouquet
+      Exprimez votre demande 💗
     </h2>
 
     <p>
-      Vous pouvez choisir la composition que vous souhaitez
-      et nous envoyer votre demande.
+      Vous avez une idée particulière ?
+      Décrivez-nous votre création et nous l’adapterons
+      selon vos envies.
     </p>
 
   </div>
@@ -1583,46 +2111,78 @@ footer p{
   <div class="custom-box">
 
     <h3>
-      Votre bouquet sur mesure 🌷
+      Votre création sur mesure 🌸
     </h3>
 
     <p>
-      Indiquez-nous les fleurs, les couleurs et le nombre
-      de fleurs que vous souhaitez.
-      Le prix sera confirmé selon votre composition.
+      Indiquez le produit que vous souhaitez,
+      les couleurs, le type de fleurs et toutes les
+      informations importantes pour votre commande.
     </p>
 
 
     <div class="form-group">
 
       <label>
-        Type de bouquet
+        Produit souhaité
       </label>
 
-      <select>
+      <select id="productChoice">
 
         <option>
-          Choisir une composition
+          Choisir un produit
         </option>
 
         <option>
-          Lilies + Tulipes
+          Bouquet de fleurs
         </option>
 
         <option>
-          Roses
+          Fleur lumineuse
         </option>
 
         <option>
-          Lilies
+          Coupe Pipe Cleaner
         </option>
 
         <option>
-          Tulipes
+          Fleur éternelle
         </option>
 
         <option>
-          Autre composition
+          Cadre fleuri
+        </option>
+
+        <option>
+          Porte-accessoires
+        </option>
+
+        <option>
+          Accessoire cheveux
+        </option>
+
+        <option>
+          Porte-clés
+        </option>
+
+        <option>
+          Vase Pipe Cleaner
+        </option>
+
+        <option>
+          Coque de téléphone
+        </option>
+
+        <option>
+          Gâteau d’anniversaire
+        </option>
+
+        <option>
+          Jardin de Fleurs Infini
+        </option>
+
+        <option>
+          Autre création
         </option>
 
       </select>
@@ -1637,7 +2197,8 @@ footer p{
       </label>
 
       <textarea
-        placeholder="Exemple : Je souhaite un bouquet avec 5 lilies roses et 3 tulipes blanches."
+        id="description"
+        placeholder="Exemple : Je souhaite une fleur lumineuse rose avec une tulipe. Ou bien : Je souhaite un cadre A4 avec des fleurs roses et le prénom..."
       ></textarea>
 
     </div>
@@ -1656,8 +2217,7 @@ footer p{
 </section>
 
 
-<!-- INSTAGRAM -->
-
+<!-- CONTACT INSTAGRAM -->
 <section class="instagram" id="contact">
 
   <div class="instagram-box">
@@ -1685,7 +2245,6 @@ footer p{
 
 
 <!-- FOOTER -->
-
 <footer>
 
   <div class="footer-logo">
@@ -1707,51 +2266,40 @@ footer p{
 
 function sendInstagram(){
 
-  const select =
-    document.querySelector('.custom-box select');
-
-  const textarea =
-    document.querySelector('.custom-box textarea');
-
-  const composition =
-    select.value;
+  const product =
+    document.getElementById("productChoice").value;
 
   const description =
-    textarea.value.trim();
+    document.getElementById("description").value.trim();
+
 
   if(
-    composition === "Choisir une composition"
-    &&
+    product === "Choisir un produit" &&
     description === ""
   ){
 
     alert(
-      "Veuillez remplir votre demande 🌷"
+      "Veuillez remplir votre demande 💗"
     );
 
     return;
   }
 
+
   alert(
-
     "Votre demande est prête 💗\n\n" +
-
-    "Composition : " +
-    composition +
-
+    "Produit : " +
+    product +
     "\n\n" +
-
     "Description : " +
     (
       description ||
       "Non précisée"
     ) +
-
     "\n\n" +
-
     "Vous allez être redirigée vers Instagram."
-
   );
+
 
   window.open(
     "https://instagram.com/flower.eema",
