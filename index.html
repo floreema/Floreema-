@@ -3,30 +3,25 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Floreema — Créations faites main avec amour</title>
-
-<meta name="description" content="Floreema — Créations faites main, fleurs en Pipe Cleaner, bouquets, créations lumineuses, cadres et cadeaux personnalisés.">
+<meta name="theme-color" content="#f8dce8">
+<meta name="description" content="Floreema — créations faites main, cadeaux personnalisés et fleurs en Pipe Cleaner.">
+<title>Floreema World — Handmade Gifts</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
 :root{
   --pink:#f8dce8;
-  --pink2:#efbfd3;
-  --pink3:#fff0f6;
-  --cream:#fffaf5;
-  --cream2:#fdf2e9;
+  --pink2:#f4cbdc;
+  --cream:#fff8f1;
   --white:#ffffff;
-  --dark:#513441;
-  --text:#765b67;
-  --gold:#c99b79;
-  --shadow:0 18px 55px rgba(92,54,70,.10);
-  --shadow2:0 8px 25px rgba(92,54,70,.08);
-  --radius:24px;
+  --dark:#5d3949;
+  --text:#6d5961;
+  --gold:#c9a16a;
+  --shadow:0 12px 35px rgba(93,57,73,.10);
+  --radius:22px;
 }
 
 *{
@@ -40,10 +35,10 @@ html{
 }
 
 body{
-  font-family:"DM Sans",sans-serif;
+  font-family:'Poppins',sans-serif;
   background:var(--cream);
   color:var(--text);
-  overflow-x:hidden;
+  line-height:1.7;
 }
 
 img{
@@ -52,235 +47,121 @@ img{
 }
 
 a{
-  color:inherit;
   text-decoration:none;
+  color:inherit;
 }
 
-button,
-input,
-textarea,
-select{
-  font:inherit;
+button{
+  font-family:inherit;
 }
-
-/* =========================
-   TOP BAR
-========================= */
 
 .topbar{
-  background:var(--pink);
-  color:var(--dark);
+  background:var(--dark);
+  color:#fff;
   text-align:center;
   padding:9px 15px;
   font-size:12px;
-  font-weight:600;
   letter-spacing:.3px;
 }
-
-/* =========================
-   HEADER
-========================= */
 
 header{
   position:sticky;
   top:0;
   z-index:1000;
-  background:rgba(255,255,255,.94);
-  backdrop-filter:blur(18px);
-  border-bottom:1px solid rgba(93,57,73,.06);
+  background:rgba(255,255,255,.96);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid rgba(93,57,73,.08);
 }
 
 .nav{
-  max-width:1250px;
+  max-width:1200px;
   margin:auto;
-  height:82px;
-  padding:0 25px;
+  min-height:82px;
+  padding:10px 22px;
   display:flex;
   align-items:center;
   justify-content:space-between;
   gap:25px;
 }
 
-.brand{
-  display:flex;
-  align-items:center;
-  gap:12px;
-  min-width:180px;
-}
-
-.brand img{
-  width:58px;
-  height:58px;
-  object-fit:contain;
+.logo{
+  width:72px;
+  height:72px;
+  object-fit:cover;
   border-radius:50%;
-  background:white;
-  box-shadow:0 5px 18px rgba(80,40,55,.10);
-}
-
-.brand-text strong{
-  display:block;
-  font-family:"Playfair Display",serif;
-  font-size:23px;
-  color:var(--dark);
-}
-
-.brand-text span{
-  display:block;
-  font-size:10px;
-  letter-spacing:1.8px;
-  text-transform:uppercase;
-  color:var(--gold);
+  box-shadow:0 5px 18px rgba(93,57,73,.12);
 }
 
 .nav-links{
   display:flex;
   align-items:center;
+  justify-content:center;
   gap:25px;
+  flex-wrap:wrap;
 }
 
 .nav-links a{
   font-size:13px;
-  font-weight:600;
+  font-weight:500;
   color:var(--dark);
-  position:relative;
+  transition:.25s;
 }
 
-.nav-links a::after{
-  content:"";
-  position:absolute;
-  left:0;
-  bottom:-7px;
-  width:0;
-  height:2px;
-  background:var(--pink2);
-  transition:.3s;
-}
-
-.nav-links a:hover::after{
-  width:100%;
+.nav-links a:hover{
+  color:#b66d8d;
 }
 
 .nav-cta{
-  background:var(--dark);
-  color:white!important;
-  padding:12px 18px;
-  border-radius:999px;
+  background:var(--pink);
+  color:var(--dark)!important;
+  padding:11px 17px;
+  border-radius:30px;
 }
-
-.nav-cta::after{
-  display:none;
-}
-
-.menu-btn{
-  display:none;
-  border:0;
-  background:var(--pink3);
-  width:44px;
-  height:44px;
-  border-radius:50%;
-  cursor:pointer;
-  font-size:20px;
-}
-
-/* =========================
-   HERO
-========================= */
 
 .hero{
   min-height:650px;
-  position:relative;
-  overflow:hidden;
-  background:
-    radial-gradient(circle at 8% 15%,rgba(248,220,232,.9),transparent 27%),
-    radial-gradient(circle at 90% 20%,rgba(253,242,233,.95),transparent 30%),
-    linear-gradient(135deg,#fff 0%,#fff8fb 48%,#fff8f0 100%);
-}
-
-.hero::before{
-  content:"";
-  position:absolute;
-  width:420px;
-  height:420px;
-  border-radius:50%;
-  border:1px solid rgba(201,155,121,.16);
-  right:-180px;
-  bottom:-160px;
-}
-
-.hero::after{
-  content:"";
-  position:absolute;
-  width:260px;
-  height:260px;
-  border-radius:50%;
-  border:1px solid rgba(239,191,211,.25);
-  left:-130px;
-  top:80px;
-}
-
-.hero-inner{
-  max-width:1250px;
-  min-height:650px;
-  margin:auto;
-  padding:75px 25px;
   display:grid;
   grid-template-columns:1.05fr .95fr;
   align-items:center;
-  gap:70px;
-  position:relative;
-  z-index:2;
+  max-width:1200px;
+  margin:auto;
+  padding:55px 22px 70px;
+  gap:55px;
 }
 
-.hero-copy{
-  max-width:620px;
+.hero-text{
+  padding:15px 0;
 }
 
 .eyebrow{
-  display:inline-flex;
-  align-items:center;
-  gap:9px;
-  background:white;
-  border:1px solid rgba(93,57,73,.08);
-  padding:9px 15px;
-  border-radius:999px;
-  color:var(--gold);
-  font-size:11px;
-  font-weight:700;
+  display:inline-block;
+  color:#b66d8d;
+  font-size:12px;
+  letter-spacing:2px;
   text-transform:uppercase;
-  letter-spacing:1.5px;
-  box-shadow:var(--shadow2);
-  margin-bottom:22px;
-}
-
-.eyebrow i{
-  width:7px;
-  height:7px;
-  border-radius:50%;
-  background:var(--pink2);
+  font-weight:600;
+  margin-bottom:15px;
 }
 
 .hero h1{
-  font-family:"Playfair Display",serif;
+  font-family:'Playfair Display',serif;
   color:var(--dark);
-  font-size:clamp(48px,6vw,76px);
-  line-height:1.02;
-  font-weight:600;
-  margin-bottom:23px;
+  font-size:clamp(42px,6vw,72px);
+  line-height:1.08;
+  margin-bottom:22px;
 }
 
-.hero h1 em{
-  color:#d994b3;
-  font-style:normal;
+.hero h1 span{
+  color:#c47b9b;
 }
 
 .hero p{
+  max-width:570px;
   font-size:16px;
-  line-height:1.9;
-  max-width:540px;
   margin-bottom:30px;
 }
 
-.hero-actions{
+.btns{
   display:flex;
   flex-wrap:wrap;
   gap:12px;
@@ -290,962 +171,541 @@ header{
   display:inline-flex;
   align-items:center;
   justify-content:center;
-  gap:9px;
-  border:0;
-  cursor:pointer;
-  padding:14px 21px;
-  border-radius:999px;
+  padding:13px 22px;
+  border-radius:30px;
   font-size:13px;
-  font-weight:700;
-  transition:.3s;
+  font-weight:600;
+  transition:.25s;
+  cursor:pointer;
 }
 
 .btn-primary{
   background:var(--dark);
-  color:white;
-  box-shadow:0 10px 25px rgba(81,52,65,.18);
+  color:#fff;
 }
 
 .btn-primary:hover{
-  transform:translateY(-3px);
-  box-shadow:0 15px 32px rgba(81,52,65,.24);
+  transform:translateY(-2px);
 }
 
-.btn-soft{
-  background:white;
+.btn-light{
+  background:#fff;
   color:var(--dark);
-  border:1px solid rgba(93,57,73,.10);
-}
-
-.btn-soft:hover{
-  transform:translateY(-3px);
-  background:var(--pink3);
-}
-
-.hero-visual{
-  position:relative;
-  display:flex;
-  justify-content:center;
+  border:1px solid rgba(93,57,73,.12);
 }
 
 .hero-card{
-  width:min(470px,100%);
-  background:white;
-  border-radius:34px;
-  padding:13px;
-  box-shadow:0 30px 70px rgba(93,57,73,.16);
-  transform:rotate(1.5deg);
+  position:relative;
 }
 
 .hero-card img{
   width:100%;
-  height:490px;
+  height:530px;
   object-fit:cover;
-  border-radius:26px;
-}
-
-.hero-floating{
-  position:absolute;
-  left:-25px;
-  bottom:20px;
-  background:white;
-  border-radius:20px;
-  padding:15px 18px;
+  border-radius:35px;
   box-shadow:var(--shadow);
-  display:flex;
-  align-items:center;
-  gap:11px;
 }
 
-.hero-floating .dot{
-  width:35px;
-  height:35px;
-  background:var(--pink);
-  border-radius:50%;
-  display:grid;
-  place-items:center;
-}
-
-.hero-floating strong{
-  display:block;
-  font-size:12px;
+.hero-badge{
+  position:absolute;
+  bottom:25px;
+  left:-20px;
+  background:#fff;
+  padding:17px 21px;
+  border-radius:18px;
+  box-shadow:var(--shadow);
   color:var(--dark);
+  font-size:12px;
 }
 
-.hero-floating span{
-  font-size:10px;
-}
-
-/* =========================
-   GENERAL
-========================= */
-
-section{
-  padding:95px 20px;
-}
-
-.container{
-  max-width:1180px;
+.section{
+  max-width:1200px;
   margin:auto;
+  padding:75px 22px;
 }
 
 .section-head{
   text-align:center;
-  max-width:720px;
-  margin:0 auto 48px;
+  max-width:700px;
+  margin:0 auto 38px;
 }
 
-.kicker{
-  color:var(--gold);
-  text-transform:uppercase;
-  letter-spacing:2px;
-  font-size:10px;
-  font-weight:800;
-  margin-bottom:10px;
+.section-head .eyebrow{
+  margin-bottom:8px;
 }
 
 .section-head h2{
-  font-family:"Playfair Display",serif;
+  font-family:'Playfair Display',serif;
   color:var(--dark);
-  font-size:42px;
-  margin-bottom:13px;
+  font-size:clamp(31px,4vw,45px);
+  margin-bottom:12px;
 }
 
 .section-head p{
-  line-height:1.8;
   font-size:14px;
 }
 
-/* =========================
-   CATEGORY
-========================= */
-
-.categories{
-  background:white;
+.category-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
 }
 
-.category-grid{
+.category{
+  background:#fff;
+  border-radius:var(--radius);
+  padding:25px;
+  min-height:145px;
+  box-shadow:var(--shadow);
+  border:1px solid rgba(93,57,73,.05);
+  transition:.3s;
+}
+
+.category:hover{
+  transform:translateY(-5px);
+}
+
+.category-icon{
+  font-size:28px;
+  margin-bottom:10px;
+}
+
+.category h3{
+  color:var(--dark);
+  font-family:'Playfair Display',serif;
+  font-size:22px;
+  margin-bottom:5px;
+}
+
+.category p{
+  font-size:12px;
+}
+
+.collection{
+  background:#fff;
+  padding:80px 0;
+}
+
+.subnav{
+  display:flex;
+  gap:9px;
+  justify-content:center;
+  flex-wrap:wrap;
+  margin-bottom:40px;
+}
+
+.subnav a{
+  background:var(--cream);
+  border:1px solid rgba(93,57,73,.08);
+  color:var(--dark);
+  border-radius:30px;
+  padding:9px 15px;
+  font-size:11px;
+  transition:.25s;
+}
+
+.subnav a:hover{
+  background:var(--pink);
+}
+
+.product-section{
+  max-width:1200px;
+  margin:0 auto 75px;
+  padding:0 22px;
+  scroll-margin-top:110px;
+}
+
+.product-section-title{
+  display:flex;
+  align-items:end;
+  justify-content:space-between;
+  gap:20px;
+  margin-bottom:22px;
+}
+
+.product-section-title h3{
+  font-family:'Playfair Display',serif;
+  color:var(--dark);
+  font-size:31px;
+}
+
+.product-section-title p{
+  font-size:12px;
+}
+
+.products{
   display:grid;
   grid-template-columns:repeat(4,1fr);
   gap:18px;
 }
 
-.category-card{
-  position:relative;
-  min-height:180px;
-  padding:25px;
-  border-radius:24px;
-  background:linear-gradient(145deg,#fff,#fff7fa);
-  border:1px solid rgba(93,57,73,.07);
-  box-shadow:var(--shadow2);
+.product{
+  background:#fff;
+  border-radius:20px;
   overflow:hidden;
-  transition:.35s;
-}
-
-.category-card:nth-child(even){
-  background:linear-gradient(145deg,#fffaf5,#fff);
-}
-
-.category-card:hover{
-  transform:translateY(-8px);
   box-shadow:var(--shadow);
+  border:1px solid rgba(93,57,73,.05);
 }
 
-.category-number{
-  color:var(--pink2);
-  font-size:11px;
-  font-weight:800;
-  letter-spacing:1px;
-}
-
-.category-icon{
-  font-size:30px;
-  margin:18px 0 12px;
-}
-
-.category-card h3{
-  color:var(--dark);
-  font-family:"Playfair Display",serif;
-  font-size:21px;
-  margin-bottom:7px;
-}
-
-.category-card p{
-  font-size:11px;
-  line-height:1.6;
-}
-
-.category-arrow{
-  position:absolute;
-  right:20px;
-  bottom:20px;
-  width:34px;
-  height:34px;
-  border-radius:50%;
-  background:var(--pink);
-  display:grid;
-  place-items:center;
-  color:var(--dark);
-}
-
-/* =========================
-   SUBCATEGORY BAR
-========================= */
-
-.subcategories{
-  background:var(--cream2);
-  padding-top:55px;
-  padding-bottom:55px;
-}
-
-.pills{
-  display:flex;
-  flex-wrap:wrap;
-  justify-content:center;
-  gap:9px;
-}
-
-.pill{
-  background:white;
-  border:1px solid rgba(93,57,73,.08);
-  padding:10px 15px;
-  border-radius:999px;
-  font-size:11px;
-  color:var(--dark);
-  transition:.25s;
-}
-
-.pill:hover{
-  background:var(--pink);
-  transform:translateY(-2px);
-}
-
-/* =========================
-   PRODUCT SECTIONS
-========================= */
-
-.products-section{
-  background:white;
-}
-
-.product-section{
-  padding:80px 0 0;
-}
-
-.product-section:first-child{
-  padding-top:0;
-}
-
-.product-heading{
-  display:flex;
-  align-items:flex-end;
-  justify-content:space-between;
-  gap:20px;
-  margin-bottom:25px;
-}
-
-.product-heading .mini{
-  color:var(--gold);
-  text-transform:uppercase;
-  letter-spacing:1.8px;
-  font-size:10px;
-  font-weight:800;
-  margin-bottom:7px;
-}
-
-.product-heading h3{
-  font-family:"Playfair Display",serif;
-  color:var(--dark);
-  font-size:31px;
-}
-
-.product-heading p{
-  max-width:500px;
-  font-size:12px;
-  line-height:1.7;
-}
-
-.product-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:22px;
-}
-
-.product-card{
-  background:linear-gradient(145deg,#fff,#fffafc);
-  border:1px solid rgba(93,57,73,.07);
-  border-radius:25px;
-  overflow:hidden;
-  box-shadow:var(--shadow2);
-  transition:.35s;
-}
-
-.product-card:hover{
-  transform:translateY(-7px);
-  box-shadow:var(--shadow);
-}
-
-.product-photo{
-  height:300px;
-  background:linear-gradient(145deg,#fff7fa,#fffaf5);
-  padding:12px;
-  position:relative;
-}
-
-.product-photo img{
+.product-img{
   width:100%;
-  height:100%;
-  object-fit:contain;
-  border-radius:17px;
-  background:white;
-}
-
-.product-badge{
-  position:absolute;
-  top:23px;
-  left:23px;
-  background:white;
-  color:var(--dark);
-  border-radius:999px;
-  padding:7px 11px;
-  font-size:9px;
-  font-weight:800;
-  box-shadow:0 7px 18px rgba(0,0,0,.08);
-}
-
-.product-info{
-  padding:20px;
-}
-
-.product-info h4{
-  color:var(--dark);
-  font-family:"Playfair Display",serif;
-  font-size:21px;
-  margin-bottom:8px;
-}
-
-.product-info p{
-  font-size:12px;
-  line-height:1.7;
-  min-height:55px;
-}
-
-.product-meta{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:10px;
-  margin-top:16px;
-  padding-top:15px;
-  border-top:1px solid rgba(93,57,73,.07);
-}
-
-.price{
-  font-size:12px;
-  font-weight:800;
-  color:var(--gold);
-}
-
-.small-btn{
-  border:0;
-  background:var(--pink);
-  color:var(--dark);
-  border-radius:999px;
-  padding:9px 13px;
-  cursor:pointer;
-  font-size:10px;
-  font-weight:800;
-  transition:.25s;
-}
-
-.small-btn:hover{
-  background:var(--pink2);
-}
-
-/* =========================
-   TWO PHOTOS
-========================= */
-
-.duo-photo{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:7px;
-  padding:12px;
-}
-
-.duo-photo img{
-  width:100%;
-  height:276px;
+  height:260px;
   object-fit:cover;
-  border-radius:16px;
-  background:white;
+  background:#f9eef3;
 }
 
-/* =========================
-   CUSTOM REQUEST
-========================= */
+.product-body{
+  padding:18px;
+}
+
+.product-body h4{
+  font-family:'Playfair Display',serif;
+  color:var(--dark);
+  font-size:20px;
+  margin-bottom:7px;
+}
+
+.product-body p{
+  font-size:12px;
+  margin-bottom:12px;
+}
+
+.tag{
+  display:inline-block;
+  background:var(--pink);
+  color:var(--dark);
+  border-radius:20px;
+  padding:5px 10px;
+  font-size:10px;
+  margin-bottom:12px;
+}
+
+.product .btn{
+  width:100%;
+  padding:10px 14px;
+  font-size:11px;
+}
 
 .custom-box{
-  margin-top:30px;
-  background:linear-gradient(135deg,#fff1f7,#fffaf4);
-  border:1px solid rgba(93,57,73,.08);
+  background:linear-gradient(135deg,#fff,#fff4f8);
+  border:1px solid rgba(198,130,159,.18);
   border-radius:28px;
-  padding:28px;
-  box-shadow:var(--shadow2);
+  padding:35px;
+  margin-top:28px;
 }
 
 .custom-box h4{
   color:var(--dark);
-  font-family:"Playfair Display",serif;
-  font-size:25px;
+  font-family:'Playfair Display',serif;
+  font-size:27px;
   margin-bottom:8px;
 }
 
-.custom-box > p{
+.custom-box p{
   font-size:12px;
-  line-height:1.7;
   margin-bottom:20px;
 }
 
 .form-grid{
   display:grid;
-  grid-template-columns:1fr 1fr;
+  grid-template-columns:repeat(2,1fr);
   gap:13px;
 }
 
-.field{
-  display:flex;
-  flex-direction:column;
-  gap:6px;
-}
-
-.field.full{
-  grid-column:1/-1;
-}
-
-.field label{
-  color:var(--dark);
-  font-size:10px;
-  font-weight:800;
-}
-
-.field input,
-.field select,
-.field textarea{
+.field,
+textarea{
   width:100%;
-  border:1px solid rgba(93,57,73,.10);
-  background:white;
-  border-radius:14px;
-  padding:13px;
+  border:1px solid rgba(93,57,73,.12);
+  border-radius:13px;
+  padding:12px 14px;
+  background:#fff;
+  color:var(--dark);
   outline:none;
-  color:var(--text);
+  font-family:inherit;
   font-size:12px;
-  transition:.2s;
 }
 
-.field textarea{
-  min-height:120px;
+textarea{
+  min-height:125px;
   resize:vertical;
 }
 
-.field input:focus,
-.field select:focus,
-.field textarea:focus{
-  border-color:var(--pink2);
-  box-shadow:0 0 0 4px rgba(248,220,232,.35);
+.full{
+  grid-column:1/-1;
 }
-
-.form-actions{
-  margin-top:16px;
-}
-
-/* =========================
-   FEATURE
-========================= */
-
-.feature{
-  background:
-    radial-gradient(circle at 15% 20%,rgba(248,220,232,.7),transparent 25%),
-    linear-gradient(135deg,#fff,#fff8f1);
-}
-
-.feature-grid{
-  display:grid;
-  grid-template-columns:.9fr 1.1fr;
-  align-items:center;
-  gap:55px;
-}
-
-.feature-image{
-  background:white;
-  padding:11px;
-  border-radius:30px;
-  box-shadow:var(--shadow);
-}
-
-.feature-image img{
-  width:100%;
-  height:520px;
-  object-fit:cover;
-  border-radius:22px;
-}
-
-.feature-copy .kicker{
-  margin-bottom:10px;
-}
-
-.feature-copy h2{
-  font-family:"Playfair Display",serif;
-  color:var(--dark);
-  font-size:45px;
-  line-height:1.1;
-  margin-bottom:18px;
-}
-
-.feature-copy p{
-  line-height:1.9;
-  font-size:14px;
-  margin-bottom:20px;
-}
-
-.feature-list{
-  display:grid;
-  gap:12px;
-  margin:22px 0 27px;
-}
-
-.feature-item{
-  display:flex;
-  align-items:center;
-  gap:12px;
-  font-size:12px;
-}
-
-.feature-item span{
-  width:31px;
-  height:31px;
-  border-radius:50%;
-  display:grid;
-  place-items:center;
-  background:var(--pink);
-}
-
-/* =========================
-   DELIVERY
-========================= */
 
 .delivery{
-  background:white;
+  background:var(--pink);
 }
 
 .delivery-grid{
   display:grid;
-  grid-template-columns:1fr 1fr;
+  grid-template-columns:repeat(2,1fr);
   gap:20px;
 }
 
 .delivery-card{
-  background:linear-gradient(145deg,#fff,#fff7fa);
-  border:1px solid rgba(93,57,73,.07);
-  border-radius:26px;
+  background:#fff;
   padding:30px;
-  box-shadow:var(--shadow2);
-  position:relative;
-  overflow:hidden;
-}
-
-.delivery-card:nth-child(2){
-  background:linear-gradient(145deg,#fffaf5,#fff);
-}
-
-.delivery-icon{
-  width:55px;
-  height:55px;
-  border-radius:18px;
-  background:var(--pink);
-  display:grid;
-  place-items:center;
-  font-size:25px;
-  margin-bottom:20px;
-}
-
-.delivery-card h3{
-  font-family:"Playfair Display",serif;
-  color:var(--dark);
-  font-size:27px;
-  margin-bottom:8px;
-}
-
-.delivery-card p{
-  font-size:12px;
-  line-height:1.8;
-}
-
-.delivery-price{
-  margin-top:18px;
-  padding:14px;
-  border-radius:15px;
-  background:white;
-  border:1px dashed rgba(93,57,73,.12);
-  color:var(--gold);
-  font-size:11px;
-  font-weight:700;
-}
-
-/* =========================
-   ABOUT
-========================= */
-
-.about{
-  background:var(--cream2);
-}
-
-.about-grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:50px;
-  align-items:center;
-}
-
-.about-copy h2{
-  font-family:"Playfair Display",serif;
-  color:var(--dark);
-  font-size:45px;
-  line-height:1.1;
-  margin-bottom:17px;
-}
-
-.about-copy p{
-  font-size:14px;
-  line-height:1.9;
-  margin-bottom:15px;
-}
-
-.about-card{
-  background:white;
-  padding:35px;
-  border-radius:30px;
+  border-radius:25px;
   box-shadow:var(--shadow);
 }
 
-.about-logo{
+.delivery-card h3{
+  color:var(--dark);
+  font-family:'Playfair Display',serif;
+  font-size:26px;
+  margin-bottom:10px;
+}
+
+.delivery-card p{
+  font-size:13px;
+}
+
+.steps{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+
+.step{
+  background:#fff;
+  padding:30px;
+  border-radius:23px;
+  box-shadow:var(--shadow);
+  text-align:center;
+}
+
+.step-number{
+  width:45px;
+  height:45px;
+  border-radius:50%;
+  background:var(--pink);
+  color:var(--dark);
   display:flex;
+  align-items:center;
   justify-content:center;
+  margin:0 auto 15px;
+  font-weight:600;
+}
+
+.step h3{
+  color:var(--dark);
+  font-family:'Playfair Display',serif;
+  font-size:22px;
+  margin-bottom:7px;
+}
+
+.step p{
+  font-size:12px;
+}
+
+.instagram{
+  text-align:center;
+  background:#fff;
+}
+
+.insta-box{
+  max-width:720px;
+  margin:auto;
+  background:var(--cream);
+  border-radius:28px;
+  padding:40px 25px;
+}
+
+.insta-box h2{
+  font-family:'Playfair Display',serif;
+  color:var(--dark);
+  font-size:35px;
+  margin-bottom:10px;
+}
+
+.insta-box p{
+  font-size:13px;
   margin-bottom:20px;
 }
 
-.about-logo img{
-  width:110px;
-  height:110px;
-  object-fit:contain;
-  border-radius:50%;
+footer{
+  background:var(--dark);
+  color:#fff;
+  padding:55px 22px 25px;
 }
 
-.about-card h3{
-  text-align:center;
-  font-family:"Playfair Display",serif;
-  color:var(--dark);
+.footer-grid{
+  max-width:1200px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:1.5fr 1fr 1fr;
+  gap:40px;
+}
+
+footer h3{
+  font-family:'Playfair Display',serif;
   font-size:25px;
   margin-bottom:12px;
 }
 
-.about-card p{
-  text-align:center;
+footer p,
+footer a{
   font-size:12px;
-  line-height:1.8;
-}
-
-/* =========================
-   INSTAGRAM CTA
-========================= */
-
-.instagram{
-  background:var(--dark);
-  color:white;
-  position:relative;
-  overflow:hidden;
-}
-
-.instagram::before{
-  content:"";
-  position:absolute;
-  width:350px;
-  height:350px;
-  border:1px solid rgba(255,255,255,.08);
-  border-radius:50%;
-  left:-180px;
-  top:-150px;
-}
-
-.instagram .container{
-  position:relative;
-  z-index:2;
-  text-align:center;
-}
-
-.instagram .kicker{
-  color:#e9b9cc;
-}
-
-.instagram h2{
-  font-family:"Playfair Display",serif;
-  font-size:44px;
-  margin-bottom:13px;
-}
-
-.instagram p{
-  max-width:600px;
-  margin:0 auto 25px;
-  line-height:1.8;
-  font-size:13px;
-  color:rgba(255,255,255,.78);
-}
-
-.instagram .btn-primary{
-  background:white;
-  color:var(--dark);
-}
-
-/* =========================
-   FOOTER
-========================= */
-
-footer{
-  background:#fff;
-  padding:45px 20px 25px;
-  border-top:1px solid rgba(93,57,73,.07);
-}
-
-.footer-grid{
-  max-width:1180px;
-  margin:auto;
-  display:grid;
-  grid-template-columns:1.4fr 1fr 1fr;
-  gap:40px;
-  padding-bottom:30px;
-}
-
-.footer-brand{
-  display:flex;
-  align-items:center;
-  gap:12px;
-  margin-bottom:13px;
-}
-
-.footer-brand img{
-  width:55px;
-  height:55px;
-  object-fit:contain;
-  border-radius:50%;
-}
-
-.footer-brand strong{
-  font-family:"Playfair Display",serif;
-  color:var(--dark);
-  font-size:23px;
-}
-
-footer p{
-  font-size:11px;
-  line-height:1.8;
-}
-
-.footer-title{
-  color:var(--dark);
-  font-size:12px;
-  font-weight:800;
-  margin-bottom:15px;
+  opacity:.88;
 }
 
 .footer-links{
-  display:grid;
-  gap:9px;
-}
-
-.footer-links a{
-  font-size:11px;
-  transition:.2s;
-}
-
-.footer-links a:hover{
-  color:#d994b3;
+  display:flex;
+  flex-direction:column;
+  gap:7px;
 }
 
 .copyright{
-  max-width:1180px;
-  margin:auto;
-  padding-top:20px;
-  border-top:1px solid rgba(93,57,73,.07);
-  display:flex;
-  justify-content:space-between;
-  gap:15px;
+  max-width:1200px;
+  margin:40px auto 0;
+  padding-top:18px;
+  border-top:1px solid rgba(255,255,255,.15);
+  text-align:center;
   font-size:10px;
+  opacity:.7;
 }
 
-/* =========================
-   MODAL
-========================= */
-
-.modal{
-  position:fixed;
-  inset:0;
-  background:rgba(40,24,31,.48);
-  backdrop-filter:blur(7px);
-  display:none;
-  align-items:center;
-  justify-content:center;
-  padding:20px;
-  z-index:2000;
+.placeholder{
+  text-align:center;
+  padding:45px 20px;
+  background:#fff;
+  border-radius:25px;
+  box-shadow:var(--shadow);
 }
 
-.modal.active{
-  display:flex;
-}
-
-.modal-box{
-  width:min(620px,100%);
-  max-height:90vh;
-  overflow:auto;
-  background:white;
-  border-radius:28px;
-  padding:28px;
-  box-shadow:0 30px 90px rgba(0,0,0,.22);
-  position:relative;
-}
-
-.close{
-  position:absolute;
-  right:17px;
-  top:17px;
-  width:38px;
-  height:38px;
-  border:0;
-  background:var(--pink3);
-  border-radius:50%;
+.placeholder h3{
+  font-family:'Playfair Display',serif;
   color:var(--dark);
-  cursor:pointer;
-  font-size:19px;
+  font-size:28px;
+  margin-bottom:8px;
 }
 
-.modal-box h3{
-  font-family:"Playfair Display",serif;
-  color:var(--dark);
-  font-size:30px;
-  padding-right:45px;
-  margin-bottom:7px;
+.placeholder p{
+  font-size:12px;
 }
 
-.modal-box > p{
-  font-size:11px;
-  line-height:1.7;
-  margin-bottom:20px;
-}
-
-/* =========================
-   FLOATING INSTAGRAM
-========================= */
-
-.floating-ig{
-  position:fixed;
-  right:18px;
-  bottom:18px;
-  z-index:900;
-  width:53px;
-  height:53px;
-  border-radius:50%;
-  display:grid;
-  place-items:center;
-  background:var(--dark);
-  color:white;
-  font-size:21px;
-  box-shadow:0 12px 30px rgba(81,52,65,.25);
-  transition:.3s;
-}
-
-.floating-ig:hover{
-  transform:translateY(-4px) scale(1.04);
-}
-
-/* =========================
-   REVEAL
-========================= */
-
-.reveal{
-  opacity:0;
-  transform:translateY(25px);
-  transition:opacity .7s ease,transform .7s ease;
-}
-
-.reveal.visible{
-  opacity:1;
-  transform:none;
-}
-
-/* =========================
-   MOBILE
-========================= */
-
-@media(max-width:950px){
-
-  .nav-links{
-    position:absolute;
-    left:15px;
-    right:15px;
-    top:78px;
-    background:white;
-    border-radius:20px;
-    padding:15px;
-    display:none;
-    flex-direction:column;
-    align-items:stretch;
-    box-shadow:var(--shadow);
-    border:1px solid rgba(93,57,73,.07);
-  }
-
-  .nav-links.open{
-    display:flex;
-  }
-
-  .nav-links a{
-    padding:12px;
-  }
-
-  .menu-btn{
-    display:block;
-  }
-
-  .hero-inner{
+@media(max-width:900px){
+  .hero{
     grid-template-columns:1fr;
-    gap:40px;
-    padding-top:55px;
+    padding-top:35px;
   }
 
-  .hero-copy{
-    text-align:center;
-    margin:auto;
-  }
-
-  .hero-actions{
-    justify-content:center;
-  }
-
-  .hero-visual{
-    max-width:520px;
-    margin:auto;
-    width:100%;
+  .hero-card img{
+    height:430px;
   }
 
   .category-grid{
     grid-template-columns:repeat(2,1fr);
   }
 
-  .product-grid{
+  .products{
     grid-template-columns:repeat(2,1fr);
   }
 
-  .feature-grid,
-  .about-grid{
+  .steps{
     grid-template-columns:1fr;
+  }
+
+  .footer-grid{
+    grid-template-columns:1fr 1fr;
+  }
+}
+
+@media(max-width:600px){
+  .nav{
+    padding:8px 14px;
+    min-height:70px;
+  }
+
+  .logo{
+    width:58px;
+    height:58px;
+  }
+
+  .nav-links{
+    gap:10px;
+  }
+
+  .nav-links a{
+    font-size:10px;
+  }
+
+  .nav-cta{
+    padding:8px 11px;
+  }
+
+  .hero{
+    padding:35px 17px 55px;
+    gap:30px;
+  }
+
+  .hero h1{
+    font-size:43px;
+  }
+
+  .hero-card img{
+    height:360px;
+    border-radius:25px;
+  }
+
+  .hero-badge{
+    left:10px;
+    bottom:15px;
+  }
+
+  .section{
+    padding:55px 17px;
+  }
+
+  .category-grid{
+    grid-template-columns:1fr;
+  }
+
+  .products{
+    grid-template-columns:1fr 1fr;
+    gap:12px;
+  }
+
+  .product-img{
+    height:190px;
+  }
+
+  .product-body{
+    padding:13px;
+  }
+
+  .product-body h4{
+    font-size:16px;
+  }
+
+  .product-body p{
+    font-size:10px;
+  }
+
+  .product-section{
+    padding:0 17px;
+  }
+
+  .product-section-title{
+    display:block;
+  }
+
+  .product-section-title h3{
+    font-size:27px;
+  }
+
+  .form-grid{
+    grid-template-columns:1fr;
+  }
+
+  .full{
+    grid-column:auto;
+  }
+
+  .custom-box{
+    padding:23px 17px;
   }
 
   .delivery-grid{
@@ -1253,136 +713,7 @@ footer p{
   }
 
   .footer-grid{
-    grid-template-columns:1fr 1fr;
-  }
-}
-
-@media(max-width:620px){
-
-  section{
-    padding:70px 16px;
-  }
-
-  .nav{
-    height:72px;
-    padding:0 16px;
-  }
-
-  .brand img{
-    width:48px;
-    height:48px;
-  }
-
-  .brand-text strong{
-    font-size:20px;
-  }
-
-  .brand-text span{
-    font-size:8px;
-  }
-
-  .hero{
-    min-height:auto;
-  }
-
-  .hero-inner{
-    min-height:auto;
-    padding:55px 17px 70px;
-  }
-
-  .hero h1{
-    font-size:49px;
-  }
-
-  .hero p{
-    font-size:13px;
-  }
-
-  .hero-card img{
-    height:380px;
-  }
-
-  .hero-floating{
-    left:5px;
-    bottom:10px;
-  }
-
-  .section-head h2{
-    font-size:34px;
-  }
-
-  .category-grid{
-    grid-template-columns:1fr 1fr;
-    gap:11px;
-  }
-
-  .category-card{
-    min-height:160px;
-    padding:18px;
-  }
-
-  .category-card h3{
-    font-size:17px;
-  }
-
-  .category-icon{
-    font-size:24px;
-    margin:14px 0 9px;
-  }
-
-  .product-grid{
     grid-template-columns:1fr;
-  }
-
-  .product-photo{
-    height:350px;
-  }
-
-  .duo-photo img{
-    height:300px;
-  }
-
-  .product-heading{
-    display:block;
-  }
-
-  .product-heading h3{
-    font-size:27px;
-    margin-bottom:8px;
-  }
-
-  .feature-image img{
-    height:390px;
-  }
-
-  .feature-copy h2,
-  .about-copy h2{
-    font-size:36px;
-  }
-
-  .form-grid{
-    grid-template-columns:1fr;
-  }
-
-  .field.full{
-    grid-column:auto;
-  }
-
-  .footer-grid{
-    grid-template-columns:1fr;
-  }
-
-  .copyright{
-    display:block;
-    line-height:1.8;
-  }
-
-  .copyright span{
-    display:block;
-  }
-
-  .instagram h2{
-    font-size:36px;
   }
 }
 </style>
@@ -1390,1762 +721,1107 @@ footer p{
 
 <body>
 
-<!-- =========================
-     TOP BAR
-========================= -->
-
 <div class="topbar">
-  ✦ Créations faites main avec amour • Livraison disponible en Algérie 🇩🇿 ✦
+  Créations faites main avec amour • Livraison disponible en Algérie 🇩🇿
 </div>
-
-<!-- =========================
-     HEADER
-========================= -->
 
 <header>
   <nav class="nav">
-
-    <a href="#accueil" class="brand">
-      <img src="./floreema-logo.jpg" alt="Floreema">
-      <div class="brand-text">
-        <strong>Floreema</strong>
-        <span>Handmade with love</span>
-      </div>
+    <a href="#accueil">
+      <img class="logo" src="./FC4778DE-32DB-45D6-B789-D377250B2821.jpeg?v=4" alt="Floreema World">
     </a>
 
-    <button class="menu-btn" id="menuBtn">☰</button>
-
-    <div class="nav-links" id="navLinks">
+    <div class="nav-links">
       <a href="#accueil">Accueil</a>
       <a href="#categories">Catégories</a>
-      <a href="#creations">Créations</a>
+      <a href="#produits">Produits</a>
+      <a href="#personnalisation">Personnalisation</a>
       <a href="#livraison">Livraison</a>
-      <a href="#apropos">À propos</a>
-      <a href="https://instagram.com/flower.eema" target="_blank" class="nav-cta">
-        Instagram ↗
-      </a>
+      <a class="nav-cta" href="https://instagram.com/flower.eema" target="_blank">Commander</a>
     </div>
-
   </nav>
 </header>
-
-<!-- =========================
-     HERO
-========================= -->
 
 <main>
 
 <section class="hero" id="accueil">
+  <div class="hero-text">
+    <span class="eyebrow">Floreema World</span>
 
-  <div class="hero-inner">
+    <h1>
+      Des créations<br>
+      faites <span>avec amour.</span>
+    </h1>
 
-    <div class="hero-copy reveal">
-
-      <div class="eyebrow">
-        <i></i>
-        Créations artisanales
-      </div>
-
-      <h1>
-        Des fleurs qui<br>
-        racontent <em>une histoire.</em>
-      </h1>
-
-      <p>
-        Bienvenue chez Floreema, un univers de créations faites main
-        pensées pour transformer vos idées, vos souvenirs et vos cadeaux
-        en pièces uniques.
-      </p>
-
-      <div class="hero-actions">
-        <a href="#creations" class="btn btn-primary">
-          Découvrir les créations
-        </a>
-
-        <a href="https://instagram.com/flower.eema"
-           target="_blank"
-           class="btn btn-soft">
-          Voir Instagram
-        </a>
-      </div>
-
-    </div>
-
-    <div class="hero-visual reveal">
-
-      <div class="hero-card">
-        <img src="./IMG_8209.jpeg"
-             alt="Jardin de Fleurs Infini Floreema">
-      </div>
-
-      <div class="hero-floating">
-        <div class="dot">♡</div>
-        <div>
-          <strong>Créé avec passion</strong>
-          <span>Chaque pièce est unique</span>
-        </div>
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-<!-- =========================
-     CATEGORIES
-========================= -->
-
-<section class="categories" id="categories">
-
-  <div class="container">
-
-    <div class="section-head reveal">
-      <div class="kicker">L'univers Floreema</div>
-      <h2>Explorez nos créations</h2>
-      <p>
-        Découvrez nos différentes collections et choisissez
-        l'univers qui correspond le mieux à votre idée.
-      </p>
-    </div>
-
-    <div class="category-grid">
-
-      <a href="#pipe-cleaner" class="category-card reveal">
-        <div class="category-number">01</div>
-        <div class="category-icon">🌷</div>
-        <h3>Pipe Cleaner</h3>
-        <p>Fleurs, bouquets, créations lumineuses et décorations.</p>
-        <div class="category-arrow">↗</div>
-      </a>
-
-      <a href="#satin" class="category-card reveal">
-        <div class="category-number">02</div>
-        <div class="category-icon">🎀</div>
-        <h3>Fleurs en Satin</h3>
-        <p>Créations délicates et élégantes en satin.</p>
-        <div class="category-arrow">↗</div>
-      </a>
-
-      <a href="#miroirs" class="category-card reveal">
-        <div class="category-number">03</div>
-        <div class="category-icon">🪞</div>
-        <h3>Miroirs</h3>
-        <p>Miroirs personnalisés avec fleurs, perles ou stickers.</p>
-        <div class="category-arrow">↗</div>
-      </a>
-
-      <a href="#coupes" class="category-card reveal">
-        <div class="category-number">04</div>
-        <div class="category-icon">☕</div>
-        <h3>Coupes</h3>
-        <p>Coupes décorées et personnalisables selon votre idée.</p>
-        <div class="category-arrow">↗</div>
-      </a>
-
-      <a href="#cadres" class="category-card reveal">
-        <div class="category-number">05</div>
-        <div class="category-icon">🖼️</div>
-        <h3>Cadres personnalisés</h3>
-        <p>Souvenirs, diplômes, anniversaires et compositions.</p>
-        <div class="category-arrow">↗</div>
-      </a>
-
-      <a href="#fleurs-artificielles" class="category-card reveal">
-        <div class="category-number">06</div>
-        <div class="category-icon">💐</div>
-        <h3>Fleurs artificielles</h3>
-        <p>Compositions florales qui durent dans le temps.</p>
-        <div class="category-arrow">↗</div>
-      </a>
-
-      <a href="#accessoires" class="category-card reveal">
-        <div class="category-number">07</div>
-        <div class="category-icon">🎀</div>
-        <h3>Accessoires cheveux</h3>
-        <p>Pinces, serre-têtes et accessoires fleuris.</p>
-        <div class="category-arrow">↗</div>
-      </a>
-
-      <a href="#vases" class="category-card reveal">
-        <div class="category-number">08</div>
-        <div class="category-icon">🪴</div>
-        <h3>Vases en Foam</h3>
-        <p>Petites compositions florales originales et colorées.</p>
-        <div class="category-arrow">↗</div>
-      </a>
-
-    </div>
-
-  </div>
-
-</section>
-
-<!-- =========================
-     SUBCATEGORIES
-========================= -->
-
-<section class="subcategories">
-
-  <div class="container">
-
-    <div class="section-head reveal">
-      <div class="kicker">Collections</div>
-      <h2>Nos univers</h2>
-    </div>
-
-    <div class="pills">
-
-      <a href="#bouquets" class="pill">Bouquets de fleurs</a>
-      <a href="#lumineuses" class="pill">Fleurs lumineuses</a>
-      <a href="#eternelle" class="pill">Fleur éternelle</a>
-      <a href="#coupes-pipe" class="pill">Coupes Pipe Cleaner</a>
-      <a href="#cadres-pipe" class="pill">Cadres fleuris</a>
-      <a href="#porte-accessoires" class="pill">Porte-accessoires</a>
-      <a href="#accessoires-pipe" class="pill">Accessoires cheveux</a>
-      <a href="#porte-cles" class="pill">Porte-clés</a>
-      <a href="#vases-pipe" class="pill">Vases</a>
-      <a href="#coques" class="pill">Coques personnalisées</a>
-      <a href="#gateaux" class="pill">Gâteaux d'anniversaire</a>
-      <a href="#jardin-infini" class="pill">Jardin de Fleurs Infini</a>
-
-    </div>
-
-  </div>
-
-</section>
-
-<!-- =========================
-     CREATIONS
-========================= -->
-
-<section class="products-section" id="creations">
-
-<div class="container">
-
-  <div class="section-head reveal">
-    <div class="kicker">Collection signature</div>
-    <h2>Créations en Pipe Cleaner</h2>
     <p>
-      Des créations modelées à la main, personnalisables selon vos
-      couleurs, vos fleurs et votre imagination.
+      Des fleurs et cadeaux faits main pour transformer chaque occasion
+      en un souvenir unique. Personnalisez votre création selon vos envies.
+    </p>
+
+    <div class="btns">
+      <a class="btn btn-primary" href="#categories">Découvrir les créations</a>
+      <a class="btn btn-light" href="https://instagram.com/flower.eema" target="_blank">Instagram</a>
+    </div>
+  </div>
+
+  <div class="hero-card">
+    <img src="./IMG_8337.jpeg?v=4" alt="Création Floreema">
+    <div class="hero-badge">
+      ✿ Créations personnalisées • Fait main
+    </div>
+  </div>
+</section>
+
+<section class="section" id="categories">
+  <div class="section-head">
+    <span class="eyebrow">Notre univers</span>
+    <h2>Découvrez nos catégories</h2>
+    <p>
+      Choisissez une catégorie pour découvrir nos créations
+      et trouver le cadeau parfait.
     </p>
   </div>
 
-  <!-- =====================
-       BOUQUETS
-  ====================== -->
+  <div class="category-grid">
 
+    <a class="category" href="#pipe-cleaner">
+      <div class="category-icon">🌸</div>
+      <h3>Créations en Pipe Cleaner</h3>
+      <p>Fleurs, bouquets, créations lumineuses et idées originales.</p>
+    </a>
+
+    <a class="category" href="#satin">
+      <div class="category-icon">🌷</div>
+      <h3>Fleurs en Satin</h3>
+      <p>Bouquets, box et petites créations en satin.</p>
+    </a>
+
+    <a class="category" href="#miroirs">
+      <div class="category-icon">🪞</div>
+      <h3>Miroirs</h3>
+      <p>Des miroirs personnalisés selon votre style.</p>
+    </a>
+
+    <a class="category" href="#coupes">
+      <div class="category-icon">🏆</div>
+      <h3>Coupes</h3>
+      <p>Coupes personnalisées en différents modèles.</p>
+    </a>
+
+    <a class="category" href="#cadres">
+      <div class="category-icon">🖼️</div>
+      <h3>Cadres Personnalisés</h3>
+      <p>Cadres fleuris, photos et occasions spéciales.</p>
+    </a>
+
+    <a class="category" href="#artificielles">
+      <div class="category-icon">💐</div>
+      <h3>Fleurs Artificielles</h3>
+      <p>Des compositions fleuries pour toutes les occasions.</p>
+    </a>
+
+    <a class="category" href="#cheveux">
+      <div class="category-icon">🎀</div>
+      <h3>Accessoires Cheveux</h3>
+      <p>Pinces et serre-têtes fleuris personnalisables.</p>
+    </a>
+
+    <a class="category" href="#vases">
+      <div class="category-icon">🌻</div>
+      <h3>Vases en Foam</h3>
+      <p>Des vases originaux avec fleurs selon votre demande.</p>
+    </a>
+
+    <a class="category" href="#box">
+      <div class="category-icon">🎁</div>
+      <h3>Box Cadeaux</h3>
+      <p>Des box personnalisées pour faire plaisir.</p>
+    </a>
+
+  </div>
+</section>
+</section>
+  <section class="collection" id="produits">
+
+  <div class="product-section" id="pipe-cleaner">
+    <div class="section-head">
+      <span class="eyebrow">Collection</span>
+      <h2>Créations en Pipe Cleaner</h2>
+      <p>
+        Des créations fleuries réalisées à la main et personnalisables
+        selon vos envies.
+      </p>
+    </div>
+
+    <div class="subnav">
+      <a href="#bouquets">Bouquets</a>
+      <a href="#lumineuses">Fleurs lumineuses</a>
+      <a href="#eternelle">Fleur éternelle</a>
+      <a href="#coupes-pipe">Coupes</a>
+      <a href="#cadres-fleuris">Cadres fleuris</a>
+      <a href="#porte-accessoires">Porte-accessoires</a>
+      <a href="#accessoires-pipe">Accessoires cheveux</a>
+      <a href="#porte-cles">Porte-clés</a>
+      <a href="#vases-pipe">Vases</a>
+      <a href="#coques">Coques</a>
+      <a href="#gateaux">Gâteaux</a>
+      <a href="#jardin-infini">Jardin de Fleurs Infini</a>
+    </div>
+  </div>
+
+  <!-- BOUQUETS -->
   <div class="product-section" id="bouquets">
-
-    <div class="product-heading reveal">
+    <div class="product-section-title">
       <div>
-        <div class="mini">Pipe Cleaner · 01</div>
         <h3>Bouquets de fleurs</h3>
+        <p>Choisissez votre modèle et personnalisez votre composition.</p>
       </div>
-
-      <p>
-        Choisissez la composition, les fleurs et les couleurs.
-        Chaque bouquet peut être adapté à votre demande.
-      </p>
     </div>
 
-    <div class="product-grid">
+    <div class="products">
 
-      <article class="product-card reveal">
-
-        <div class="product-photo">
-          <span class="product-badge">Best seller</span>
-          <img src="./IMG_8337.jpeg"
-               alt="Grand bouquet lilies et tulipes">
+      <article class="product">
+        <img class="product-img"
+             src="./IMG_8337.jpeg?v=4"
+             alt="Grand bouquet lilies et tulipes">
+        <div class="product-body">
+          <span class="tag">Toutes les couleurs</span>
+          <h4>Grand Bouquet — Lilies & Tulipes</h4>
+          <p>Composition personnalisable selon le nombre et le type de fleurs.</p>
+          <p><strong>Prix sur demande</strong></p>
+          <a class="btn btn-primary"
+             href="https://instagram.com/flower.eema"
+             target="_blank">Commander</a>
         </div>
-
-        <div class="product-info">
-          <h4>Grand Bouquet</h4>
-
-          <p>
-            Composition de lilies & tulipes.
-            Toutes les couleurs disponibles.
-            Quantité de fleurs selon votre demande.
-          </p>
-
-          <div class="product-meta">
-            <span class="price">Prix sur demande</span>
-
-            <button class="small-btn"
-              onclick="openOrder('Grand Bouquet — Lilies & Tulipes')">
-              Commander
-            </button>
-          </div>
-        </div>
-
       </article>
 
-
-      <article class="product-card reveal">
-
-        <div class="product-photo">
-          <img src="./IMG_8338.jpeg"
-               alt="Moyen bouquet lilies et tulipes">
+      <article class="product">
+        <img class="product-img"
+             src="./IMG_8338.jpeg?v=4"
+             alt="Moyen bouquet lilies et tulipes">
+        <div class="product-body">
+          <span class="tag">Toutes les couleurs</span>
+          <h4>Moyen Bouquet — Lilies & Tulipes</h4>
+          <p>Composition personnalisable selon le nombre de fleurs.</p>
+          <p><strong>Prix sur demande</strong></p>
+          <a class="btn btn-primary"
+             href="https://instagram.com/flower.eema"
+             target="_blank">Commander</a>
         </div>
-
-        <div class="product-info">
-          <h4>Moyen Bouquet</h4>
-
-          <p>
-            Lilies & tulipes disponibles dans plusieurs couleurs.
-            Composition adaptable.
-          </p>
-
-          <div class="product-meta">
-            <span class="price">Prix sur demande</span>
-
-            <button class="small-btn"
-              onclick="openOrder('Moyen Bouquet — Lilies & Tulipes')">
-              Commander
-            </button>
-          </div>
-        </div>
-
       </article>
 
-
-      <article class="product-card reveal">
-
-        <div class="product-photo">
-          <img src="./IMG_8339.jpeg"
-               alt="Moyen bouquet lilies et tulipes">
+      <article class="product">
+        <img class="product-img"
+             src="./IMG_8339.jpeg?v=4"
+             alt="Moyen bouquet lilies et tulipes">
+        <div class="product-body">
+          <span class="tag">Toutes les couleurs</span>
+          <h4>Moyen Bouquet — Lilies & Tulipes</h4>
+          <p>Un autre modèle de composition personnalisable.</p>
+          <p><strong>Prix sur demande</strong></p>
+          <a class="btn btn-primary"
+             href="https://instagram.com/flower.eema"
+             target="_blank">Commander</a>
         </div>
-
-        <div class="product-info">
-          <h4>Moyen Bouquet</h4>
-
-          <p>
-            Un autre modèle de composition lilies & tulipes.
-            Couleurs disponibles selon votre choix.
-          </p>
-
-          <div class="product-meta">
-            <span class="price">Prix sur demande</span>
-
-            <button class="small-btn"
-              onclick="openOrder('Moyen Bouquet — Modèle 2')">
-              Commander
-            </button>
-          </div>
-        </div>
-
       </article>
 
-
-      <article class="product-card reveal">
-
-        <div class="product-photo">
-          <img src="./IMG_5947.jpeg"
-               alt="Mini bouquet de roses">
-        </div>
-
-        <div class="product-info">
+      <article class="product">
+        <img class="product-img"
+             src="./IMG_5947.jpeg?v=4"
+             alt="Mini bouquet de roses">
+        <div class="product-body">
+          <span class="tag">Toutes les couleurs</span>
           <h4>Mini Bouquet de Roses</h4>
-
-          <p>
-            Petit bouquet romantique réalisé à la main.
-            Toutes les couleurs disponibles.
-          </p>
-
-          <div class="product-meta">
-            <span class="price">Prix sur demande</span>
-
-            <button class="small-btn"
-              onclick="openOrder('Mini Bouquet de Roses')">
-              Commander
-            </button>
-          </div>
+          <p>Petit bouquet fleuri disponible dans plusieurs couleurs.</p>
+          <p><strong>Prix sur demande</strong></p>
+          <a class="btn btn-primary"
+             href="https://instagram.com/flower.eema"
+             target="_blank">Commander</a>
         </div>
-
       </article>
 
     </div>
 
-
-    <div class="custom-box reveal">
-
-      <h4>Personnalisez votre bouquet ♡</h4>
-
+    <div class="custom-box">
+      <h4>Personnalisez votre bouquet 💗</h4>
       <p>
-        Vous avez une idée précise ? Indiquez-nous le type de fleurs,
-        les couleurs, la quantité et tous les détails souhaités.
+        Indiquez-nous le type de fleurs, les couleurs, la quantité
+        et tous les détails souhaités.
       </p>
 
       <div class="form-grid">
+        <select class="field">
+          <option>Type de bouquet</option>
+          <option>Lilies</option>
+          <option>Tulipes</option>
+          <option>Lilies & Tulipes</option>
+          <option>Roses</option>
+          <option>Autre</option>
+        </select>
 
-        <div class="field">
-          <label>Type de fleurs</label>
+        <input class="field"
+               type="text"
+               placeholder="Couleur souhaitée">
 
-          <select id="bouquetType">
-            <option value="">Choisissez</option>
-            <option>Lilies</option>
-            <option>Tulipes</option>
-            <option>Lilies & Tulipes</option>
-            <option>Roses</option>
-            <option>Autre</option>
-          </select>
-        </div>
+        <input class="field"
+               type="text"
+               placeholder="Quantité de fleurs">
 
-        <div class="field">
-          <label>Couleur souhaitée</label>
+        <input class="field"
+               type="text"
+               placeholder="Occasion">
 
-          <input
-            id="bouquetColor"
-            type="text"
-            placeholder="Ex : rose, blanc, violet...">
-        </div>
-
-        <div class="field full">
-          <label>Décrivez votre demande</label>
-
-          <textarea
-            id="bouquetDetails"
-            placeholder="Ex : Je souhaite un bouquet avec 5 lilies roses et 3 tulipes blanches..."></textarea>
-        </div>
-
+        <textarea class="full"
+                  placeholder="Exemple : Je souhaite un bouquet avec 5 lilies roses et 3 tulipes blanches..."></textarea>
       </div>
 
-      <div class="form-actions">
+      <br>
 
-        <button class="btn btn-primary"
-          onclick="sendBouquetRequest()">
-          Envoyer ma demande sur Instagram ↗
-        </button>
-
-      </div>
-
+      <a class="btn btn-primary"
+         href="https://instagram.com/flower.eema"
+         target="_blank">
+        Envoyer ma demande sur Instagram
+      </a>
     </div>
-
   </div>
 
 
-  <!-- =====================
-       FLEURS LUMINEUSES
-  ====================== -->
-
+  <!-- FLEURS LUMINEUSES -->
   <div class="product-section" id="lumineuses">
-
-    <div class="product-heading reveal">
+    <div class="product-section-title">
       <div>
-        <div class="mini">Pipe Cleaner · 02</div>
         <h3>Fleurs lumineuses</h3>
+        <p>Une création qui prend vie encore plus joliment le soir.</p>
       </div>
-
-      <p>
-        Des fleurs illuminées pour créer une ambiance douce et magique.
-        Différents types de fleurs disponibles.
-      </p>
     </div>
 
-    <div class="product-grid">
-
-      <article class="product-card reveal">
-
-        <div class="product-photo">
-          <span class="product-badge">Lumineux ✦</span>
-
-          <img src="./IMG_5061.jpeg"
-               alt="Fleur lumineuse Pipe Cleaner">
-        </div>
-
-        <div class="product-info">
-
+    <div class="products">
+      <article class="product">
+        <img class="product-img"
+             src="./IMG_5061.jpeg?v=4"
+             alt="Fleur lumineuse Pipe Cleaner">
+        <div class="product-body">
+          <span class="tag">Toutes les couleurs</span>
           <h4>Fleur lumineuse</h4>
-
           <p>
-            Disponible en différentes couleurs et différents types
-            de fleurs : tulipe, lily, lotus, rose et autres selon demande.
+            Disponible en Tulipe, Lily / Lys, Lotus ou Rose.
+            Le modèle et la composition sont personnalisables.
           </p>
-
-          <div class="product-meta">
-            <span class="price">Prix sur demande</span>
-
-            <button class="small-btn"
-              onclick="openOrder('Fleur lumineuse')">
-              Personnaliser
-            </button>
-          </div>
-
+          <p><strong>Prix sur demande</strong></p>
+          <a class="btn btn-primary"
+             href="https://instagram.com/flower.eema"
+             target="_blank">Commander</a>
         </div>
-
       </article>
-
     </div>
 
-    <div class="custom-box reveal">
-
+    <div class="custom-box">
       <h4>Exprimez votre demande 💗</h4>
-
       <p>
-        Type de fleur, couleur, quantité, forme, dimensions ou toute
-        autre idée : expliquez-nous exactement ce que vous imaginez.
+        Choisissez votre fleur, vos couleurs, la quantité et la forme
+        souhaitée.
       </p>
 
-      <div class="form-grid">
+      <textarea placeholder="Type de fleur, couleur, quantité, forme, détails particuliers..."></textarea>
 
-        <div class="field">
-          <label>Type de fleur</label>
+      <br><br>
 
-          <select id="lightFlower">
-            <option value="">Choisissez</option>
-            <option>Tulipe</option>
-            <option>Lily / Lys</option>
-            <option>Lotus</option>
-            <option>Rose</option>
-            <option>Autre</option>
-          </select>
-        </div>
-
-        <div class="field">
-          <label>Couleur</label>
-
-          <input id="lightColor"
-                 type="text"
-                 placeholder="Votre couleur">
-        </div>
-
-        <div class="field full">
-          <label>Votre demande</label>
-
-          <textarea id="lightDetails"
-            placeholder="Décrivez votre création idéale..."></textarea>
-        </div>
-
-      </div>
-
-      <div class="form-actions">
-
-        <button class="btn btn-primary"
-          onclick="sendLightRequest()">
-          Demander ma création ↗
-        </button>
-
-      </div>
-
+      <a class="btn btn-primary"
+         href="https://instagram.com/flower.eema"
+         target="_blank">
+        Envoyer ma demande
+      </a>
     </div>
-
   </div>
 
 
-  <!-- =====================
-       FLEUR ETERNELLE
-  ====================== -->
-
+  <!-- FLEUR ETERNELLE -->
   <div class="product-section" id="eternelle">
-
-    <div class="product-heading reveal">
-
+    <div class="product-section-title">
       <div>
-        <div class="mini">Pipe Cleaner · 03</div>
         <h3>Fleur éternelle</h3>
+        <p>Une création délicate à garder longtemps.</p>
       </div>
-
-      <p>
-        Une création délicate à offrir ou à garder comme souvenir.
-      </p>
-
     </div>
 
-    <div class="product-grid">
+    <div class="products">
 
-      <article class="product-card reveal">
-
-        <div class="product-photo">
-
-          <span class="product-badge">
-            Création spéciale
-          </span>
-
-          <img src="./IMG_6689.jpeg"
-               alt="Rose éternelle Pipe Cleaner">
-
-        </div>
-
-        <div class="product-info">
-
+      <article class="product">
+        <img class="product-img"
+             src="./IMG_6689.jpeg?v=4"
+             alt="Rose éternelle Pipe Cleaner">
+        <div class="product-body">
+          <span class="tag">Toutes les couleurs</span>
           <h4>Rose éternelle</h4>
-
-          <p>
-            Disponible dans différentes couleurs.
-            Une pièce pensée pour durer et conserver son charme.
-          </p>
-
-          <div class="product-meta">
-
-            <span class="price">
-              Prix sur demande
-            </span>
-
-            <button class="small-btn"
-              onclick="openOrder('Rose éternelle')">
-              Commander
-            </button>
-
-          </div>
-
+          <p>Une rose réalisée à la main, personnalisable selon votre couleur.</p>
+          <p><strong>Prix sur demande</strong></p>
+          <a class="btn btn-primary"
+             href="https://instagram.com/flower.eema"
+             target="_blank">Commander</a>
         </div>
-
       </article>
 
     </div>
-
   </div>
 
 
-  <!-- =====================
-       COUPES PIPE CLEANER
-  ====================== -->
-
+  <!-- COUPES -->
   <div class="product-section" id="coupes-pipe">
-
-    <div class="product-heading reveal">
-
+    <div class="product-section-title">
       <div>
-        <div class="mini">Pipe Cleaner · 04</div>
-        <h3>Coupes Pipe Cleaner</h3>
+        <h3>Coupes en Pipe Cleaner</h3>
+        <p>Modèles fleuris disponibles en différentes couleurs.</p>
       </div>
-
-      <p>
-        Chaque modèle est présenté avec ses deux vues pour mieux
-        apprécier les détails de la création.
-      </p>
-
     </div>
 
-    <div class="product-grid">
+    <div class="products">
 
-      <article class="product-card reveal">
-
-        <div class="product-photo duo-photo">
-          <img src="./IMG_7682.jpeg" alt="Coupe Pipe Cleaner rose">
-          <img src="./IMG_7683.jpeg" alt="Coupe Pipe Cleaner rose">
-        </div>
-
-        <div class="product-info">
+      <article class="product">
+        <img class="product-img"
+             src="./IMG_7682.jpeg?v=4"
+             alt="Coupe Pipe Cleaner rose">
+        <div class="product-body">
+          <span class="tag">Rose</span>
           <h4>Coupe — Rose</h4>
-
-          <p>
-            Modèle fleuri réalisé à la main.
-            Disponible dans différentes couleurs.
-          </p>
-
-          <div class="product-meta">
-            <span class="price">Prix sur demande</span>
-
-            <button class="small-btn"
-              onclick="openOrder('Coupe Pipe Cleaner — Rose')">
-              Commander
-            </button>
-          </div>
+          <p>Deux vues du même modèle réunies dans une seule création.</p>
+          <p><strong>Prix sur demande</strong></p>
+          <a class="btn btn-primary"
+             href="https://instagram.com/flower.eema"
+             target="_blank">Commander</a>
         </div>
-
       </article>
 
-
-      <article class="product-card reveal">
-
-        <div class="product-photo duo-photo">
-          <img src="./IMG_7695.jpeg" alt="Coupe Pipe Cleaner rose pâle">
-          <img src="./IMG_7696.jpeg" alt="Coupe Pipe Cleaner rose pâle">
-        </div>
-
-        <div class="product-info">
+      <article class="product">
+        <img class="product-img"
+             src="./IMG_7695.jpeg?v=4"
+             alt="Coupe Pipe Cleaner rose pâle">
+        <div class="product-body">
+          <span class="tag">Rose pâle</span>
           <h4>Coupe — Rose pâle</h4>
-
-          <p>
-            Composition délicate avec fleurs Pipe Cleaner.
-            Couleurs selon disponibilité.
-          </p>
-
-          <div class="product-meta">
-            <span class="price">Prix sur demande</span>
-
-            <button class="small-btn"
-              onclick="openOrder('Coupe Pipe Cleaner — Rose pâle')">
-              Commander
-            </button>
-          </div>
+          <p>Modèle disponible selon vos envies de couleur.</p>
+          <p><strong>Prix sur demande</strong></p>
+          <a class="btn btn-primary"
+             href="https://instagram.com/flower.eema"
+             target="_blank">Commander</a>
         </div>
-
       </article>
 
-
-      <article class="product-card reveal">
-
-        <div class="product-photo duo-photo">
-          <img src="./IMG_7702.jpeg" alt="Coupe Pipe Cleaner lilas">
-          <img src="./IMG_7703.jpeg" alt="Coupe Pipe Cleaner lilas">
-        </div>
-
-        <div class="product-info">
+      <article class="product">
+        <img class="product-img"
+             src="./IMG_7702.jpeg?v=4"
+             alt="Coupe Pipe Cleaner lilas">
+        <div class="product-body">
+          <span class="tag">Lilas</span>
           <h4>Coupe — Lilas</h4>
-
-          <p>
-            Modèle lilas avec détails floraux.
-            Personnalisation possible.
-          </p>
-
-          <div class="product-meta">
-            <span class="price">Prix sur demande</span>
-
-            <button class="small-btn"
-              onclick="openOrder('Coupe Pipe Cleaner — Lilas')">
-              Commander
-            </button>
-          </div>
+          <p>Création fleurie dans une jolie teinte lilas.</p>
+          <p><strong>Prix sur demande</strong></p>
+          <a class="btn btn-primary"
+             href="https://instagram.com/flower.eema"
+             target="_blank">Commander</a>
         </div>
-
       </article>
 
     </div>
-
   </div>
 
 
-  <!-- =====================
-       CADRE FLEURI
-  ====================== -->
-
-  <div class="product-section" id="cadres-pipe">
-
-    <div class="product-heading reveal">
-
+  <!-- CADRES FLEURIS -->
+  <div class="product-section" id="cadres-fleuris">
+    <div class="product-section-title">
       <div>
-        <div class="mini">Pipe Cleaner · 05</div>
         <h3>Cadres fleuris</h3>
+        <p>Une décoration personnalisée avec fleurs en Pipe Cleaner.</p>
       </div>
-
-      <p>
-        Cadres personnalisables selon vos couleurs, votre texte,
-        vos fleurs et le format souhaité.
-      </p>
-
     </div>
 
-    <div class="product-grid">
-
-      <article class="product-card reveal">
-
-        <div class="product-photo">
-          <img src="./IMG_8400.jpeg"
-               alt="Cadre fleuri personnalisé">
-        </div>
-
-        <div class="product-info">
-
+    <div class="products">
+      <article class="product">
+        <img class="product-img"
+             src="./IMG_8400.jpeg?v=4"
+             alt="Cadre fleuri Pipe Cleaner">
+        <div class="product-body">
+          <span class="tag">A4 • A5 • 3D</span>
           <h4>Cadre fleuri personnalisé</h4>
-
           <p>
-            Formats disponibles : A4, A5 et 3D.
-            Couleurs et détails selon votre demande.
+            Nom, texte, couleurs, fleurs et forme selon votre demande.
           </p>
-
-          <div class="product-meta">
-
-            <span class="price">
-              Prix sur demande
-            </span>
-
-            <button class="small-btn"
-              onclick="openOrder('Cadre fleuri personnalisé')">
-              Personnaliser
-            </button>
-
-          </div>
-
+          <p><strong>Prix sur demande</strong></p>
+          <a class="btn btn-primary"
+             href="https://instagram.com/flower.eema"
+             target="_blank">Commander</a>
         </div>
-
       </article>
-
     </div>
 
+    <div class="custom-box">
+      <h4>Votre cadre sur mesure 💗</h4>
+      <textarea placeholder="Nom / texte, taille, couleurs, fleurs, forme et tous les détails souhaités..."></textarea>
+      <br><br>
+      <a class="btn btn-primary"
+         href="https://instagram.com/flower.eema"
+         target="_blank">
+        Demander mon cadre
+      </a>
+    </div>
   </div>
 
 
-  <!-- =====================
-       PORTE ACCESSOIRES
-  ====================== -->
-
+  <!-- PORTE ACCESSOIRES -->
   <div class="product-section" id="porte-accessoires">
-
-    <div class="product-heading reveal">
-
+    <div class="product-section-title">
       <div>
-        <div class="mini">Pipe Cleaner · 06</div>
         <h3>Porte-accessoires</h3>
+        <p>Une création pratique et fleurie à personnaliser.</p>
       </div>
-
-      <p>
-        Une création décorative et pratique, personnalisable
-        selon vos couleurs et vos envies.
-      </p>
-
     </div>
 
-    <div class="product-grid">
-
-      <article class="product-card reveal">
-
-        <div class="product-photo">
-
-          <img src="./IMG_8402.jpeg"
-               alt="Porte-accessoires Pipe Cleaner">
-
+    <div class="products">
+      <article class="product">
+        <img class="product-img"
+             src="./IMG_8402.jpeg?v=4"
+             alt="Porte-accessoires Pipe Cleaner">
+        <div class="product-body">
+          <span class="tag">Toutes les couleurs</span>
+          <h4>Porte-accessoires</h4>
+          <p>Couleur et forme personnalisables selon votre demande.</p>
+          <p><strong>Prix sur demande</strong></p>
+          <a class="btn btn-primary"
+             href="https://instagram.com/flower.eema"
+             target="_blank">Commander</a>
         </div>
-
-        <div class="product-info">
-
-          <h4>Porte-accessoires fleuri</h4>
-
-          <p>
-            Toutes les couleurs disponibles.
-            Forme et détails selon votre demande.
-          </p>
-
-          <div class="product-meta">
-
-            <span class="price">
-              Prix sur demande
-            </span>
-
-            <button class="small-btn"
-              onclick="openOrder('Porte-accessoires Pipe Cleaner')">
-              Commander
-            </button>
-
-          </div>
-
-        </div>
-
       </article>
-
     </div>
 
+    <div class="custom-box">
+      <h4>Personnalisez-le 💗</h4>
+      <textarea placeholder="Couleur, forme, fleurs et détails souhaités..."></textarea>
+      <br><br>
+      <a class="btn btn-primary"
+         href="https://instagram.com/flower.eema"
+         target="_blank">
+        Envoyer ma demande
+      </a>
+    </div>
   </div>
 
 
-  <!-- =====================
-       ACCESSOIRES CHEVEUX
-  ====================== -->
-
+  <!-- ACCESSOIRES CHEVEUX -->
   <div class="product-section" id="accessoires-pipe">
-
-    <div class="product-heading reveal">
-
+    <div class="product-section-title">
       <div>
-        <div class="mini">Pipe Cleaner · 07</div>
         <h3>Accessoires cheveux</h3>
+        <p>Des modèles fleuris réalisés à la main.</p>
       </div>
-
-      <p>
-        Chaque photo représente un modèle différent.
-        Les couleurs et le type de fleur peuvent être adaptés.
-      </p>
-
     </div>
 
-    <div class="product-grid">
+    <div class="products">
 
-      <article class="product-card reveal">
-
-        <div class="product-photo">
-          <img src="./IMG_8404.jpeg"
-               alt="Accessoire cheveux Pipe Cleaner modèle 1">
+      <article class="product">
+        <img class="product-img"
+             src="./IMG_8403.jpeg?v=4"
+             alt="Accessoire cheveux Pipe Cleaner modèle 1">
+        <div class="product-body">
+          <span class="tag">Modèle 1</span>
+          <h4>Accessoire cheveux</h4>
+          <p>Couleurs et type de fleur selon votre demande.</p>
+          <p><strong>Prix sur demande</strong></p>
+          <a class="btn btn-primary"
+             href="https://instagram.com/flower.eema"
+             target="_blank">Commander</a>
         </div>
-
-        <div class="product-info">
-          <h4>Modèle fleuri 01</h4>
-
-          <p>
-            Accessoire réalisé à la main.
-            Couleurs disponibles selon votre choix.
-          </p>
-
-          <div class="product-meta">
-            <span class="price">Prix sur demande</span>
-
-            <button class="small-btn"
-              onclick="openOrder('Accessoire cheveux modèle 01')">
-              Commander
-            </button>
-          </div>
-        </div>
-
       </article>
 
-
-      <article class="product-card reveal">
-
-        <div class="product-photo">
-          <img src="./IMG_8403.jpeg"
-               alt="Accessoire cheveux Pipe Cleaner modèle 2">
+      <article class="product">
+        <img class="product-img"
+             src="./IMG_8404.jpeg?v=4"
+             alt="Accessoire cheveux Pipe Cleaner modèle 2">
+        <div class="product-body">
+          <span class="tag">Modèle 2</span>
+          <h4>Accessoire cheveux</h4>
+          <p>Création personnalisable selon vos envies.</p>
+          <p><strong>Prix sur demande</strong></p>
+          <a class="btn btn-primary"
+             href="https://instagram.com/flower.eema"
+             target="_blank">Commander</a>
         </div>
-
-        <div class="product-info">
-          <h4>Modèle fleuri 02</h4>
-
-          <p>
-            Modèle personnalisable avec différentes fleurs et couleurs.
-          </p>
-
-          <div class="product-meta">
-            <span class="price">Prix sur demande</span>
-
-            <button class="small-btn"
-              onclick="openOrder('Accessoire cheveux modèle 02')">
-              Commander
-            </button>
-          </div>
-        </div>
-
       </article>
 
-
-      <article class="product-card reveal">
-
-        <div class="product-photo">
-          <img src="./IMG_0304(1).jpeg"
-               alt="Accessoire cheveux Pipe Cleaner modèle 3">
+      <article class="product">
+        <img class="product-img"
+             src="./IMG_0304(1).jpeg?v=4"
+             alt="Accessoire cheveux Pipe Cleaner modèle 3">
+        <div class="product-body">
+          <span class="tag">Modèle 3</span>
+          <h4>Accessoire cheveux</h4>
+          <p>Disponible dans les couleurs de votre choix.</p>
+          <p><strong>Prix sur demande</strong></p>
+          <a class="btn btn-primary"
+             href="https://instagram.com/flower.eema"
+             target="_blank">Commander</a>
         </div>
-
-        <div class="product-info">
-          <h4>Modèle fleuri 03</h4>
-
-          <p>
-            Création unique, personnalisable selon votre demande.
-          </p>
-
-          <div class="product-meta">
-            <span class="price">Prix sur demande</span>
-
-            <button class="small-btn"
-              onclick="openOrder('Accessoire cheveux modèle 03')">
-              Commander
-            </button>
-          </div>
-        </div>
-
       </article>
 
     </div>
 
+    <div class="custom-box">
+      <h4>Votre modèle 💗</h4>
+      <textarea placeholder="Couleur, type de fleur, modèle et détails..."></textarea>
+      <br><br>
+      <a class="btn btn-primary"
+         href="https://instagram.com/flower.eema"
+         target="_blank">
+        Envoyer ma demande
+      </a>
+    </div>
   </div>
 
 
-  <!-- =====================
-       PORTE CLES
-  ====================== -->
-
+  <!-- PORTE-CLES -->
   <div class="product-section" id="porte-cles">
-
-    <div class="product-heading reveal">
-
+    <div class="product-section-title">
       <div>
-        <div class="mini">Pipe Cleaner · 08</div>
         <h3>Porte-clés</h3>
+        <p>Petites créations fleuries à emporter partout.</p>
       </div>
-
-      <p>
-        Petits accessoires fleuris à personnaliser selon votre style.
-      </p>
-
     </div>
 
-    <div class="product-grid">
-
-      <article class="product-card reveal">
-
-        <div class="product-photo">
-
-          <img src="./IMG_8405.jpeg"
-               alt="Porte-clés Pipe Cleaner">
-
-        </div>
-
-        <div class="product-info">
-
+    <div class="products">
+      <article class="product">
+        <img class="product-img"
+             src="./IMG_8405.jpeg?v=4"
+             alt="Porte-clés Pipe Cleaner">
+        <div class="product-body">
+          <span class="tag">Personnalisable</span>
           <h4>Porte-clés fleuri</h4>
-
-          <p>
-            Type de fleur et couleur selon votre demande.
-          </p>
-
-          <div class="product-meta">
-
-            <span class="price">
-              Prix sur demande
-            </span>
-
-            <button class="small-btn"
-              onclick="openOrder('Porte-clés Pipe Cleaner')">
-              Commander
-            </button>
-
-          </div>
-
+          <p>Type de fleur et couleur selon votre demande.</p>
+          <p><strong>Prix sur demande</strong></p>
+          <a class="btn btn-primary"
+             href="https://instagram.com/flower.eema"
+             target="_blank">Commander</a>
         </div>
-
       </article>
-
     </div>
-
   </div>
 
 
-  <!-- =====================
-       VASES
-  ====================== -->
-
+  <!-- VASES -->
   <div class="product-section" id="vases-pipe">
-
-    <div class="product-heading reveal">
-
+    <div class="product-section-title">
       <div>
-        <div class="mini">Pipe Cleaner · 09</div>
-        <h3>Vases lumineux</h3>
+        <h3>Vases en Pipe Cleaner</h3>
+        <p>Des créations fleuries avec une touche lumineuse.</p>
       </div>
-
-      <p>
-        Des créations décoratives qui prennent une autre dimension
-        une fois la lumière allumée.
-      </p>
-
     </div>
 
-    <div class="product-grid">
-
-      <article class="product-card reveal">
-
-        <div class="product-photo">
-
-          <img src="./IMG_8406.jpeg"
-               alt="Vase lumineux Pipe Cleaner">
-
-        </div>
-
-        <div class="product-info">
-
-          <h4>Vase lumineux</h4>
-
+    <div class="products">
+      <article class="product">
+        <img class="product-img"
+             src="./IMG_8406.jpeg?v=4"
+             alt="Vase lumineux Pipe Cleaner">
+        <div class="product-body">
+          <span class="tag">Lumineux</span>
+          <h4>Vase fleuri lumineux</h4>
           <p>
-            Différents types de fleurs disponibles.
-            Éclairage intégré pour une jolie ambiance le soir.
+            Différents types de fleurs et couleurs disponibles
+            selon votre demande.
           </p>
-
-          <div class="product-meta">
-
-            <span class="price">
-              Prix sur demande
-            </span>
-
-            <button class="small-btn"
-              onclick="openOrder('Vase lumineux Pipe Cleaner')">
-              Personnaliser
-            </button>
-
-          </div>
-
+          <p><strong>Prix sur demande</strong></p>
+          <a class="btn btn-primary"
+             href="https://instagram.com/flower.eema"
+             target="_blank">Commander</a>
         </div>
-
       </article>
-
     </div>
-
   </div>
 
 
-  <!-- =====================
-       COQUE
-  ====================== -->
-
+  <!-- COQUES -->
   <div class="product-section" id="coques">
-
-    <div class="product-heading reveal">
-
+    <div class="product-section-title">
       <div>
-        <div class="mini">Pipe Cleaner · 10</div>
-        <h3>Coques de téléphone</h3>
+        <h3>Coques de téléphone anti-choc</h3>
+        <p>Des modèles fleuris uniques selon votre téléphone et votre style.</p>
       </div>
-
-      <p>
-        Modèles anti-choc personnalisables selon votre demande.
-      </p>
-
     </div>
 
-    <div class="product-grid">
+    <div class="products">
 
-      <article class="product-card reveal">
-
-        <div class="product-photo">
-
-          <img src="./IMG_8408.jpeg"
-               alt="Coque téléphone personnalisée modèle 1">
-
+      <article class="product">
+        <img class="product-img"
+             src="./IMG_8408.jpeg?v=4"
+             alt="Coque téléphone Pipe Cleaner modèle 1">
+        <div class="product-body">
+          <span class="tag">Modèle 1</span>
+          <h4>Coque anti-choc</h4>
+          <p>Modèle personnalisable selon votre demande.</p>
+          <p><strong>Prix sur demande</strong></p>
+          <a class="btn btn-primary"
+             href="https://instagram.com/flower.eema"
+             target="_blank">Commander</a>
         </div>
-
-        <div class="product-info">
-
-          <h4>Coque personnalisée 01</h4>
-
-          <p>
-            Modèle et décoration selon votre demande.
-          </p>
-
-          <div class="product-meta">
-
-            <span class="price">
-              Prix sur demande
-            </span>
-
-            <button class="small-btn"
-              onclick="openOrder('Coque personnalisée modèle 01')">
-              Commander
-            </button>
-
-          </div>
-
-        </div>
-
       </article>
 
-
-      <article class="product-card reveal">
-
-        <div class="product-photo">
-
-          <img src="./IMG_8407.jpeg"
-               alt="Coque téléphone personnalisée modèle 2">
-
+      <article class="product">
+        <img class="product-img"
+             src="./IMG_8407.jpeg?v=4"
+             alt="Coque téléphone Pipe Cleaner modèle 2">
+        <div class="product-body">
+          <span class="tag">Modèle 2</span>
+          <h4>Coque anti-choc</h4>
+          <p>Choisissez votre modèle et vos détails.</p>
+          <p><strong>Prix sur demande</strong></p>
+          <a class="btn btn-primary"
+             href="https://instagram.com/flower.eema"
+             target="_blank">Commander</a>
         </div>
-
-        <div class="product-info">
-
-          <h4>Coque personnalisée 02</h4>
-
-          <p>
-            Création selon vos envies et le modèle de votre téléphone.
-          </p>
-
-          <div class="product-meta">
-
-            <span class="price">
-              Prix sur demande
-            </span>
-
-            <button class="small-btn"
-              onclick="openOrder('Coque personnalisée modèle 02')">
-              Commander
-            </button>
-
-          </div>
-
-        </div>
-
       </article>
 
     </div>
 
+    <div class="custom-box">
+      <h4>Créez votre coque 💗</h4>
+      <textarea placeholder="Modèle de téléphone, couleurs, fleurs, disposition et détails souhaités..."></textarea>
+      <br><br>
+      <a class="btn btn-primary"
+         href="https://instagram.com/flower.eema"
+         target="_blank">
+        Envoyer ma demande
+      </a>
+    </div>
   </div>
 
 
-  <!-- =====================
-       GATEAUX
-  ====================== -->
-
+  <!-- GATEAUX -->
   <div class="product-section" id="gateaux">
-
-    <div class="product-heading reveal">
-
+    <div class="product-section-title">
       <div>
-        <div class="mini">Pipe Cleaner · 11</div>
-        <h3>Gâteaux d'anniversaire</h3>
+        <h3>Gâteaux d’anniversaire</h3>
+        <p>Des créations décoratives originales pour célébrer un anniversaire.</p>
       </div>
-
-      <p>
-        Une décoration originale pour célébrer un anniversaire
-        d'une manière vraiment différente.
-      </p>
-
     </div>
 
-    <div class="product-grid">
+    <div class="products">
 
-      <article class="product-card reveal">
-
-        <div class="product-photo">
-
-          <img src="./IMG_8351.jpeg"
-               alt="Gâteau anniversaire Pipe Cleaner modèle 1">
-
+      <article class="product">
+        <img class="product-img"
+             src="./IMG_8351.jpeg?v=4"
+             alt="Gâteau anniversaire Pipe Cleaner modèle 1">
+        <div class="product-body">
+          <span class="tag">Modèle 1</span>
+          <h4>Gâteau d’anniversaire</h4>
+          <p>Modèle et couleurs personnalisables.</p>
+          <p><strong>Prix sur demande</strong></p>
+          <a class="btn btn-primary"
+             href="https://instagram.com/flower.eema"
+             target="_blank">Commander</a>
         </div>
-
-        <div class="product-info">
-
-          <h4>Gâteau décoratif 01</h4>
-
-          <p>
-            Modèle personnalisable.
-            Couleurs disponibles selon votre choix.
-          </p>
-
-          <div class="product-meta">
-
-            <span class="price">
-              Prix sur demande
-            </span>
-
-            <button class="small-btn"
-              onclick="openOrder('Gâteau anniversaire modèle 01')">
-              Personnaliser
-            </button>
-
-          </div>
-
-        </div>
-
       </article>
 
-
-      <article class="product-card reveal">
-
-        <div class="product-photo">
-
-          <img src="./IMG_8357.jpeg"
-               alt="Gâteau anniversaire Pipe Cleaner modèle 2">
-
+      <article class="product">
+        <img class="product-img"
+             src="./IMG_8357.jpeg?v=4"
+             alt="Gâteau anniversaire Pipe Cleaner modèle 2">
+        <div class="product-body">
+          <span class="tag">Modèle 2</span>
+          <h4>Gâteau d’anniversaire</h4>
+          <p>Choisissez les couleurs et les détails de votre création.</p>
+          <p><strong>Prix sur demande</strong></p>
+          <a class="btn btn-primary"
+             href="https://instagram.com/flower.eema"
+             target="_blank">Commander</a>
         </div>
-
-        <div class="product-info">
-
-          <h4>Gâteau décoratif 02</h4>
-
-          <p>
-            Création sur demande avec couleurs et détails personnalisables.
-          </p>
-
-          <div class="product-meta">
-
-            <span class="price">
-              Prix sur demande
-            </span>
-
-            <button class="small-btn"
-              onclick="openOrder('Gâteau anniversaire modèle 02')">
-              Personnaliser
-            </button>
-
-          </div>
-
-        </div>
-
       </article>
 
     </div>
 
+    <div class="custom-box">
+      <h4>Votre gâteau sur mesure 🎂</h4>
+      <textarea placeholder="Couleurs, thème, prénom, âge, fleurs et autres détails..."></textarea>
+      <br><br>
+      <a class="btn btn-primary"
+         href="https://instagram.com/flower.eema"
+         target="_blank">
+        Envoyer ma demande
+      </a>
+    </div>
   </div>
 
 
-  <!-- =====================
-       JARDIN INFINI
-  ====================== -->
-
+  <!-- JARDIN INFINI -->
   <div class="product-section" id="jardin-infini">
-
-    <div class="product-heading reveal">
-
+    <div class="product-section-title">
       <div>
-        <div class="mini">Pipe Cleaner · 12</div>
         <h3>Jardin de Fleurs Infini</h3>
+        <p>
+          Une création originale avec effet miroir 3D et lumière.
+        </p>
       </div>
-
-      <p>
-        Une création avec effet miroir et lumière qui donne
-        l'impression d'un jardin de fleurs sans fin.
-      </p>
-
     </div>
 
-    <div class="product-grid">
+    <div class="products">
 
-      <article class="product-card reveal">
-
-        <div class="product-photo">
-
-          <img src="./IMG_8209.jpeg"
-               alt="Jardin de Fleurs Infini">
-
-        </div>
-
-        <div class="product-info">
-
+      <article class="product">
+        <img class="product-img"
+             src="./IMG_8209.jpeg?v=4"
+             alt="Jardin de Fleurs Infini">
+        <div class="product-body">
+          <span class="tag">Pipe Cleaner • 3D • Lumineux</span>
           <h4>Jardin de Fleurs Infini</h4>
-
           <p>
-            Effet miroir 3D, fleurs en Pipe Cleaner et éclairage intégré.
-            Composition personnalisable.
+            Un cadre avec miroirs face à face créant un magnifique
+            effet de profondeur, comme un jardin de fleurs sans fin.
           </p>
-
-          <div class="product-meta">
-
-            <span class="price">
-              Prix sur demande
-            </span>
-
-            <button class="small-btn"
-              onclick="openOrder('Jardin de Fleurs Infini')">
-              Commander
-            </button>
-
-          </div>
-
+          <p><strong>Prix sur demande</strong></p>
+          <a class="btn btn-primary"
+             href="https://instagram.com/flower.eema"
+             target="_blank">Commander</a>
         </div>
-
       </article>
 
     </div>
 
+    <div class="custom-box">
+      <h4>Personnalisez votre Jardin de Fleurs Infini 💗</h4>
+      <textarea placeholder="Couleurs, types de fleurs, composition, dimensions et tous les détails souhaités..."></textarea>
+      <br><br>
+      <a class="btn btn-primary"
+         href="https://instagram.com/flower.eema"
+         target="_blank">
+        Demander ma création
+      </a>
+    </div>
   </div>
 
+</section>
+<!-- AUTRES CATÉGORIES -->
+
+<div class="product-section" id="satin">
+  <div class="product-section-title">
+    <div>
+      <h3>Fleurs en Satin</h3>
+      <p>Bouquets, box et porte-clés réalisés en satin.</p>
+    </div>
+  </div>
+
+  <div class="placeholder">
+    <h3>Créations en Satin 🌷</h3>
+    <p>
+      Bouquets de fleurs • Box de fleurs • Porte-clés en satin
+    </p>
+    <br>
+    <a class="btn btn-primary"
+       href="https://instagram.com/flower.eema"
+       target="_blank">Découvrir sur Instagram</a>
+  </div>
 </div>
 
-</section>
 
-
-<!-- =========================
-     FEATURE
-========================= -->
-
-<section class="feature">
-
-  <div class="container feature-grid">
-
-    <div class="feature-image reveal">
-
-      <img src="./IMG_8406.jpeg"
-           alt="Création lumineuse Floreema">
-
+<div class="product-section" id="miroirs">
+  <div class="product-section-title">
+    <div>
+      <h3>Miroirs</h3>
+      <p>Des miroirs personnalisés selon vos envies.</p>
     </div>
-
-    <div class="feature-copy reveal">
-
-      <div class="kicker">
-        La touche Floreema
-      </div>
-
-      <h2>
-        Une création qui devient un souvenir.
-      </h2>
-
-      <p>
-        Chez Floreema, nous ne cherchons pas seulement à créer
-        quelque chose de joli. Nous voulons créer une pièce qui
-        représente une personne, une occasion ou un moment.
-      </p>
-
-      <div class="feature-list">
-
-        <div class="feature-item">
-          <span>♡</span>
-          <strong>Créations faites main</strong>
-        </div>
-
-        <div class="feature-item">
-          <span>✦</span>
-          <strong>Personnalisation selon votre idée</strong>
-        </div>
-
-        <div class="feature-item">
-          <span>🌷</span>
-          <strong>Couleurs et fleurs au choix</strong>
-        </div>
-
-        <div class="feature-item">
-          <span>🇩🇿</span>
-          <strong>Livraison disponible en Algérie</strong>
-        </div>
-
-      </div>
-
-      <a href="https://instagram.com/flower.eema"
-         target="_blank"
-         class="btn btn-primary">
-        Découvrir @flower.eema ↗
-      </a>
-
-    </div>
-
   </div>
 
-</section>
+  <div class="placeholder">
+    <h3>Miroirs personnalisés 🪞</h3>
+    <p>
+      Miroir prénom • Miroir en Foam • Miroir en perles •
+      Miroir fleurs artificielles • Miroir Pipe Cleaner • Miroir stickers
+    </p>
+    <br>
+    <a class="btn btn-primary"
+       href="https://instagram.com/flower.eema"
+       target="_blank">Commander sur Instagram</a>
+  </div>
+</div>
 
 
-<!-- =========================
-     OTHER CATEGORIES
-========================= -->
-
-<section class="products-section" id="satin">
-
-  <div class="container">
-
-    <div class="section-head reveal">
-
-      <div class="kicker">Collection 02</div>
-
-      <h2>Fleurs en Satin</h2>
-
-      <p>
-        Une collection élégante de créations en satin.
-        Les modèles seront ajoutés progressivement.
-      </p>
-
+<div class="product-section" id="coupes">
+  <div class="product-section-title">
+    <div>
+      <h3>Coupes</h3>
+      <p>Des coupes personnalisées pour vos occasions spéciales.</p>
     </div>
-
-    <div class="pills">
-
-      <span class="pill">Bouquets de fleurs</span>
-      <span class="pill">Box de fleurs</span>
-      <span class="pill">Porte-clés en satin</span>
-
-    </div>
-
   </div>
 
-</section>
+  <div class="placeholder">
+    <h3>Coupes personnalisées 🏆</h3>
+    <p>
+      Coupe en Foam • Coupe Pipe Cleaner • Coupe à dessins
+    </p>
+    <br>
+    <a class="btn btn-primary"
+       href="https://instagram.com/flower.eema"
+       target="_blank">Commander sur Instagram</a>
+  </div>
+</div>
 
 
-<section class="about" id="miroirs">
-
-  <div class="container">
-
-    <div class="section-head reveal">
-
-      <div class="kicker">Collection 03</div>
-
-      <h2>Miroirs personnalisés</h2>
-
-      <p>
-        Des miroirs décorés avec prénom, fleurs, perles,
-        Pipe Cleaner ou stickers.
-      </p>
-
+<div class="product-section" id="cadres">
+  <div class="product-section-title">
+    <div>
+      <h3>Cadres Personnalisés</h3>
+      <p>Des cadres uniques pour garder vos plus beaux souvenirs.</p>
     </div>
-
-    <div class="pills">
-
-      <span class="pill">Miroir prénom</span>
-      <span class="pill">Miroir en Foam</span>
-      <span class="pill">Miroir en perles</span>
-      <span class="pill">Miroir fleurs artificielles</span>
-      <span class="pill">Miroir Pipe Cleaner</span>
-      <span class="pill">Miroir stickers</span>
-
-    </div>
-
   </div>
 
-</section>
+  <div class="placeholder">
+    <h3>Cadres sur mesure 🖼️</h3>
+    <p>
+      Cadre de remise des diplômes • Cadre photo •
+      Cadre anniversaire • Cadre fleuri • Cadre décoratif
+    </p>
+    <br>
+    <p>A4 • A5 • 3D</p>
+    <br>
+    <a class="btn btn-primary"
+       href="https://instagram.com/flower.eema"
+       target="_blank">Commander sur Instagram</a>
+  </div>
+</div>
 
 
-<section class="products-section" id="coupes">
-
-  <div class="container">
-
-    <div class="section-head reveal">
-
-      <div class="kicker">Collection 04</div>
-
-      <h2>Coupes</h2>
-
-      <p>
-        Des modèles en Foam, Pipe Cleaner et avec dessins.
-      </p>
-
+<div class="product-section" id="artificielles">
+  <div class="product-section-title">
+    <div>
+      <h3>Fleurs Artificielles</h3>
+      <p>Des compositions fleuries adaptées à chaque occasion.</p>
     </div>
-
-    <div class="pills">
-
-      <span class="pill">Coupe en Foam</span>
-      <span class="pill">Coupe Pipe Cleaner</span>
-      <span class="pill">Coupe à dessins</span>
-
-    </div>
-
   </div>
 
-</section>
+  <div class="placeholder">
+    <h3>Fleurs Artificielles 💐</h3>
+    <p>
+      Bouquets et compositions selon le type de fleurs choisi.
+    </p>
+    <br>
+    <a class="btn btn-primary"
+       href="https://instagram.com/flower.eema"
+       target="_blank">Demander une composition</a>
+  </div>
+</div>
 
 
-<section class="about" id="cadres">
-
-  <div class="container">
-
-    <div class="section-head reveal">
-
-      <div class="kicker">Collection 05</div>
-
-      <h2>Cadres personnalisés</h2>
-
-      <p>
-        Pour diplômes, anniversaires, photos et compositions fleuries.
-      </p>
-
+<div class="product-section" id="cheveux">
+  <div class="product-section-title">
+    <div>
+      <h3>Accessoires Cheveux</h3>
+      <p>Des accessoires fleuris et féminins faits main.</p>
     </div>
-
-    <div class="pills">
-
-      <span class="pill">Remise des diplômes</span>
-      <span class="pill">Cadre photo</span>
-      <span class="pill">Anniversaire</span>
-      <span class="pill">Cadre fleuri</span>
-      <span class="pill">Cadre décoratif</span>
-      <span class="pill">A4</span>
-      <span class="pill">A5</span>
-      <span class="pill">3D</span>
-
-    </div>
-
   </div>
 
-</section>
+  <div class="placeholder">
+    <h3>Accessoires Cheveux 🎀</h3>
+    <p>
+      Pinces fleurs Pipe Cleaner • Serre-têtes Pipe Cleaner •
+      Pinces papillon en Satin • Headbands en Satin
+    </p>
+    <br>
+    <a class="btn btn-primary"
+       href="https://instagram.com/flower.eema"
+       target="_blank">Commander sur Instagram</a>
+  </div>
+</div>
 
 
-<section class="products-section" id="fleurs-artificielles">
-
-  <div class="container">
-
-    <div class="section-head reveal">
-
-      <div class="kicker">Collection 06</div>
-
-      <h2>Fleurs artificielles</h2>
-
-      <p>
-        Bouquets et compositions selon le type de fleur souhaité.
-      </p>
-
+<div class="product-section" id="vases">
+  <div class="product-section-title">
+    <div>
+      <h3>Vases en Foam</h3>
+      <p>Des vases originaux avec fleurs selon votre demande.</p>
     </div>
-
   </div>
 
-</section>
+  <div class="placeholder">
+    <h3>Vases en Foam 🌻</h3>
+    <p>
+      Vase Tulipe • Vase Sunflower • Composition selon votre demande
+    </p>
+    <br>
+    <a class="btn btn-primary"
+       href="https://instagram.com/flower.eema"
+       target="_blank">Commander sur Instagram</a>
+  </div>
+</div>
 
 
-<section class="about" id="accessoires">
-
-  <div class="container">
-
-    <div class="section-head reveal">
-
-      <div class="kicker">Collection 07</div>
-
-      <h2>Accessoires cheveux</h2>
-
-      <p>
-        Une collection de pinces et serre-têtes fleuris.
-      </p>
-
+<div class="product-section" id="box">
+  <div class="product-section-title">
+    <div>
+      <h3>Box Cadeaux</h3>
+      <p>Des cadeaux personnalisés pour toutes les occasions.</p>
     </div>
-
-    <div class="pills">
-
-      <span class="pill">Pinces fleurs Pipe Cleaner</span>
-      <span class="pill">Serre-têtes Pipe Cleaner</span>
-      <span class="pill">Pinces papillon en Satin</span>
-      <span class="pill">Headbands en Satin</span>
-
-    </div>
-
   </div>
 
-</section>
+  <div class="placeholder">
+    <h3>Box Cadeaux 🎁</h3>
+    <p>
+      Box sur mesure • Box photos & fleurs • Box photos & chocolat
+    </p>
+    <br>
+    <a class="btn btn-primary"
+       href="https://instagram.com/flower.eema"
+       target="_blank">Créer ma Box</a>
+  </div>
+</div>
 
 
-<section class="products-section" id="vases">
+<!-- PERSONNALISATION -->
 
-  <div class="container">
-
-    <div class="section-head reveal">
-
-      <div class="kicker">Collection 08</div>
-
-      <h2>Vases en Foam</h2>
-
-      <p>
-        Tulipes, tournesols et autres compositions selon votre demande.
-      </p>
-
-    </div>
-
-    <div class="pills">
-
-      <span class="pill">Vase Tulipe</span>
-      <span class="pill">Vase Sunflower</span>
-      <span class="pill">Composition sur demande</span>
-
-    </div>
-
+<section class="section" id="personnalisation">
+  <div class="section-head">
+    <span class="eyebrow">Sur mesure</span>
+    <h2>Une création imaginée pour vous</h2>
+    <p>
+      Vous avez une idée précise ? Décrivez-nous votre projet
+      et nous créerons une pièce spécialement pour vous.
+    </p>
   </div>
 
-</section>
-
-
-<!-- =========================
-     DELIVERY
-========================= -->
-
-<section class="delivery" id="livraison">
-
-  <div class="container">
-
-    <div class="section-head reveal">
-
-      <div class="kicker">Livraison</div>
-
-      <h2>Votre commande, jusqu'à chez vous.</h2>
-
-      <p>
-        Nous travaillons avec plusieurs services de livraison.
-        Les tarifs dépendent du service choisi et de votre destination.
-      </p>
-
-    </div>
-
-    <div class="delivery-grid">
-
-      <div class="delivery-card reveal">
-
-        <div class="delivery-icon">
-          🚚
-        </div>
-
-        <h3>ZR Express</h3>
-
-        <p>
-          Livraison disponible selon les zones desservies.
-          Le tarif est calculé selon votre destination.
-        </p>
-
-        <div class="delivery-price">
-          Tarif de livraison : selon destination
-        </div>
-
-      </div>
-
-
-      <div class="delivery-card reveal">
-
-        <div class="delivery-icon">
-          📦
-        </div>
-
-        <h3>FZ Delivery</h3>
-
-        <p>
-          Une deuxième option de livraison selon votre wilaya
-          et les disponibilités du service.
-        </p>
-
-        <div class="delivery-price">
-          Tarif de livraison : selon destination
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- =========================
-     ABOUT
-========================= -->
-
-<section class="about" id="apropos">
-
-  <div class="container about-grid">
-
-    <div class="about-copy reveal">
-
-      <div class="kicker">
-        À propos de Floreema
-      </div>
-
-      <h2>
-        Petit atelier.<br>
-        Grandes idées.
-      </h2>
-
-      <p>
-        Floreema est un univers dédié aux créations faites main,
-        où chaque détail est pensé avec soin.
-      </p>
-
-      <p>
-        Notre objectif est de vous proposer des créations originales
-        que vous pouvez personnaliser pour qu'elles deviennent
-        réellement les vôtres.
-      </p>
-
-    </div>
-
-
-    <div class="about-card reveal">
-
-      <div class="about-logo">
-
-        <img src="./floreema-logo.jpg"
-             alt="Logo Floreema">
-
-      </div>
-
-      <h3>Floreema</h3>
-
-      <p>
-        Handmade gifts & floral creations<br>
-        Créé avec amour en Algérie 🇩🇿
-      </p>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- =========================
-     INSTAGRAM
-========================= -->
-
-<section class="instagram">
-
-  <div class="container reveal">
-
-    <div class="kicker">
-      Retrouvez-nous
-    </div>
-
-    <h2>
-      Encore plus de créations sur Instagram.
-    </h2>
+  <div class="custom-box">
+    <h4>Votre demande personnalisée 💗</h4>
 
     <p>
-      Découvrez les nouveautés, les coulisses et les créations
-      disponibles directement sur notre page.
+      Indiquez la création souhaitée, les couleurs, les fleurs,
+      la quantité, l'occasion et tous les détails importants.
     </p>
 
-    <a href="https://instagram.com/flower.eema"
-       target="_blank"
-       class="btn btn-primary">
-      @flower.eema ↗
+    <div class="form-grid">
+
+      <input class="field"
+             type="text"
+             placeholder="Votre prénom">
+
+      <input class="field"
+             type="text"
+             placeholder="Type de création">
+
+      <input class="field"
+             type="text"
+             placeholder="Couleur(s) souhaitée(s)">
+
+      <input class="field"
+             type="text"
+             placeholder="Occasion">
+
+      <textarea class="full"
+                placeholder="Décrivez votre idée en détail..."></textarea>
+
+    </div>
+
+    <br>
+
+    <a class="btn btn-primary"
+       href="https://instagram.com/flower.eema"
+       target="_blank">
+      Envoyer ma demande sur Instagram
+    </a>
+  </div>
+</section>
+
+
+<!-- LIVRAISON -->
+
+<section class="section delivery" id="livraison">
+
+  <div class="section-head">
+    <span class="eyebrow">Livraison</span>
+    <h2>Livraison disponible en Algérie 🇩🇿</h2>
+    <p>
+      Nous travaillons avec deux services de livraison.
+      Le tarif dépend de la wilaya et de la destination.
+    </p>
+  </div>
+
+  <div class="delivery-grid">
+
+    <div class="delivery-card">
+      <h3>ZR Express</h3>
+      <p>
+        Livraison disponible selon la destination.
+        <br><br>
+        <strong>Tarif selon wilaya / destination.</strong>
+      </p>
+    </div>
+
+    <div class="delivery-card">
+      <h3>FZ Delivery</h3>
+      <p>
+        Livraison disponible selon la destination.
+        <br><br>
+        <strong>Tarif selon wilaya / destination.</strong>
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- COMMENT COMMANDER -->
+
+<section class="section">
+
+  <div class="section-head">
+    <span class="eyebrow">Simple & rapide</span>
+    <h2>Comment commander ?</h2>
+    <p>
+      Quelques étapes simples pour préparer votre création.
+    </p>
+  </div>
+
+  <div class="steps">
+
+    <div class="step">
+      <div class="step-number">1</div>
+      <h3>Choisissez</h3>
+      <p>
+        Découvrez nos créations et choisissez votre modèle.
+      </p>
+    </div>
+
+    <div class="step">
+      <div class="step-number">2</div>
+      <h3>Personnalisez</h3>
+      <p>
+        Indiquez vos couleurs, fleurs, dimensions et détails.
+      </p>
+    </div>
+
+    <div class="step">
+      <div class="step-number">3</div>
+      <h3>Commandez</h3>
+      <p>
+        Contactez-nous sur Instagram pour confirmer votre commande.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- INSTAGRAM -->
+
+<section class="section instagram">
+
+  <div class="insta-box">
+
+    <span class="eyebrow">Suivez-nous</span>
+
+    <h2>@flower.eema</h2>
+
+    <p>
+      Retrouvez toutes nos nouvelles créations,
+      vidéos et nouveautés sur Instagram.
+    </p>
+
+    <a class="btn btn-primary"
+       href="https://instagram.com/flower.eema"
+       target="_blank">
+      Voir Instagram
     </a>
 
   </div>
@@ -3155,395 +1831,55 @@ footer p{
 </main>
 
 
-<!-- =========================
-     FOOTER
-========================= -->
+<!-- FOOTER -->
 
 <footer>
 
   <div class="footer-grid">
 
     <div>
-
-      <div class="footer-brand">
-
-        <img src="./floreema-logo.jpg"
-             alt="Floreema">
-
-        <strong>Floreema</strong>
-
-      </div>
-
+      <h3>Floreema World</h3>
       <p>
         Créations faites main avec amour.
-        Des fleurs, des cadeaux et des souvenirs
-        pensés spécialement pour vous.
+        Des fleurs et cadeaux personnalisés
+        pour rendre chaque moment spécial.
       </p>
-
     </div>
 
-
     <div>
-
-      <div class="footer-title">
-        Navigation
-      </div>
+      <h3>Navigation</h3>
 
       <div class="footer-links">
-
         <a href="#accueil">Accueil</a>
         <a href="#categories">Catégories</a>
-        <a href="#creations">Créations</a>
+        <a href="#produits">Produits</a>
+        <a href="#personnalisation">Personnalisation</a>
         <a href="#livraison">Livraison</a>
-        <a href="#apropos">À propos</a>
-
       </div>
-
     </div>
 
-
     <div>
-
-      <div class="footer-title">
-        Contact
-      </div>
+      <h3>Contact</h3>
 
       <div class="footer-links">
-
         <a href="https://instagram.com/flower.eema"
            target="_blank">
-          Instagram · @flower.eema
+          Instagram : @flower.eema
         </a>
 
         <a href="#livraison">
           Livraison en Algérie 🇩🇿
         </a>
-
-        <a href="#creations">
-          Prix sur demande
-        </a>
-
       </div>
-
     </div>
 
   </div>
 
-
   <div class="copyright">
-
-    <span>
-      © 2026 Floreema — Tous droits réservés.
-    </span>
-
-    <span>
-      Handmade with love ♡
-    </span>
-
+    © 2026 Floreema World — Handmade with love ♡
   </div>
 
 </footer>
-
-
-<!-- =========================
-     FLOATING INSTAGRAM
-========================= -->
-
-<a href="https://instagram.com/flower.eema"
-   target="_blank"
-   class="floating-ig"
-   aria-label="Instagram">
-  ◎
-</a>
-
-
-<!-- =========================
-     ORDER MODAL
-========================= -->
-
-<div class="modal" id="orderModal">
-
-  <div class="modal-box">
-
-    <button class="close"
-      onclick="closeOrder()">
-      ×
-    </button>
-
-    <h3>
-      Personnalisez votre commande
-    </h3>
-
-    <p>
-      Décrivez-nous ce que vous souhaitez.
-      Nous vous répondrons directement sur Instagram
-      pour confirmer les détails et le prix.
-    </p>
-
-    <div class="form-grid">
-
-      <div class="field full">
-
-        <label>Création choisie</label>
-
-        <input id="orderProduct"
-               type="text"
-               readonly>
-
-      </div>
-
-
-      <div class="field">
-
-        <label>Couleur</label>
-
-        <input id="orderColor"
-               type="text"
-               placeholder="Ex : rose, blanc...">
-
-      </div>
-
-
-      <div class="field">
-
-        <label>Quantité</label>
-
-        <input id="orderQuantity"
-               type="number"
-               min="1"
-               value="1">
-
-      </div>
-
-
-      <div class="field full">
-
-        <label>Votre demande</label>
-
-        <textarea id="orderDetails"
-          placeholder="Écrivez ici tous les détails de votre création : fleurs, couleurs, texte, forme, occasion, etc."></textarea>
-
-      </div>
-
-    </div>
-
-    <div class="form-actions">
-
-      <button class="btn btn-primary"
-        onclick="sendOrder()">
-        Envoyer la demande sur Instagram ↗
-      </button>
-
-    </div>
-
-  </div>
-
-</div>
-
-
-<script>
-
-/* =========================
-   MOBILE MENU
-========================= */
-
-const menuBtn = document.getElementById("menuBtn");
-const navLinks = document.getElementById("navLinks");
-
-menuBtn.addEventListener("click", () => {
-  navLinks.classList.toggle("open");
-});
-
-document.querySelectorAll(".nav-links a").forEach(link => {
-  link.addEventListener("click", () => {
-    navLinks.classList.remove("open");
-  });
-});
-
-
-/* =========================
-   SCROLL REVEAL
-========================= */
-
-const observer = new IntersectionObserver(
-  entries => {
-
-    entries.forEach(entry => {
-
-      if(entry.isIntersecting){
-
-        entry.target.classList.add("visible");
-
-        observer.unobserve(entry.target);
-
-      }
-
-    });
-
-  },
-  {
-    threshold:.08
-  }
-);
-
-document.querySelectorAll(".reveal").forEach(el => {
-  observer.observe(el);
-});
-
-
-/* =========================
-   ORDER MODAL
-========================= */
-
-const modal = document.getElementById("orderModal");
-
-function openOrder(product){
-
-  document.getElementById("orderProduct").value = product;
-
-  document.getElementById("orderColor").value = "";
-  document.getElementById("orderQuantity").value = "1";
-  document.getElementById("orderDetails").value = "";
-
-  modal.classList.add("active");
-
-  document.body.style.overflow = "hidden";
-}
-
-
-function closeOrder(){
-
-  modal.classList.remove("active");
-
-  document.body.style.overflow = "";
-
-}
-
-
-modal.addEventListener("click", function(e){
-
-  if(e.target === modal){
-    closeOrder();
-  }
-
-});
-
-
-/* =========================
-   SEND GENERAL ORDER
-========================= */
-
-function sendOrder(){
-
-  const product =
-    document.getElementById("orderProduct").value;
-
-  const color =
-    document.getElementById("orderColor").value || "Non précisée";
-
-  const quantity =
-    document.getElementById("orderQuantity").value || "1";
-
-  const details =
-    document.getElementById("orderDetails").value || "Aucun détail supplémentaire";
-
-  const message =
-`Bonjour Floreema 🌷
-
-Je souhaite commander :
-
-Création : ${product}
-Couleur : ${color}
-Quantité : ${quantity}
-
-Ma demande :
-${details}
-
-Merci ♡`;
-
-  const url =
-    "https://ig.me/m/flower.eema?text=" +
-    encodeURIComponent(message);
-
-  window.open(url, "_blank");
-
-}
-
-
-/* =========================
-   BOUQUET REQUEST
-========================= */
-
-function sendBouquetRequest(){
-
-  const type =
-    document.getElementById("bouquetType").value || "Non précisé";
-
-  const color =
-    document.getElementById("bouquetColor").value || "Non précisée";
-
-  const details =
-    document.getElementById("bouquetDetails").value || "Aucun détail";
-
-  const message =
-`Bonjour Floreema 🌷
-
-Je souhaite personnaliser un bouquet.
-
-Type de fleurs : ${type}
-Couleur : ${color}
-
-Ma demande :
-${details}
-
-Merci ♡`;
-
-  const url =
-    "https://ig.me/m/flower.eema?text=" +
-    encodeURIComponent(message);
-
-  window.open(url, "_blank");
-
-}
-
-
-/* =========================
-   LIGHT FLOWER REQUEST
-========================= */
-
-function sendLightRequest(){
-
-  const type =
-    document.getElementById("lightFlower").value || "Non précisé";
-
-  const color =
-    document.getElementById("lightColor").value || "Non précisée";
-
-  const details =
-    document.getElementById("lightDetails").value || "Aucun détail";
-
-  const message =
-`Bonjour Floreema ✨🌷
-
-Je souhaite une fleur lumineuse.
-
-Type de fleur : ${type}
-Couleur : ${color}
-
-Ma demande :
-${details}
-
-Merci ♡`;
-
-  const url =
-    "https://ig.me/m/flower.eema?text=" +
-    encodeURIComponent(message);
-
-  window.open(url, "_blank");
-
-}
-
-</script>
 
 </body>
 </html>
